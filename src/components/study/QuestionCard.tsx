@@ -19,7 +19,7 @@ export function QuestionCard({ question }: QuestionCardProps) {
     <Card>
       <CardContent className="p-4">
         <div className="flex flex-col gap-4">
-          <div className="relative w-full aspect-video rounded-md overflow-hidden">
+          <div className="relative w-full h-48 rounded-md overflow-hidden">
             <Image
               src={question.imageUrl}
               alt={question.question}
