@@ -1,5 +1,5 @@
 import { AppLayout } from '@/components/AppLayout';
-import { StudyGuide } from '@/components/study/StudyGuide';
+import { StudyCard } from '@/components/study/StudyCard';
 import { mockStudyTopics } from '@/lib/data';
 
 export default function StudyPage() {
@@ -9,10 +9,14 @@ export default function StudyPage() {
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Study Guide</h1>
           <p className="text-muted-foreground">
-            Review key topics for the Canadian Citizenship Test.
+            Explore key topics for the Canadian Citizenship Test.
           </p>
         </div>
-        <StudyGuide topics={mockStudyTopics} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {mockStudyTopics.map((topic) => (
+            <StudyCard key={topic.id} topic={topic} />
+          ))}
+        </div>
       </div>
     </AppLayout>
   );
