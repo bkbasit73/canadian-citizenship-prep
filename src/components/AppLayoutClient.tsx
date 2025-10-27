@@ -5,10 +5,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
     Home,
-    ClipboardList,
+    Timer,
     BookOpen,
     Gamepad2,
-    FileText
+    ClipboardCheck
 } from 'lucide-react';
 import { MapleLeafIcon } from './icons/MapleLeafIcon';
 import {
@@ -25,10 +25,10 @@ export function AppLayoutClient() {
 
   const menuItems = [
     { href: '/', label: 'Dashboard', icon: Home },
-    { href: '/practice', label: 'Timed Challenge', icon: ClipboardList },
+    { href: '/practice', label: 'Timed Challenge', icon: Timer },
     { href: '/study', label: 'Discover Canada', icon: BookOpen },
     { href: '/game', label: 'Survival mode Game', icon: Gamepad2 },
-    { href: '/demo-test', label: 'Official Practice Test', icon: FileText },
+    { href: '/demo-test', label: 'Official Practice Test', icon: ClipboardCheck },
   ];
 
   return (
