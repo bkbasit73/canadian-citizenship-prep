@@ -19,7 +19,7 @@ import {
   SidebarMenuButton,
   SidebarProvider,
 } from '@/components/ui/sidebar';
-import { MapleLeafIcon } from './icons/MapleLeafIcon';
+import { CanadianFlagIcon } from './icons/CanadianFlagIcon';
 import { Header } from './Header';
 
 interface AppLayoutProps {
@@ -44,7 +44,7 @@ export function AppLayout({ children }: AppLayoutProps) {
       >
         <SidebarHeader className="p-4">
           <Link href="/" className="flex items-center gap-3 text-sidebar-foreground">
-             <MapleLeafIcon className="size-8 shrink-0 text-sidebar-primary" />
+             <CanadianFlagIcon className="size-10 shrink-0" />
              <span className="text-lg font-bold">True North Quiz</span>
           </Link>
         </SidebarHeader>

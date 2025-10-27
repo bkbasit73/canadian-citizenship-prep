@@ -1609,31 +1609,41 @@ export const mockStudyTopics: StudyTopic[] = [
     id: 'history-1',
     category: 'History',
     title: 'The First Peoples',
-    content: 'Aboriginal peoples have lived in what is now Canada for thousands of years. They consist of First Nations, Inuit, and Métis. First Nations have a history rich with diverse cultures and traditions. The Inuit primarily inhabit the Arctic regions. The Métis are of mixed Aboriginal and European ancestry.'
+    content: 'Aboriginal peoples have lived in what is now Canada for thousands of years. They consist of First Nations, Inuit, and Métis. First Nations have a history rich with diverse cultures and traditions. The Inuit primarily inhabit the Arctic regions. The Métis are of mixed Aboriginal and European ancestry.',
+    imageUrl: 'https://picsum.photos/seed/history1/400/250',
+    imageHint: 'indigenous art',
   },
   {
     id: 'gov-1',
     category: 'Government',
     title: 'Canada\'s System of Government',
-    content: 'Canada is a parliamentary democracy and a constitutional monarchy. This means we have a Parliament to make our laws and the Queen of Canada as our head of state. There are three levels of government: federal, provincial/territorial, and municipal.'
+    content: 'Canada is a parliamentary democracy and a constitutional monarchy. This means we have a Parliament to make our laws and the Queen of Canada as our head of state. There are three levels of government: federal, provincial/territorial, and municipal.',
+    imageUrl: 'https://picsum.photos/seed/gov1/400/250',
+    imageHint: 'parliament building',
   },
   {
     id: 'rights-1',
     category: 'Rights and Responsibilities',
     title: 'The Canadian Charter of Rights and Freedoms',
-    content: 'The Charter protects fundamental freedoms, democratic rights, mobility rights, legal rights, and equality rights for all Canadians. With these rights come responsibilities, such as obeying the law, serving on a jury, and voting in elections.'
+    content: 'The Charter protects fundamental freedoms, democratic rights, mobility rights, legal rights, and equality rights for all Canadians. With these rights come responsibilities, such as obeying the law, serving on a jury, and voting in elections.',
+    imageUrl: 'https://picsum.photos/seed/rights1/400/250',
+    imageHint: 'charter document',
   },
   {
     id: 'symbols-1',
     category: 'Symbols',
     title: 'The National Flag',
-    content: 'The red and white Canadian flag with a single red maple leaf was first raised on February 15, 1965. The maple leaf has been a symbol of Canada since the 18th century. Red and white are Canada\'s official colors.'
+    content: 'The red and white Canadian flag with a single red maple leaf was first raised on February 15, 1965. The maple leaf has been a symbol of Canada since the 18th century. Red and white are Canada\'s official colors.',
+    imageUrl: 'https://picsum.photos/seed/symbols1/400/250',
+    imageHint: 'canadian flag',
   },
   {
     id: 'geo-1',
     category: 'Geography',
     title: 'The Regions of Canada',
-    content: 'Canada is the second-largest country in the world and has five distinct regions: the Atlantic Provinces, Central Canada, the Prairie Provinces, the West Coast, and the Northern Territories. Each region has its own unique landscape and economy.'
+    content: 'Canada is the second-largest country in the world and has five distinct regions: the Atlantic Provinces, Central Canada, the Prairie Provinces, the West Coast, and the Northern Territories. Each region has its own unique landscape and economy.',
+    imageUrl: 'https://picsum.photos/seed/geo1/400/250',
+    imageHint: 'rocky mountains',
   }
 ];
 

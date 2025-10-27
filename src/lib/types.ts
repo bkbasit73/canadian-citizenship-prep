@@ -19,6 +19,8 @@ export type StudyTopic = {
   title: string;
   content: string;
   category: QuestionCategory;
+  imageUrl?: string;
+  imageHint?: string;
 };
 
 export type UserPerformance = {

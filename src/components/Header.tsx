@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { MapleLeafIcon } from '@/components/icons/MapleLeafIcon';
+import { CanadianFlagIcon } from '@/components/icons/CanadianFlagIcon';
 import { SidebarTrigger } from './ui/sidebar';
 
 export function Header() {
@@ -7,7 +7,7 @@ export function Header() {
     <header className="flex h-16 items-center gap-4 border-b bg-card px-4 md:px-6">
       <nav className="flex items-center gap-4">
         <Link href="/" className="flex items-center gap-2 font-semibold text-lg md:text-base">
-          <MapleLeafIcon className="h-7 w-7 text-primary" />
+          <CanadianFlagIcon className="h-7 w-7" />
           <span className="hidden md:inline-block font-bold">True North Quiz</span>
         </Link>
         <SidebarTrigger className="md:hidden" />
