@@ -25,8 +25,8 @@ export function RealTimeClock() {
   }
 
   return (
-    <div className="hidden sm:flex items-center justify-center bg-card/50 text-card-foreground/80 h-12 w-28 rounded-full border">
-        <span className="font-mono text-sm font-semibold tracking-wider">
+    <div className="hidden sm:flex items-center justify-center bg-card/50 text-card-foreground/80 h-12 w-32 rounded-lg border">
+        <span className="font-mono text-lg font-semibold tracking-wider">
             {time}
         </span>
     </div>
