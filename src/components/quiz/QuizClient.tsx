@@ -60,7 +60,7 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
   }, [currentQuestionIndex, questions.length, timePerQuestion]);
 
   useEffect(() => {
-    if (quizState !== 'in-progress') return;
+    if (quizState !== 'in-progress' || !hasMounted) return;
 
     if (timeLeft <= 0 && !isAnswered) {
       setIsAnswered(true); // Mark as answered to show feedback
@@ -76,7 +76,7 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [quizState, timeLeft, isAnswered, handleNextQuestion]);
+  }, [quizState, timeLeft, isAnswered, handleNextQuestion, hasMounted]);
 
   const handleStartQuiz = (level: number, time: number) => {
     const questionCount = Math.min(level, allQuestions.length);

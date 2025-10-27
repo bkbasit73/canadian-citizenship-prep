@@ -51,7 +51,7 @@ export function SurvivalQuiz({ questions: allQuestions }: SurvivalQuizProps) {
   }, [currentQuestionIndex, shuffledQuestions.length]);
 
   useEffect(() => {
-    if (quizState !== 'in-progress') return;
+    if (quizState !== 'in-progress' || !hasMounted) return;
 
     if (timeLeft <= 0) {
       handleNextQuestion();
@@ -63,7 +63,7 @@ export function SurvivalQuiz({ questions: allQuestions }: SurvivalQuizProps) {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [quizState, timeLeft, handleNextQuestion]);
+  }, [quizState, timeLeft, handleNextQuestion, hasMounted]);
 
   const handleAnswerSubmit = (answer: string) => {
     if (answer === currentQuestion.answer) {
