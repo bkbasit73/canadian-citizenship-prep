@@ -8,17 +8,21 @@ import {
     Timer,
     BookOpen,
     Gamepad2,
-    ClipboardCheck
+    ClipboardCheck,
+    HeartHandshake
 } from 'lucide-react';
 import { MapleLeafIcon } from './icons/MapleLeafIcon';
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
+  SidebarSeparator,
 } from '@/components/ui/sidebar';
+import { Button } from '@/components/ui/button';
 
 export function AppLayoutClient() {
   const pathname = usePathname();
@@ -61,6 +65,17 @@ export function AppLayoutClient() {
             ))}
           </SidebarMenu>
         </SidebarContent>
+        <SidebarFooter>
+          <SidebarSeparator />
+           <div className="p-2 flex flex-col gap-2">
+             <Button asChild variant="outline" className="justify-start group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:size-8 group-data-[collapsible=icon]:p-0">
+                <Link href="https://terryfox.org/donate/" target="_blank" rel="noopener noreferrer">
+                    <HeartHandshake className="group-data-[collapsible=icon]:size-4"/>
+                    <span className="group-data-[collapsible=icon]:hidden">Donate</span>
+                </Link>
+             </Button>
+           </div>
+        </SidebarFooter>
       </Sidebar>
   );
 }
