@@ -25,8 +25,8 @@ const shuffleArray = <T,>(array: T[]): T[] => {
 };
 
 export function SurvivalQuiz({ questions: allQuestions }: SurvivalQuizProps) {
-  const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
   const [hasMounted, setHasMounted] = useState(false);
+  const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
   const [quizState, setQuizState] = useState<'not-started' | 'in-progress' | 'finished'>('not-started');
   const [timeLeft, setTimeLeft] = useState(TIME_PER_QUESTION);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
