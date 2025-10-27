@@ -27,7 +27,7 @@ export default function StudyPage() {
 
   return (
     <AppLayout>
-      <div className="max-w-4xl mx-auto w-full">
+      <div className="max-w-7xl mx-auto w-full">
         <div className="flex flex-col gap-8">
           <div>
             <h1 className="text-3xl font-bold tracking-tight">Study Mode</h1>
@@ -42,7 +42,7 @@ export default function StudyPage() {
                   {category}
                 </AccordionTrigger>
                 <AccordionContent>
-                  <div className="flex flex-col gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {questionsByCategory[category].map((question) => (
                       <QuestionCard key={question.id} question={question} />
                     ))}
