@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { CanadianFlagIcon } from '@/components/icons/CanadianFlagIcon';
+import { MapleLeafIcon } from '@/components/icons/MapleLeafIcon';
 import { SidebarTrigger } from './ui/sidebar';
 import { RealTimeClock } from './RealTimeClock';
 
@@ -8,7 +8,7 @@ export function Header() {
     <header className="flex h-16 items-center gap-4 border-b bg-card px-4 md:px-6">
       <nav className="flex items-center gap-4">
         <Link href="/" className="flex items-center gap-2 font-semibold text-lg md:text-base">
-          <CanadianFlagIcon className="h-10 w-10" />
+          <MapleLeafIcon className="h-10 w-10 text-primary" />
         </Link>
         <SidebarTrigger className="md:hidden" />
       </nav>

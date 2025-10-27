@@ -20,7 +20,7 @@ import {
   SidebarMenuButton,
   SidebarProvider,
 } from '@/components/ui/sidebar';
-import { CanadianFlagIcon } from './icons/CanadianFlagIcon';
+import { MapleLeafIcon } from './icons/MapleLeafIcon';
 import { Header } from './Header';
 
 interface AppLayoutProps {
@@ -46,7 +46,7 @@ export function AppLayout({ children }: AppLayoutProps) {
       >
         <SidebarHeader className="p-4">
           <Link href="/" className="flex items-center gap-3 text-sidebar-foreground">
-             <CanadianFlagIcon className="size-12 shrink-0" />
+             <MapleLeafIcon className="size-12 shrink-0 text-primary" />
              <span className="text-base font-bold">Citizenship Challenge</span>
           </Link>
         </SidebarHeader>
