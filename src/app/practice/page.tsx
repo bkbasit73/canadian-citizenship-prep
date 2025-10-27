@@ -14,9 +14,9 @@ export default function PracticePage() {
       <div className="max-w-4xl mx-auto w-full">
         <div className="flex flex-col gap-8">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">Challenge Mode</h1>
+            <h1 className="text-3xl font-bold tracking-tight">Timed Challenge</h1>
             <p className="text-muted-foreground">
-              Test your knowledge with a timed quiz. Choose your challenge!
+              Test your knowledge against the clock. Choose your challenge!
             </p>
           </div>
           <QuizClient allQuestions={allQuestions} />

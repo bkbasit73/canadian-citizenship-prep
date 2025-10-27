@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
-import { CheckCircle, XCircle, ArrowRight, RefreshCw } from 'lucide-react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
+import { CheckCircle, XCircle, ArrowRight, RefreshCw, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
@@ -22,12 +22,20 @@ const shuffleArray = <T,>(array: T[]): T[] => {
   return [...array].sort(() => Math.random() - 0.5);
 };
 
-const CHALLENGE_LEVELS = [20, 40, 60, 100, 200];
+const CHALLENGE_LEVELS = [
+    { level: 20, timePerQuestion: 30 },
+    { level: 40, timePerQuestion: 25 },
+    { level: 60, timePerQuestion: 20 },
+    { level: 100, timePerQuestion: 15 },
+    { level: 200, timePerQuestion: 10 },
+];
 
 export function QuizClient({ allQuestions }: QuizClientProps) {
   const [quizState, setQuizState] = useState<QuizState>('not-started');
   const [questions, setQuestions] = useState<Question[]>([]);
   const [numQuestions, setNumQuestions] = useState(0);
+  const [timePerQuestion, setTimePerQuestion] = useState(30);
+  const [timeLeft, setTimeLeft] = useState(timePerQuestion);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
@@ -35,19 +43,46 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
 
   const currentQuestion = useMemo(() => questions[currentQuestionIndex], [questions, currentQuestionIndex]);
 
-  useEffect(() => {
-    if (quizState === 'in-progress' && numQuestions > 0) {
-      setQuestions(shuffleArray(allQuestions).slice(0, numQuestions));
-      setCurrentQuestionIndex(0);
-      setScore(0);
-      setIsAnswered(false);
+  const handleNextQuestion = useCallback(() => {
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex((prev) => prev + 1);
       setSelectedAnswer(null);
+      setIsAnswered(false);
+      setTimeLeft(timePerQuestion);
+    } else {
+      setQuizState('finished');
     }
-  }, [quizState, allQuestions, numQuestions]);
+  }, [currentQuestionIndex, questions.length, timePerQuestion]);
 
-  const handleStartQuiz = (level: number) => {
+  useEffect(() => {
+    if (quizState !== 'in-progress') return;
+
+    if (timeLeft <= 0 && !isAnswered) {
+      setIsAnswered(true); // Mark as answered to show feedback
+      // No score update since time ran out
+      const timeout = setTimeout(() => handleNextQuestion(), 2000); // Wait 2s before moving on
+      return () => clearTimeout(timeout);
+    }
+    
+    if (isAnswered) return;
+
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => prev - 1);
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [quizState, timeLeft, isAnswered, handleNextQuestion]);
+
+  const handleStartQuiz = (level: number, time: number) => {
     const questionCount = Math.min(level, allQuestions.length);
     setNumQuestions(questionCount);
+    setTimePerQuestion(time);
+    setTimeLeft(time);
+    setQuestions(shuffleArray(allQuestions).slice(0, questionCount));
+    setCurrentQuestionIndex(0);
+    setScore(0);
+    setIsAnswered(false);
+    setSelectedAnswer(null);
     setQuizState('in-progress');
   };
 
@@ -64,16 +99,6 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
     }
   };
 
-  const handleNextQuestion = () => {
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex((prev) => prev + 1);
-      setSelectedAnswer(null);
-      setIsAnswered(false);
-    } else {
-      setQuizState('finished');
-    }
-  };
-
   if (quizState === 'not-started') {
     return (
       <Card className="max-w-2xl mx-auto text-center">
@@ -83,8 +108,8 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
         <CardContent>
           <p className="text-muted-foreground mb-6">Select the number of questions for your quiz.</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            {CHALLENGE_LEVELS.map((level) => (
-                <Button key={level} variant="outline" size="lg" onClick={() => handleStartQuiz(level)} disabled={level > allQuestions.length}>
+            {CHALLENGE_LEVELS.map(({level, time}) => (
+                <Button key={level} variant="outline" size="lg" onClick={() => handleStartQuiz(level, time)} disabled={level > allQuestions.length}>
                     {level} Questions
                 </Button>
             ))}
@@ -95,7 +120,7 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
   }
 
   if (quizState === 'finished') {
-    const accuracy = (score / questions.length) * 100;
+    const accuracy = questions.length > 0 ? (score / questions.length) * 100 : 0;
     return (
       <Card className="max-w-2xl mx-auto text-center">
         <CardHeader>
@@ -141,14 +166,22 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
     )
   }
 
+  const timeProgress = (timeLeft / timePerQuestion) * 100;
+
   return (
     <Card className="max-w-2xl mx-auto">
       <CardHeader>
         <div className="flex justify-between items-center mb-2">
             <CardTitle>Question {currentQuestionIndex + 1} of {questions.length}</CardTitle>
-            <Badge variant="secondary">{currentQuestion.category}</Badge>
+            <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2 text-lg font-semibold text-muted-foreground">
+                    <Clock className="h-5 w-5" />
+                    <span>{timeLeft}s</span>
+                </div>
+                <Badge variant="secondary">{currentQuestion.category}</Badge>
+            </div>
         </div>
-        <Progress value={((currentQuestionIndex + 1) / questions.length) * 100} />
+        <Progress value={timeProgress} className={cn(timeLeft <= 5 && 'animate-pulse', timeProgress < 20 ? '[&>div]:bg-destructive' : '')} />
       </CardHeader>
       <CardContent className="space-y-6">
         <p className="text-lg font-semibold">{currentQuestion.question}</p>
@@ -182,6 +215,13 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
             );
           })}
         </RadioGroup>
+
+        {isAnswered && timeLeft <= 0 && (
+            <div className="rounded-md border-l-4 bg-destructive/20 p-4 border-destructive text-center">
+                <p className="font-bold">Time&apos;s up!</p>
+            </div>
+        )}
+
         {isAnswered && (
           <div className="rounded-md border-l-4 bg-muted p-4 border-primary">
             <p className="font-semibold">Explanation:</p>
