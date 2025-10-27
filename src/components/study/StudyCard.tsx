@@ -1,26 +1,29 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import type { StudyTopic } from '@/lib/types';
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
-import { Button } from '../ui/button';
-import { RotateCcw } from 'lucide-react';
 
 interface StudyCardProps {
   topic: StudyTopic;
 }
 
 export function StudyCard({ topic }: StudyCardProps) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
   return (
-    <div className="flip-card-container h-96">
+    <div
+      className={cn('flip-card-container h-96', { flipped: isFlipped })}
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
       <div className="flip-card">
         <div className="flip-card-front">
           <Card className="overflow-hidden h-full flex flex-col">

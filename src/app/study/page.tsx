@@ -9,7 +9,7 @@ export default function StudyPage() {
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Study Guide</h1>
           <p className="text-muted-foreground">
-            Explore key topics for the Canadian Citizenship Test. Hover over a card to flip it.
+            Explore key topics for the Canadian Citizenship Test. Click on a card to flip it.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

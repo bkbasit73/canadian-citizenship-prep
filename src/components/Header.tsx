@@ -8,7 +8,7 @@ export function Header() {
       <nav className="flex items-center gap-4">
         <Link href="/" className="flex items-center gap-2 font-semibold text-lg md:text-base">
           <CanadianFlagIcon className="h-7 w-7" />
-          <span className="hidden md:inline-block font-bold">True North Quiz</span>
+          <span className="hidden md:inline-block font-bold">Citizenship Test</span>
         </Link>
         <SidebarTrigger className="md:hidden" />
       </nav>

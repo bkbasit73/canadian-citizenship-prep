@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'True North Quiz',
+  title: 'Citizenship Test',
   description: 'Prepare for the Canadian Citizenship Test with interactive quizzes, study materials, and performance tracking.',
 };
 

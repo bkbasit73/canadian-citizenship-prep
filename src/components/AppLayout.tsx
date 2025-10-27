@@ -45,7 +45,7 @@ export function AppLayout({ children }: AppLayoutProps) {
         <SidebarHeader className="p-4">
           <Link href="/" className="flex items-center gap-3 text-sidebar-foreground">
              <CanadianFlagIcon className="size-10 shrink-0" />
-             <span className="text-lg font-bold">True North Quiz</span>
+             <span className="text-lg font-bold">Citizenship Test</span>
           </Link>
         </SidebarHeader>
         <SidebarContent>

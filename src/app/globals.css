@@ -96,8 +96,7 @@ body {
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
-  .flip-card-container:hover .flip-card,
-  .flip-card-container:focus-within .flip-card {
+  .flip-card-container.flipped .flip-card {
     transform: rotateY(180deg);
   }
   .flip-card-front,
