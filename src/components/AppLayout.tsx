@@ -70,6 +70,7 @@ export function AppLayout({ children }: AppLayoutProps) {
         </SidebarContent>
       </Sidebar>
       <SidebarInset>
+        <Header />
         <main className="relative flex-1 overflow-auto p-4 md:p-6 lg:p-8">
             <div className="absolute inset-0 z-0">
                 <Image
