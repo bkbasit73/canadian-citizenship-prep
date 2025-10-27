@@ -38,7 +38,7 @@ export default function StudyPage() {
           <Accordion type="single" collapsible className="w-full">
             {categories.map((category) => (
               <AccordionItem key={category} value={category}>
-                <AccordionTrigger className="text-xl font-semibold">
+                <AccordionTrigger className="text-2xl font-bold py-6">
                   {category}
                 </AccordionTrigger>
                 <AccordionContent>
