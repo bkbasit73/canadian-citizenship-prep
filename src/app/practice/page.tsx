@@ -1,5 +1,3 @@
-'use client';
-
 import { AppLayout } from '@/components/AppLayout';
 import { QuizClient } from '@/components/quiz/QuizClient';
 import { mockQuestions } from '@/lib/data';

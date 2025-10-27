@@ -31,7 +31,6 @@ const CHALLENGE_LEVELS = [
 ];
 
 export function QuizClient({ allQuestions }: QuizClientProps) {
-  const [hasMounted, setHasMounted] = useState(false);
   const [quizState, setQuizState] = useState<QuizState>('not-started');
   const [questions, setQuestions] = useState<Question[]>([]);
   const [numQuestions, setNumQuestions] = useState(0);
@@ -41,10 +40,6 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
-
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
 
   const currentQuestion = useMemo(() => questions[currentQuestionIndex], [questions, currentQuestionIndex]);
 
@@ -60,7 +55,7 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
   }, [currentQuestionIndex, questions.length, timePerQuestion]);
 
   useEffect(() => {
-    if (quizState !== 'in-progress' || !hasMounted) return;
+    if (quizState !== 'in-progress') return;
 
     if (timeLeft <= 0 && !isAnswered) {
       setIsAnswered(true); // Mark as answered to show feedback
@@ -76,7 +71,7 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [quizState, timeLeft, isAnswered, handleNextQuestion, hasMounted]);
+  }, [quizState, timeLeft, isAnswered, handleNextQuestion]);
 
   const handleStartQuiz = (level: number, time: number) => {
     const questionCount = Math.min(level, allQuestions.length);
@@ -103,26 +98,6 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
       setScore((prev) => prev + 1);
     }
   };
-
-  if (!hasMounted) {
-    return (
-      <Card className="max-w-2xl mx-auto w-full">
-          <CardHeader>
-            <Skeleton className="h-8 w-1/2 mb-2" />
-          </CardHeader>
-          <CardContent>
-            <Skeleton className="h-4 w-3/4 mb-6" />
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              <Skeleton className="h-12 w-full" />
-              <Skeleton className="h-12 w-full" />
-              <Skeleton className="h-12 w-full" />
-              <Skeleton className="h-12 w-full" />
-              <Skeleton className="h-12 w-full" />
-            </div>
-          </CardContent>
-        </Card>
-    )
-  }
 
   if (quizState === 'not-started') {
     return (

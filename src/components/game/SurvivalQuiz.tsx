@@ -25,7 +25,6 @@ const shuffleArray = <T,>(array: T[]): T[] => {
 };
 
 export function SurvivalQuiz({ questions: allQuestions }: SurvivalQuizProps) {
-  const [hasMounted, setHasMounted] = useState(false);
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
   const [quizState, setQuizState] = useState<'not-started' | 'in-progress' | 'finished'>('not-started');
   const [timeLeft, setTimeLeft] = useState(TIME_PER_QUESTION);
@@ -33,10 +32,6 @@ export function SurvivalQuiz({ questions: allQuestions }: SurvivalQuizProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [score, setScore] = useState(0);
   const [numQuestions, setNumQuestions] = useState(0);
-
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
 
   const currentQuestion = useMemo(() => shuffledQuestions[currentQuestionIndex], [shuffledQuestions, currentQuestionIndex]);
 
@@ -51,7 +46,7 @@ export function SurvivalQuiz({ questions: allQuestions }: SurvivalQuizProps) {
   }, [currentQuestionIndex, shuffledQuestions.length]);
 
   useEffect(() => {
-    if (quizState !== 'in-progress' || !hasMounted) return;
+    if (quizState !== 'in-progress') return;
 
     if (timeLeft <= 0) {
       handleNextQuestion();
@@ -63,7 +58,7 @@ export function SurvivalQuiz({ questions: allQuestions }: SurvivalQuizProps) {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [quizState, timeLeft, handleNextQuestion, hasMounted]);
+  }, [quizState, timeLeft, handleNextQuestion]);
 
   const handleAnswerSubmit = (answer: string) => {
     if (answer === currentQuestion.answer) {
@@ -88,26 +83,6 @@ export function SurvivalQuiz({ questions: allQuestions }: SurvivalQuizProps) {
     setQuizState('not-started');
     setNumQuestions(0);
   };
-
-  if (!hasMounted) {
-    return (
-        <Card className="max-w-2xl mx-auto w-full">
-            <CardHeader>
-              <Skeleton className="h-8 w-1/2 mb-2" />
-              <Skeleton className="h-4 w-full" />
-            </CardHeader>
-            <CardContent className="space-y-6 pt-6">
-              <Skeleton className="h-6 w-3/4" />
-              <div className="space-y-4">
-                <Skeleton className="h-12 w-full" />
-                <Skeleton className="h-12 w-full" />
-                <Skeleton className="h-12 w-full" />
-                <Skeleton className="h-12 w-full" />
-              </div>
-            </CardContent>
-          </Card>
-    )
-  }
 
   if (quizState === 'not-started') {
     return (
