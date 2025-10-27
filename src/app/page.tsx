@@ -1,54 +1,52 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { LoginForm } from '@/components/auth/LoginForm';
-import { MapleLeafIcon } from '@/components/icons/MapleLeafIcon';
+import { BarChart3, CheckCircle, Percent, Target } from 'lucide-react';
+import { AppLayout } from '@/components/AppLayout';
+import { StatCard } from '@/components/dashboard/StatCard';
+import { PerformanceChart } from '@/components/dashboard/PerformanceChart';
+import { SmartTips } from '@/components/dashboard/SmartTips';
+import { mockUserPerformance } from '@/lib/data';
 
-export default function LoginPage() {
-  const loginImage = PlaceHolderImages.find((img) => img.id === 'login-hero');
+export default function DashboardPage() {
+  const { totalCorrect, totalAnswered } = mockUserPerformance;
+  const accuracy = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
 
   return (
-    <div className="w-full lg:grid lg:min-h-screen lg:grid-cols-2">
-      <div className="relative hidden bg-muted lg:block">
-        <Image
-          src={loginImage?.imageUrl || '/placeholder.svg'}
-          alt={loginImage?.description || 'A beautiful landscape'}
-          width={1280}
-          height={853}
-          data-ai-hint={loginImage?.imageHint}
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-        <div className="absolute bottom-0 left-0 p-8">
-          <Link href="/" className="flex items-center gap-3 text-foreground">
-            <MapleLeafIcon className="h-10 w-10 text-primary" />
-            <span className="text-3xl font-bold tracking-tighter">
-              True North Quiz
-            </span>
-          </Link>
-          <p className="mt-4 text-lg text-muted-foreground max-w-xl">
-            Your journey to Canadian citizenship starts here. Master the test
-            with our interactive quizzes and study guides.
-          </p>
+    <AppLayout>
+      <div className="flex flex-col gap-8">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">Welcome!</h1>
+          <p className="text-muted-foreground">Here&apos;s a summary of your progress. Keep up the great work!</p>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <StatCard
+                title="Total Correct Answers"
+                value={totalCorrect.toString()}
+                icon={CheckCircle}
+                description="Your all-time correct answers"
+            />
+            <StatCard
+                title="Total Questions Answered"
+                value={totalAnswered.toString()}
+                icon={Target}
+                description="Total questions you've attempted"
+            />
+            <StatCard
+                title="Overall Accuracy"
+                value={`${accuracy}%`}
+                icon={Percent}
+                description="Your overall answering accuracy"
+            />
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2">
+                <PerformanceChart performanceData={mockUserPerformance.categoryPerformance} />
+            </div>
+            <div>
+                <SmartTips performanceData={mockUserPerformance} />
+            </div>
         </div>
       </div>
-      <div className="flex items-center justify-center py-12">
-        <div className="mx-auto grid w-[350px] gap-6">
-          <div className="grid gap-2 text-center">
-            <h1 className="text-3xl font-bold">Login</h1>
-            <p className="text-balance text-muted-foreground">
-              Enter your email below to login to your account
-            </p>
-          </div>
-          <LoginForm />
-          <div className="mt-4 text-center text-sm">
-            Don&apos;t have an account?{' '}
-            <Link href="/signup" className="underline">
-              Sign up
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
+    </AppLayout>
   );
 }

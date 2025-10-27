@@ -4,10 +4,9 @@ import type React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
-    BarChart3,
-    BookOpen,
     Home,
-    ClipboardList
+    ClipboardList,
+    BookOpen
 } from 'lucide-react';
 
 import {
@@ -19,7 +18,6 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarProvider,
-  SidebarFooter
 } from '@/components/ui/sidebar';
 import { MapleLeafIcon } from './icons/MapleLeafIcon';
 import { Header } from './Header';
@@ -32,7 +30,7 @@ export function AppLayout({ children }: AppLayoutProps) {
   const pathname = usePathname();
 
   const menuItems = [
-    { href: '/dashboard', label: 'Dashboard', icon: Home },
+    { href: '/', label: 'Dashboard', icon: Home },
     { href: '/practice', label: 'Practice Quiz', icon: ClipboardList },
     { href: '/study', label: 'Study Guide', icon: BookOpen },
   ];
@@ -45,7 +43,7 @@ export function AppLayout({ children }: AppLayoutProps) {
         className="border-r border-sidebar-border"
       >
         <SidebarHeader className="p-4">
-          <Link href="/dashboard" className="flex items-center gap-3 text-sidebar-foreground">
+          <Link href="/" className="flex items-center gap-3 text-sidebar-foreground">
              <MapleLeafIcon className="size-8 shrink-0 text-sidebar-primary" />
              <span className="text-lg font-bold">True North Quiz</span>
           </Link>
