@@ -22,6 +22,7 @@ import {
 } from '@/components/ui/sidebar';
 import { MapleLeafIcon } from './icons/MapleLeafIcon';
 import { Header } from './Header';
+import { CanadianFlagIcon } from './icons/CanadianFlagIcon';
 
 interface AppLayoutProps {
   children: React.ReactNode;
@@ -71,8 +72,13 @@ export function AppLayout({ children }: AppLayoutProps) {
       </Sidebar>
       <SidebarInset>
         <Header />
-        <main className="flex-1 overflow-auto p-4 md:p-6 lg:p-8">
-            {children}
+        <main className="relative flex-1 overflow-auto p-4 md:p-6 lg:p-8">
+            <div className="absolute inset-0 z-0 flex items-center justify-center">
+                <CanadianFlagIcon className="w-1/2 h-1/2 opacity-5 text-foreground" />
+            </div>
+            <div className="relative z-10">
+              {children}
+            </div>
         </main>
       </SidebarInset>
     </SidebarProvider>
