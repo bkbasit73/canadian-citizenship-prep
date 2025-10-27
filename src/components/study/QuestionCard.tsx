@@ -19,16 +19,18 @@ export function QuestionCard({ question }: QuestionCardProps) {
     <Card>
       <CardContent className="p-4">
         <div className="flex flex-col gap-4">
-          <div className="relative w-full h-48 rounded-md overflow-hidden">
-            <Image
-              src={question.imageUrl}
-              alt={question.question}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              data-ai-hint={question.imageHint}
-            />
-          </div>
+          {question.imageUrl && (
+            <div className="relative w-full h-48 rounded-md overflow-hidden">
+              <Image
+                src={question.imageUrl}
+                alt={question.question}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                data-ai-hint={question.imageHint}
+              />
+            </div>
+          )}
           <div className="flex-grow">
             <p className="font-semibold text-lg">{question.question}</p>
             <div className="mt-2">
