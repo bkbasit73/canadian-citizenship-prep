@@ -3,6 +3,7 @@
 import type React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 import {
     Home,
     ClipboardList,
@@ -21,7 +22,6 @@ import {
   SidebarProvider,
 } from '@/components/ui/sidebar';
 import { Header } from './Header';
-import { CanadianFlagIcon } from './icons/CanadianFlagIcon';
 
 interface AppLayoutProps {
   children: React.ReactNode;
@@ -71,8 +71,15 @@ export function AppLayout({ children }: AppLayoutProps) {
       <SidebarInset>
         <Header />
         <main className="relative flex-1 overflow-auto p-4 md:p-6 lg:p-8">
-            <div className="absolute inset-0 z-0 flex items-center justify-center">
-                <CanadianFlagIcon className="w-1/2 h-1/2 opacity-5" />
+            <div className="absolute inset-0 z-0">
+                <Image
+                  src="https://images.unsplash.com/photo-1593335965251-3f191673076e?q=80&w=2070&auto=format&fit=crop"
+                  alt="Canadian flag watermark"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  className="opacity-10"
+                  data-ai-hint="canadian flag"
+                />
             </div>
             <div className="relative z-10">
               {children}
