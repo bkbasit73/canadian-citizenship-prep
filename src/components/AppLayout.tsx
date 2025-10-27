@@ -1,0 +1,80 @@
+'use client';
+
+import type React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import {
+    BarChart3,
+    BookOpen,
+    Home,
+    ClipboardList
+} from 'lucide-react';
+
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarHeader,
+  SidebarInset,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
+  SidebarProvider,
+  SidebarFooter
+} from '@/components/ui/sidebar';
+import { MapleLeafIcon } from './icons/MapleLeafIcon';
+import { Header } from './Header';
+
+interface AppLayoutProps {
+  children: React.ReactNode;
+}
+
+export function AppLayout({ children }: AppLayoutProps) {
+  const pathname = usePathname();
+
+  const menuItems = [
+    { href: '/dashboard', label: 'Dashboard', icon: Home },
+    { href: '/practice', label: 'Practice Quiz', icon: ClipboardList },
+    { href: '/study', label: 'Study Guide', icon: BookOpen },
+  ];
+
+  return (
+    <SidebarProvider>
+      <Sidebar
+        variant="sidebar"
+        collapsible="icon"
+        className="border-r border-sidebar-border"
+      >
+        <SidebarHeader className="p-4">
+          <Link href="/dashboard" className="flex items-center gap-3 text-sidebar-foreground">
+             <MapleLeafIcon className="size-8 shrink-0 text-sidebar-primary" />
+             <span className="text-lg font-bold">True North Quiz</span>
+          </Link>
+        </SidebarHeader>
+        <SidebarContent>
+          <SidebarMenu>
+            {menuItems.map((item) => (
+              <SidebarMenuItem key={item.href}>
+                <SidebarMenuButton
+                  asChild
+                  isActive={pathname === item.href}
+                  tooltip={{ children: item.label }}
+                >
+                  <Link href={item.href}>
+                    <item.icon />
+                    <span>{item.label}</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            ))}
+          </SidebarMenu>
+        </SidebarContent>
+      </Sidebar>
+      <SidebarInset>
+        <Header />
+        <main className="flex-1 overflow-auto p-4 md:p-6 lg:p-8">
+            {children}
+        </main>
+      </SidebarInset>
+    </SidebarProvider>
+  );
+}
