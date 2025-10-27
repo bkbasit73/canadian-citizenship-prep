@@ -46,8 +46,8 @@ export function AppLayout({ children }: AppLayoutProps) {
       >
         <SidebarHeader className="p-4">
           <Link href="/" className="flex items-center gap-3 text-sidebar-foreground">
-             <CanadianFlagIcon className="size-10 shrink-0" />
-             <span className="text-lg font-bold">Citizenship Challenge</span>
+             <CanadianFlagIcon className="size-12 shrink-0" />
+             <span className="text-base font-bold">Citizenship Challenge</span>
           </Link>
         </SidebarHeader>
         <SidebarContent>
