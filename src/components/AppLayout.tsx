@@ -10,7 +10,7 @@ import {
     BookOpen,
     Gamepad2
 } from 'lucide-react';
-
+import { MapleLeafIcon } from './icons/MapleLeafIcon';
 import {
   Sidebar,
   SidebarContent,
@@ -46,6 +46,7 @@ export function AppLayout({ children }: AppLayoutProps) {
       >
         <SidebarHeader className="p-4">
           <Link href="/" className="flex items-center gap-3 text-sidebar-foreground">
+             <MapleLeafIcon className="h-8 w-8 text-red-500" />
              <span className="text-xl font-bold">Citizenship Challenge</span>
           </Link>
         </SidebarHeader>

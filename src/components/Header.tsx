@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { SidebarTrigger } from './ui/sidebar';
 import { RealTimeClock } from './RealTimeClock';
-import { CanadianFlagIcon } from './icons/CanadianFlagIcon';
+import { MapleLeafIcon } from './icons/MapleLeafIcon';
 
 export function Header() {
   return (
