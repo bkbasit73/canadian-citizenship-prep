@@ -68,7 +68,7 @@ export function AppLayoutClient() {
         <SidebarFooter>
           <SidebarSeparator />
            <div className="p-2 flex flex-col gap-2">
-             <Button asChild variant="outline" className="justify-start group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:size-8 group-data-[collapsible=icon]:p-0">
+             <Button asChild variant="default" className="justify-start group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:size-8 group-data-[collapsible=icon]:p-0">
                 <Link href="https://terryfox.org/donate/" target="_blank" rel="noopener noreferrer">
                     <HeartHandshake className="group-data-[collapsible=icon]:size-4"/>
                     <span className="group-data-[collapsible=icon]:hidden">Donate</span>
