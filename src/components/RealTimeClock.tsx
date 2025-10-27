@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { cn } from '@/lib/utils';
 
 export function RealTimeClock() {
   const [time, setTime] = useState<string | null>(null);
@@ -24,8 +25,10 @@ export function RealTimeClock() {
   }
 
   return (
-    <div className="hidden sm:block text-sm font-medium text-muted-foreground">
-      {time}
+    <div className="hidden sm:flex items-center justify-center bg-card/50 text-card-foreground/80 px-4 py-1.5 rounded-md border">
+        <span className="font-mono text-sm font-semibold tracking-wider">
+            {time}
+        </span>
     </div>
   );
 }
