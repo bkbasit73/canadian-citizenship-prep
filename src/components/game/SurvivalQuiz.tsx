@@ -32,6 +32,11 @@ export function SurvivalQuiz({ questions: allQuestions }: SurvivalQuizProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [score, setScore] = useState(0);
   const [numQuestions, setNumQuestions] = useState(0);
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   const currentQuestion = useMemo(() => shuffledQuestions[currentQuestionIndex], [shuffledQuestions, currentQuestionIndex]);
 
@@ -83,6 +88,26 @@ export function SurvivalQuiz({ questions: allQuestions }: SurvivalQuizProps) {
     setQuizState('not-started');
     setNumQuestions(0);
   };
+  
+  if (!hasMounted) {
+      return (
+          <Card className="max-w-2xl mx-auto text-center">
+            <CardHeader>
+                <Skeleton className="h-8 w-1/2 mx-auto mb-2" />
+            </CardHeader>
+            <CardContent>
+                <Skeleton className="h-6 w-3/4 mx-auto mb-6" />
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    <Skeleton className="h-12 w-full" />
+                    <Skeleton className="h-12 w-full" />
+                    <Skeleton className="h-12 w-full" />
+                    <Skeleton className="h-12 w-full" />
+                    <Skeleton className="h-12 w-full" />
+                </div>
+            </CardContent>
+          </Card>
+      )
+  }
 
   if (quizState === 'not-started') {
     return (

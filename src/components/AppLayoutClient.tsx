@@ -7,7 +7,8 @@ import {
     Home,
     ClipboardList,
     BookOpen,
-    Gamepad2
+    Gamepad2,
+    FileText
 } from 'lucide-react';
 import { MapleLeafIcon } from './icons/MapleLeafIcon';
 import {
@@ -26,7 +27,8 @@ export function AppLayoutClient() {
     { href: '/', label: 'Dashboard', icon: Home },
     { href: '/practice', label: 'Timed Challenge', icon: ClipboardList },
     { href: '/study', label: 'Study Mode', icon: BookOpen },
-    { href: '/game', label: 'Game', icon: Gamepad2 },
+    { href: '/game', label: 'Survival Mode', icon: Gamepad2 },
+    { href: '/demo-test', label: 'Official Practice Test', icon: FileText },
   ];
 
   return (
