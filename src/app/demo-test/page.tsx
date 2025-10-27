@@ -15,7 +15,7 @@ export default function DemoTestPage() {
               Official Practice Test
             </h1>
             <p className="text-muted-foreground">
-              Simulates the real test: 20 questions, 30 minutes, 15 correct answers to pass.
+              Simulates the real test: 20 questions, 45 minutes, 15 correct answers to pass.
             </p>
           </div>
           <DemoTest allQuestions={allQuestions} />

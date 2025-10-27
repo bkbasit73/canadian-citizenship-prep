@@ -17,7 +17,7 @@ interface DemoTestProps {
   allQuestions: Question[];
 }
 
-const TEST_DURATION_MINUTES = 30;
+const TEST_DURATION_MINUTES = 45;
 const TEST_QUESTION_COUNT = 20;
 const PASSING_SCORE = 15;
 
