@@ -33,8 +33,8 @@ export function AppLayout({ children }: AppLayoutProps) {
   const menuItems = [
     { href: '/', label: 'Dashboard', icon: Home },
     { href: '/practice', label: 'Timed Challenge', icon: ClipboardList },
-    { href: '/game', label: 'Game', icon: Gamepad2 },
     { href: '/study', label: 'Study Mode', icon: BookOpen },
+    { href: '/game', label: 'Game', icon: Gamepad2 },
   ];
 
   return (
