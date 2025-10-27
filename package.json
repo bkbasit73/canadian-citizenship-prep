@@ -1,7 +1,8 @@
 {
-  "name": "nextn",
+  "name": "canadian-citizenship-challenge",
   "version": "0.1.0",
   "private": true,
+  "description": "An interactive learning app to help users prepare for the Canadian Citizenship Test.",
   "scripts": {
     "dev": "next dev --turbopack -p 9002",
     "genkit:dev": "genkit start -- tsx src/ai/dev.ts",

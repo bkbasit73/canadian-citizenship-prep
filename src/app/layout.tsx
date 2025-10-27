@@ -6,7 +6,7 @@ import { FirebaseClientProvider } from '@/firebase';
 import { AnonymousSignIn } from '@/components/auth/AnonymousSignIn';
 
 export const metadata: Metadata = {
-  title: 'Best Citizenship Learning Game',
+  title: 'Canadian Citizenship Challenge Game',
   description: 'Prepare for the Canadian Citizenship Test with interactive quizzes, study materials, and performance tracking.',
 };
 

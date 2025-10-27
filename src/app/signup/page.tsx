@@ -40,7 +40,7 @@ export default function SignupPage() {
           <Link href="/" className="flex items-center gap-3 text-foreground">
             <MapleLeafIcon className="h-10 w-10 text-primary" />
             <span className="text-3xl font-bold tracking-tighter">
-              Citizenship Learning Game
+              Canadian Citizenship Challenge
             </span>
           </Link>
           <p className="mt-4 text-lg text-muted-foreground max-w-xl">

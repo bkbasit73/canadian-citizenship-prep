@@ -32,7 +32,7 @@ export function AppLayout({ children }: AppLayoutProps) {
 
   const menuItems = [
     { href: '/', label: 'Dashboard', icon: Home },
-    { href: '/practice', label: 'Challenge Mode', icon: ClipboardList },
+    { href: '/practice', label: 'Timed Challenge', icon: ClipboardList },
     { href: '/game', label: 'Game', icon: Gamepad2 },
     { href: '/study', label: 'Study Mode', icon: BookOpen },
   ];
@@ -47,7 +47,7 @@ export function AppLayout({ children }: AppLayoutProps) {
         <SidebarHeader className="p-4">
           <Link href="/" className="flex items-center gap-3 text-sidebar-foreground">
              <CanadianFlagIcon className="size-10 shrink-0" />
-             <span className="text-lg font-bold">Citizenship Game</span>
+             <span className="text-lg font-bold">Citizenship Challenge</span>
           </Link>
         </SidebarHeader>
         <SidebarContent>
