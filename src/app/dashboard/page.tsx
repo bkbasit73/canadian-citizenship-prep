@@ -3,6 +3,8 @@ import { PerformanceChart } from '@/components/dashboard/PerformanceChart';
 import { SmartTips } from '@/components/dashboard/SmartTips';
 import { mockUserPerformance } from '@/lib/data';
 import { AppLayout } from '@/components/AppLayout';
+import { RealTimeClock } from '@/components/dashboard/RealTimeClock';
+import { WeatherWidget } from '@/components/dashboard/WeatherWidget';
 
 export default function DashboardPage() {
   const { totalCorrect, totalAnswered } = mockUserPerformance;
@@ -12,9 +14,15 @@ export default function DashboardPage() {
     <AppLayout>
       <div className="max-w-4xl mx-auto w-full">
         <div className="flex flex-col gap-8">
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight">Welcome back!</h1>
-            <p className="text-muted-foreground">Here&apos;s a summary of your progress. Keep up the great work!</p>
+          <div className="flex justify-between items-start">
+            <div>
+              <h1 className="text-3xl font-bold tracking-tight">Welcome back!</h1>
+              <p className="text-muted-foreground">Here&apos;s a summary of your progress. Keep up the great work!</p>
+            </div>
+            <div className="hidden md:flex items-center gap-4">
+              <WeatherWidget />
+              <RealTimeClock />
+            </div>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
