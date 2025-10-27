@@ -37,7 +37,12 @@ export default function StudyPage() {
             {categories.map((category) => (
               <AccordionItem key={category} value={category}>
                 <AccordionTrigger className="text-2xl font-bold py-6">
-                  {category}
+                  <div className="flex items-center gap-4">
+                    <span>{category}</span>
+                    <span className="text-base font-medium text-muted-foreground">
+                      ({questionsByCategory[category].length} questions)
+                    </span>
+                  </div>
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
