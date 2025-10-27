@@ -12,7 +12,10 @@ export default function SignupPage() {
        <div className="flex items-center justify-center py-12">
         <div className="mx-auto grid w-[350px] gap-6">
           <div className="grid gap-2 text-center">
-            <h1 className="text-3xl font-bold">Sign Up</h1>
+            <div className="flex justify-center items-center gap-2">
+                <MapleLeafIcon className="h-8 w-8 text-red-500" />
+                <h1 className="text-3xl font-bold">Sign Up</h1>
+            </div>
             <p className="text-balance text-muted-foreground">
               Create an account to start your journey
             </p>
