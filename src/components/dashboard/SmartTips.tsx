@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Lightbulb } from 'lucide-react';
-
+import type { UserPerformance } from '@/lib/types';
 import {
   Card,
   CardContent,
@@ -14,7 +14,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { getPersonalizedStudyTips, PersonalizedStudyTipsInput, PersonalizedStudyTipsOutput } from '@/ai/flows/personalized-study-tips';
 
 interface SmartTipsProps {
-  performanceData: PersonalizedStudyTipsInput;
+  performanceData: UserPerformance;
 }
 
 export function SmartTips({ performanceData }: SmartTipsProps) {
@@ -26,7 +26,7 @@ export function SmartTips({ performanceData }: SmartTipsProps) {
     async function fetchTips() {
       try {
         setLoading(true);
-        const input = {
+        const input: PersonalizedStudyTipsInput = {
           userId: performanceData.userId,
           totalCorrectAnswers: performanceData.totalCorrect,
           totalQuestionsAnswered: performanceData.totalAnswered,

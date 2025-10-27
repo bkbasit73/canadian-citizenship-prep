@@ -29,12 +29,14 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   const currentQuestion = useMemo(() => questions[currentQuestionIndex], [questions, currentQuestionIndex]);
 
   useEffect(() => {
     if (quizState === 'in-progress') {
         setQuestions(shuffleArray(allQuestions).slice(0, 10)); // Take 10 random questions
+        setLoading(false);
     }
   }, [quizState, allQuestions]);
 
@@ -104,14 +106,14 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
     );
   }
 
-  if (!currentQuestion) {
+  if (loading || !currentQuestion) {
     return (
         <Card className="max-w-2xl mx-auto">
             <CardHeader>
                 <Skeleton className="h-8 w-1/2 mb-2" />
                 <Skeleton className="h-4 w-full" />
             </CardHeader>
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-6 pt-6">
                 <Skeleton className="h-6 w-3/4" />
                 <div className="space-y-4">
                     <Skeleton className="h-12 w-full" />
