@@ -1,9 +1,8 @@
-import { CheckCircle, Target, Percent } from 'lucide-react';
-import { AppLayout } from '@/components/AppLayout';
 import { StatCard } from '@/components/dashboard/StatCard';
 import { PerformanceChart } from '@/components/dashboard/PerformanceChart';
 import { SmartTips } from '@/components/dashboard/SmartTips';
 import { mockUserPerformance } from '@/lib/data';
+import { AppLayout } from '@/components/AppLayout';
 
 export default function DashboardPage() {
   const { totalCorrect, totalAnswered } = mockUserPerformance;
@@ -22,19 +21,16 @@ export default function DashboardPage() {
               <StatCard
                   title="Total Correct Answers"
                   value={totalCorrect.toString()}
-                  icon={CheckCircle}
                   description="Your all-time correct answers"
               />
               <StatCard
                   title="Total Questions Answered"
                   value={totalAnswered.toString()}
-                  icon={Target}
                   description="Total questions you've attempted"
               />
               <StatCard
                   title="Overall Accuracy"
                   value={`${accuracy}%`}
-                  icon={Percent}
                   description="Your overall answering accuracy"
               />
           </div>
