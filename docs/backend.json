@@ -1,0 +1,130 @@
+{
+  "entities": {
+    "Question": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Question",
+      "type": "object",
+      "description": "Represents a question from the Canadian citizenship test.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the question."
+        },
+        "text": {
+          "type": "string",
+          "description": "The text of the question."
+        },
+        "answers": {
+          "type": "array",
+          "description": "Array of possible answers.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "correctAnswerIndex": {
+          "type": "number",
+          "description": "Index of the correct answer in the answers array."
+        },
+        "category": {
+          "type": "string",
+          "description": "Category of the question (e.g., History, Government, Rights & Freedoms, Geography, Symbols)."
+        },
+        "explanation": {
+          "type": "string",
+          "description": "Explanation of the correct answer."
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "answers",
+        "correctAnswerIndex",
+        "category",
+        "explanation"
+      ]
+    },
+    "QuizResult": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "QuizResult",
+      "type": "object",
+      "description": "Represents the result of a quiz taken by a user.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the quiz result."
+        },
+        "questionId": {
+          "type": "string",
+          "description": "Reference to the Question. (Relationship: Question 1:N QuizResult)"
+        },
+        "userAnswerIndex": {
+          "type": "number",
+          "description": "Index of the answer chosen by the user."
+        },
+        "isCorrect": {
+          "type": "boolean",
+          "description": "Indicates whether the user's answer was correct."
+        },
+        "timestamp": {
+          "type": "string",
+          "description": "Timestamp of when the question was answered.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "questionId",
+        "userAnswerIndex",
+        "isCorrect",
+        "timestamp"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/questions/{questionId}",
+        "definition": {
+          "entityName": "Question",
+          "schema": {
+            "$ref": "#/backend/entities/Question"
+          },
+          "description": "Stores the test questions. Open read access, write access restricted to admins (not implemented in this design).",
+          "params": [
+            {
+              "name": "questionId",
+              "description": "Unique identifier for the question."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/quiz_results/{quizResultId}",
+        "definition": {
+          "entityName": "QuizResult",
+          "schema": {
+            "$ref": "#/backend/entities/QuizResult"
+          },
+          "description": "Stores quiz results for each user.  Path-based ownership ensures only the user can access their results. No denormalized fields are needed because authorization is implied from the path.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "Unique identifier for the user."
+            },
+            {
+              "name": "quizResultId",
+              "description": "Unique identifier for the quiz result."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "This design prioritizes security and scalability for the Canadian Citizenship Test Preparation App. It leverages path-based ownership for user-specific data and a flat structure for globally accessible data, enabling robust security rules without relying on complex `get()` calls. By avoiding hierarchical authorization dependencies, atomic operations are fully supported and debuggability is enhanced.\n\nAuthorization Independence is achieved through structural segregation. All QuizResult documents are located under the relevant user ID `/users/{userId}/quiz_results/{quizResultId}`. Thus all the information necessary to authorize access to the quiz results for a given user is available in the path. This obviates the need for any `get()` calls in the security rules to check the user's identity or role, enabling atomic operations and greater scalability.\n\nTo support QAPs, questions are stored in a top-level collection (`/questions`). Since the questions are the same for every user, this ensures that any `list` operations on questions do not return user-specific questions. Quiz results are scoped to the user."
+  }
+}
