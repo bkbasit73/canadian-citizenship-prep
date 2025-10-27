@@ -6,7 +6,7 @@ export type QuestionCategory =
   | 'Symbols';
 
 export type Question = {
-  id: number;
+  id: string; // Changed to string to match Firestore document ID
   question: string;
   options: string[];
   answer: string;

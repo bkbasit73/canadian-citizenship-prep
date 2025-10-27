@@ -1,82 +1,68 @@
 /**
- * @file Firestore Security Rules for the Canadian Citizenship Test Preparation App.
+ * @fileoverview Firestore Security Rules for the Canadian Citizenship Test Preparation App.
  *
  * Core Philosophy:
- * This ruleset prioritizes security and scalability by using path-based ownership for user-specific data
- * and open read access for globally accessible data (questions). It ensures that users can only access their own quiz results.
+ * This ruleset employs a hybrid security model:
+ *   - Public Read Access: The `/questions` collection is publicly readable, allowing all users to access test questions.
+ *   - User-Ownership: The `/users/{userId}/quiz_results` collection enforces strict user-ownership, ensuring only authenticated users can access their own quiz results.
  *
  * Data Structure:
- * - `/questions/{questionId}`: Stores the test questions, accessible to everyone for reading.
- * - `/users/{userId}/quiz_results/{quizResultId}`: Stores quiz results specific to each user.
+ * - `/questions/{questionId}`: Stores the test questions, accessible to all users.
+ * - `/users/{userId}/quiz_results/{quizResultId}`: Stores individual quiz results, accessible only to the user identified by `{userId}`.
  *
  * Key Security Decisions:
- * - Questions are publicly readable to avoid authentication requirements for study.
- * - Users can only read and write their own quiz results.
- * - Denormalization is not needed, because Authorization Independence is achieved through structural segregation, all QuizResult documents are located under the relevant user ID.
+ * - Questions are publicly readable to facilitate easy access for all users.
+ * - Quiz results are strictly user-owned, preventing unauthorized access to sensitive user data.
+ * - No listing of user documents is allowed to protect user privacy.
  *
- * Security Note:
- * - The rules currently do not implement admin-only write access to the `/questions` collection.
+ * Denormalization for Authorization:
+ * - Authorization is path-based for `/users/{userId}/quiz_results/{quizResultId}`, eliminating the need for denormalized data or `get()` calls. The user ID in the path is directly compared to the authenticated user's UID.
+ *
+ * Structural Segregation:
+ * - Questions and quiz results are stored in separate collections to optimize read access and enforce different security policies.
  */
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
     /**
-     * @description Allows public read access to questions, but restricts write access.
+     * @description Allows anyone to read questions, but restricts writes.
      * @path /questions/{questionId}
-     * @allow (get, list) Allows any user to read any question.
-     * @deny (create, update, delete) Denies any user (even authenticated ones) from creating, updating, or deleting a question.
-     * @principle Allows open access to questions while restricting modification.
+     * @allow (get, list)
+     * @deny (create, update, delete)
+     * @principle Allows public read access to questions while restricting write access.
      */
     match /questions/{questionId} {
-      allow get: if true;
-      allow list: if true;
-      allow create: if false;
-      allow update: if false;
-      allow delete: if false;
+      allow get, list: if true;
+      allow create, update, delete: if false;
     }
 
     /**
-     * @description Restricts access to quiz results to the owning user.
+     * @description Enforces strict user-ownership for quiz results. Only the authenticated user can access their own quiz results.
      * @path /users/{userId}/quiz_results/{quizResultId}
-     * @allow (create, get, list, update, delete) Allows the user with ID {userId} to create, get, list, update, and delete their own quiz results.
-     * @deny (create, get, list, update, delete) Denies any other user from accessing quiz results under the /users/{userId} path.
-     * @principle Enforces document ownership for all operations.
+     * @allow (create, get, list, update, delete) when the user is the owner.
+     * @deny (create, get, list, update, delete) when the user is not the owner.
+     * @principle Enforces document ownership based on the path.
      */
     match /users/{userId}/quiz_results/{quizResultId} {
       allow create: if isSignedIn() && isOwner(userId);
       allow get: if isSignedIn() && isOwner(userId);
       allow list: if isSignedIn() && isOwner(userId);
-      allow update: if isSignedIn() && isExistingOwner(userId);
+      allow update: if isSignedIn() && isOwner(userId) && resource != null;
       allow delete: if isSignedIn() && isExistingOwner(userId);
     }
 
-    // Helper functions
-
-    /**
-     * @description Checks if the request is authenticated.
-     * @return True if the request is authenticated, false otherwise.
-     */
+    // ---- Helper functions ----
     function isSignedIn() {
       return request.auth != null;
     }
 
-    /**
-     * @description Checks if the authenticated user ID matches the provided user ID.
-     * @param userId The user ID to compare against.
-     * @return True if the authenticated user ID matches the provided user ID, false otherwise.
-     */
     function isOwner(userId) {
       return request.auth.uid == userId;
     }
 
-    /**
-     * @description Checks if the authenticated user is the owner of an existing document.
-     * @param userId The user ID to compare against.
-     * @return True if the authenticated user is the owner and the document exists, false otherwise.
-     */
     function isExistingOwner(userId) {
-        return isOwner(userId) && resource != null;
+      return isSignedIn() && isOwner(userId) && resource != null;
     }
   }
 }
