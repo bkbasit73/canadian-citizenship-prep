@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { SignupForm } from '@/components/auth/SignupForm';
-import { MapleLeafIcon } from '@/components/icons/MapleLeafIcon';
+import { CanadianFlagIcon } from '@/components/icons/CanadianFlagIcon';
 
 export default function SignupPage() {
   const loginImage = PlaceHolderImages.find((img) => img.id === 'login-hero');
@@ -38,7 +38,7 @@ export default function SignupPage() {
          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
         <div className="absolute bottom-0 left-0 p-8">
           <Link href="/" className="flex items-center gap-3 text-foreground">
-            <MapleLeafIcon className="h-10 w-10 text-primary" />
+            <CanadianFlagIcon className="h-10 w-10" />
             <span className="text-3xl font-bold tracking-tighter">
               Canadian Citizenship Challenge
             </span>
