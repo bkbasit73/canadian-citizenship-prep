@@ -6,7 +6,8 @@ import { usePathname } from 'next/navigation';
 import {
     Home,
     ClipboardList,
-    BookOpen
+    BookOpen,
+    Gamepad2
 } from 'lucide-react';
 
 import {
@@ -32,6 +33,7 @@ export function AppLayout({ children }: AppLayoutProps) {
   const menuItems = [
     { href: '/', label: 'Dashboard', icon: Home },
     { href: '/practice', label: 'Challenge Mode', icon: ClipboardList },
+    { href: '/game', label: 'Game', icon: Gamepad2 },
     { href: '/study', label: 'Study Mode', icon: BookOpen },
   ];
 

@@ -11,14 +11,16 @@ export default function PracticePage() {
 
   return (
     <AppLayout>
-      <div className="flex flex-col gap-8">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight">Challenge Mode</h1>
-          <p className="text-muted-foreground">
-            Test your knowledge with a timed quiz. Choose your challenge!
-          </p>
+      <div className="max-w-5xl mx-auto w-full">
+        <div className="flex flex-col gap-8">
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight">Challenge Mode</h1>
+            <p className="text-muted-foreground">
+              Test your knowledge with a timed quiz. Choose your challenge!
+            </p>
+          </div>
+          <QuizClient allQuestions={allQuestions} />
         </div>
-        <QuizClient allQuestions={allQuestions} />
       </div>
     </AppLayout>
   );
