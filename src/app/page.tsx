@@ -1,4 +1,4 @@
-import { BarChart3, CheckCircle, Percent, Target } from 'lucide-react';
+import { CheckCircle, Target, Percent } from 'lucide-react';
 import { AppLayout } from '@/components/AppLayout';
 import { StatCard } from '@/components/dashboard/StatCard';
 import { PerformanceChart } from '@/components/dashboard/PerformanceChart';
@@ -43,8 +43,8 @@ export default function DashboardPage() {
               <div className="lg:col-span-2">
                   <PerformanceChart performanceData={mockUserPerformance.categoryPerformance} />
               </div>
-              <div>
-                  <SmartTips performanceData={mockUserPerformance} />
+              <div className="lg:col-span-1">
+                  <SmartTips />
               </div>
           </div>
         </div>
