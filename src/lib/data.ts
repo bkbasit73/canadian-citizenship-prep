@@ -1,5 +1,29 @@
 import type { Question, StudyTopic, UserPerformance, QuestionCategory } from '@/lib/types';
 
+export const categoryImages: Record<QuestionCategory, { imageUrl: string; imageHint: string }> = {
+  'History': {
+    imageUrl: 'https://picsum.photos/seed/history/400/250',
+    imageHint: 'historical document',
+  },
+  'Government': {
+    imageUrl: 'https://picsum.photos/seed/government/400/250',
+    imageHint: 'parliament building',
+  },
+  'Rights and Responsibilities': {
+    imageUrl: 'https://picsum.photos/seed/rights/400/250',
+    imageHint: 'charter document',
+  },
+  'Symbols': {
+    imageUrl: 'https://picsum.photos/seed/symbols/400/250',
+    imageHint: 'canadian flag',
+  },
+  'Geography': {
+    imageUrl: 'https://picsum.photos/seed/geography/400/250',
+    imageHint: 'rocky mountains',
+  },
+};
+
+
 export const mockQuestions: Question[] = [
   // Rights and Responsibilities
   {

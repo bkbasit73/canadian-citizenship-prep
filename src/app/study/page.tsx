@@ -1,24 +1,55 @@
 'use client';
 
 import { AppLayout } from '@/components/AppLayout';
-import { StudyGuide } from '@/components/study/StudyGuide';
-import { mockStudyTopics } from '@/lib/data';
-import type { StudyTopic } from '@/lib/types';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import { mockQuestions } from '@/lib/data';
+import type { Question, QuestionCategory } from '@/lib/types';
+import { QuestionCard } from '@/components/study/QuestionCard';
 
 export default function StudyPage() {
-  // Directly use the mock study topics from the data file
-  const topics: StudyTopic[] = mockStudyTopics;
+  const questionsByCategory = mockQuestions.reduce(
+    (acc, question) => {
+      if (!acc[question.category]) {
+        acc[question.category] = [];
+      }
+      acc[question.category].push(question);
+      return acc;
+    },
+    {} as Record<QuestionCategory, Question[]>
+  );
+
+  const categories = Object.keys(questionsByCategory) as QuestionCategory[];
 
   return (
     <AppLayout>
       <div className="flex flex-col gap-8">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Study Guide</h1>
+          <h1 className="text-3xl font-bold tracking-tight">Study Mode</h1>
           <p className="text-muted-foreground">
-            Explore key topics for the citizenship test. Click a card to flip it and learn more.
+            Review all questions by category. Click a question to see the answer.
           </p>
         </div>
-        <StudyGuide topics={topics} />
+        <Accordion type="single" collapsible className="w-full">
+          {categories.map((category) => (
+            <AccordionItem key={category} value={category}>
+              <AccordionTrigger className="text-xl font-semibold">
+                {category}
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-4">
+                  {questionsByCategory[category].map((question) => (
+                    <QuestionCard key={question.id} question={question} />
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </AppLayout>
   );
