@@ -9,7 +9,6 @@ export function Header() {
       <nav className="flex items-center gap-4">
         <Link href="/" className="flex items-center gap-2 font-semibold text-lg md:text-base">
           <CanadianFlagIcon className="h-7 w-7" />
-          <span className="hidden md:inline-block font-bold">Best Citizenship Learning Game</span>
         </Link>
         <SidebarTrigger className="md:hidden" />
       </nav>
