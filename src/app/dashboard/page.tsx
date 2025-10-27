@@ -3,8 +3,6 @@ import { PerformanceChart } from '@/components/dashboard/PerformanceChart';
 import { SmartTips } from '@/components/dashboard/SmartTips';
 import { mockUserPerformance } from '@/lib/data';
 import { AppLayout } from '@/components/AppLayout';
-import { RealTimeClock } from '@/components/dashboard/RealTimeClock';
-import { WeatherWidget } from '@/components/dashboard/WeatherWidget';
 
 export default function DashboardPage() {
   const { totalCorrect, totalAnswered } = mockUserPerformance;
@@ -18,10 +16,6 @@ export default function DashboardPage() {
             <div>
               <h1 className="text-3xl font-bold tracking-tight">Welcome back!</h1>
               <p className="text-muted-foreground">Here&apos;s a summary of your progress. Keep up the great work!</p>
-            </div>
-            <div className="hidden md:flex items-center gap-4">
-              <WeatherWidget />
-              <RealTimeClock />
             </div>
           </div>
 

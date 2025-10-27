@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SidebarTrigger } from './ui/sidebar';
 import { MapleLeafIcon } from './icons/MapleLeafIcon';
+import { RealTimeClock } from './dashboard/RealTimeClock';
 
 export function Header() {
   return (
@@ -13,6 +14,7 @@ export function Header() {
         <SidebarTrigger className="md:hidden" />
       </nav>
       <div className="ml-auto flex items-center gap-4">
+        <RealTimeClock />
       </div>
     </header>
   );
