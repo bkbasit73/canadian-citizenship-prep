@@ -18,9 +18,9 @@ export default function PracticePage() {
     <AppLayout>
       <div className="flex flex-col gap-8">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Practice Quiz</h1>
+          <h1 className="text-3xl font-bold tracking-tight">Challenge Mode</h1>
           <p className="text-muted-foreground">
-            Test your knowledge with randomized questions from Firestore.
+            Test your knowledge with a timed quiz. Choose your challenge!
           </p>
         </div>
         {isLoading || !questions ? (

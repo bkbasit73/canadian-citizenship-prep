@@ -31,8 +31,8 @@ export function AppLayout({ children }: AppLayoutProps) {
 
   const menuItems = [
     { href: '/', label: 'Dashboard', icon: Home },
-    { href: '/practice', label: 'Practice Quiz', icon: ClipboardList },
-    { href: '/study', label: 'Study Guide', icon: BookOpen },
+    { href: '/practice', label: 'Challenge Mode', icon: ClipboardList },
+    { href: '/study', label: 'Study Mode', icon: BookOpen },
   ];
 
   return (
@@ -45,7 +45,7 @@ export function AppLayout({ children }: AppLayoutProps) {
         <SidebarHeader className="p-4">
           <Link href="/" className="flex items-center gap-3 text-sidebar-foreground">
              <CanadianFlagIcon className="size-10 shrink-0" />
-             <span className="text-lg font-bold">Citizenship Test</span>
+             <span className="text-lg font-bold">Citizenship Challenge</span>
           </Link>
         </SidebarHeader>
         <SidebarContent>

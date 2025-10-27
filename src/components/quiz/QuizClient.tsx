@@ -22,30 +22,38 @@ const shuffleArray = <T,>(array: T[]): T[] => {
   return [...array].sort(() => Math.random() - 0.5);
 };
 
+const CHALLENGE_LEVELS = [20, 40, 60, 100, 200];
+
 export function QuizClient({ allQuestions }: QuizClientProps) {
   const [quizState, setQuizState] = useState<QuizState>('not-started');
   const [questions, setQuestions] = useState<Question[]>([]);
+  const [numQuestions, setNumQuestions] = useState(0);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
-  const [loading, setLoading] = useState(true);
 
   const currentQuestion = useMemo(() => questions[currentQuestionIndex], [questions, currentQuestionIndex]);
 
   useEffect(() => {
-    if (quizState === 'in-progress') {
-        setQuestions(shuffleArray(allQuestions).slice(0, 10)); // Take 10 random questions
-        setLoading(false);
+    if (quizState === 'in-progress' && numQuestions > 0) {
+      setQuestions(shuffleArray(allQuestions).slice(0, numQuestions));
+      setCurrentQuestionIndex(0);
+      setScore(0);
+      setIsAnswered(false);
+      setSelectedAnswer(null);
     }
-  }, [quizState, allQuestions]);
+  }, [quizState, allQuestions, numQuestions]);
 
-  const handleStartQuiz = () => {
+  const handleStartQuiz = (level: number) => {
+    const questionCount = Math.min(level, allQuestions.length);
+    setNumQuestions(questionCount);
     setQuizState('in-progress');
-    setCurrentQuestionIndex(0);
-    setScore(0);
-    setIsAnswered(false);
-    setSelectedAnswer(null);
+  };
+
+  const handleRestart = () => {
+    setQuizState('not-started');
+    setNumQuestions(0);
   };
 
   const handleAnswerSubmit = () => {
@@ -70,14 +78,18 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
     return (
       <Card className="max-w-2xl mx-auto text-center">
         <CardHeader>
-          <CardTitle>Ready to Test Your Knowledge?</CardTitle>
+          <CardTitle>Choose Your Challenge</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-muted-foreground">You&apos;ll face 10 random questions from the official study guide.</p>
+          <p className="text-muted-foreground mb-6">Select the number of questions for your quiz.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {CHALLENGE_LEVELS.map((level) => (
+                <Button key={level} variant="outline" size="lg" onClick={() => handleStartQuiz(level)} disabled={level > allQuestions.length}>
+                    {level} Questions
+                </Button>
+            ))}
+          </div>
         </CardContent>
-        <CardFooter className="justify-center">
-          <Button onClick={handleStartQuiz}>Start Quiz</Button>
-        </CardFooter>
       </Card>
     );
   }
@@ -87,7 +99,7 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
     return (
       <Card className="max-w-2xl mx-auto text-center">
         <CardHeader>
-          <CardTitle>Quiz Complete!</CardTitle>
+          <CardTitle>Challenge Complete!</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="text-lg">You scored</p>
@@ -97,35 +109,35 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
           </p>
         </CardContent>
         <CardFooter className="justify-center">
-          <Button onClick={handleStartQuiz}>
+          <Button onClick={handleRestart}>
             <RefreshCw className="mr-2 h-4 w-4"/>
-            Try Again
+            New Challenge
           </Button>
         </CardFooter>
       </Card>
     );
   }
 
-  if (loading || !currentQuestion) {
+  if (!currentQuestion) {
     return (
-        <Card className="max-w-2xl mx-auto">
+        <Card className="max-w-2xl mx-auto w-full">
             <CardHeader>
-                <Skeleton className="h-8 w-1/2 mb-2" />
-                <Skeleton className="h-4 w-full" />
+              <Skeleton className="h-8 w-1/2 mb-2" />
+              <Skeleton className="h-4 w-full" />
             </CardHeader>
             <CardContent className="space-y-6 pt-6">
-                <Skeleton className="h-6 w-3/4" />
-                <div className="space-y-4">
-                    <Skeleton className="h-12 w-full" />
-                    <Skeleton className="h-12 w-full" />
-                    <Skeleton className="h-12 w-full" />
-                    <Skeleton className="h-12 w-full" />
-                </div>
+              <Skeleton className="h-6 w-3/4" />
+              <div className="space-y-4">
+                <Skeleton className="h-12 w-full" />
+                <Skeleton className="h-12 w-full" />
+                <Skeleton className="h-12 w-full" />
+                <Skeleton className="h-12 w-full" />
+              </div>
             </CardContent>
             <CardFooter>
-                <Skeleton className="h-10 w-28 ml-auto" />
+              <Skeleton className="h-10 w-28 ml-auto" />
             </CardFooter>
-        </Card>
+          </Card>
     )
   }
 

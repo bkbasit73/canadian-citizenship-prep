@@ -5,47 +5,57 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Card, CardContent } from '@/components/ui/card';
-import type { StudyTopic, QuestionCategory } from '@/lib/types';
-import Image from 'next/image';
+import type { Question, QuestionCategory } from '@/lib/types';
+import { Badge } from '../ui/badge';
 
 interface StudyGuideProps {
-  topics: StudyTopic[];
+  questions: Question[];
 }
 
-export function StudyGuide({ topics }: StudyGuideProps) {
-  const groupedTopics = topics.reduce((acc, topic) => {
-    (acc[topic.category] = acc[topic.category] || []).push(topic);
+export function StudyGuide({ questions }: StudyGuideProps) {
+  const groupedQuestions = questions.reduce((acc, question) => {
+    const category = question.category;
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(question);
     return acc;
-  }, {} as Record<QuestionCategory, StudyTopic[]>);
+  }, {} as Record<QuestionCategory, Question[]>);
 
   return (
     <Card>
       <CardContent className="p-0">
         <Accordion type="single" collapsible className="w-full">
-          {Object.entries(groupedTopics).map(([category, categoryTopics]) => (
+          {Object.entries(groupedQuestions).map(([category, categoryQuestions]) => (
             <AccordionItem value={category} key={category}>
               <AccordionTrigger className="px-6 text-lg font-semibold hover:no-underline">
-                {category}
+                <div className="flex items-center gap-4">
+                  <span>{category}</span>
+                  <Badge variant="secondary">{categoryQuestions.length} Questions</Badge>
+                </div>
               </AccordionTrigger>
               <AccordionContent className="px-6">
                 <div className="space-y-6">
-                  {categoryTopics.map((topic) => (
-                    <div key={topic.id} className="grid md:grid-cols-3 gap-6 items-start">
-                       {topic.imageUrl && (
-                        <div className="md:col-span-1">
-                           <Image
-                            src={topic.imageUrl}
-                            alt={topic.title}
-                            width={400}
-                            height={250}
-                            className="rounded-lg object-cover w-full aspect-video"
-                            data-ai-hint={topic.imageHint}
-                          />
-                        </div>
-                      )}
-                      <div className={topic.imageUrl ? 'md:col-span-2' : 'md:col-span-3'}>
-                        <h3 className="font-bold text-md mb-1">{topic.title}</h3>
-                        <p className="text-muted-foreground text-sm leading-relaxed">{topic.content}</p>
+                  {categoryQuestions.map((question) => (
+                    <div key={question.id} className="p-4 border rounded-lg bg-muted/50">
+                      <p className="font-bold text-md mb-2">{question.question}</p>
+                      <ul className="space-y-1 list-disc list-inside mb-3 text-sm">
+                        {question.options.map((option, index) => (
+                          <li
+                            key={index}
+                            className={
+                              option === question.answer
+                                ? 'font-semibold text-green-700'
+                                : 'text-muted-foreground'
+                            }
+                          >
+                            {option}
+                          </li>
+                        ))}
+                      </ul>
+                      <div>
+                         <p className="font-semibold text-sm">Explanation:</p>
+                         <p className="text-muted-foreground text-sm leading-relaxed">{question.explanation}</p>
                       </div>
                     </div>
                   ))}
