@@ -33,6 +33,8 @@ export const mockQuestions: Question[] = [
     answer: 'English and French',
     category: 'Symbols',
     explanation: 'Canada has two official languages: English and French. All federal government services must be available in both languages.',
+    imageUrl: 'https://picsum.photos/seed/q1/600/400',
+    imageHint: 'language flags',
   },
   {
     id: 2,
@@ -41,6 +43,8 @@ export const mockQuestions: Question[] = [
     answer: 'The reigning Sovereign of the United Kingdom',
     category: 'Government',
     explanation: 'As a constitutional monarchy, Canada’s Head of State is a hereditary Sovereign (Queen or King) who reigns in accordance with the Constitution.',
+    imageUrl: 'https://picsum.photos/seed/q2/600/400',
+    imageHint: 'royal crown',
   },
   {
     id: 3,
@@ -49,6 +53,8 @@ export const mockQuestions: Question[] = [
     answer: 'The Victoria Cross',
     category: 'Symbols',
     explanation: 'The Victoria Cross is the highest military decoration awarded for valour "in the face of the enemy" to members of the armed forces of Commonwealth countries.',
+    imageUrl: 'https://picsum.photos/seed/q3/600/400',
+    imageHint: 'military medal',
   },
   {
     id: 4,
@@ -57,6 +63,8 @@ export const mockQuestions: Question[] = [
     answer: '1867',
     category: 'History',
     explanation: 'On July 1, 1867, the provinces of Canada, Nova Scotia, and New Brunswick were united into a federal state, the Dominion of Canada.',
+    imageUrl: 'https://picsum.photos/seed/q4/600/400',
+    imageHint: 'vintage map',
   },
   {
     id: 5,
@@ -65,6 +73,8 @@ export const mockQuestions: Question[] = [
     answer: 'To vote in elections',
     category: 'Rights and Responsibilities',
     explanation: 'Voting in federal, provincial or territorial, and local elections is a key responsibility of every Canadian citizen.',
+    imageUrl: 'https://picsum.photos/seed/q5/600/400',
+    imageHint: 'ballot box',
   },
   {
     id: 6,
@@ -73,6 +83,8 @@ export const mockQuestions: Question[] = [
     answer: 'Pacific Ocean',
     category: 'Geography',
     explanation: 'The Pacific Ocean borders Canada to the west, the Atlantic Ocean to the east, and the Arctic Ocean to the north.',
+    imageUrl: 'https://picsum.photos/seed/q6/600/400',
+    imageHint: 'ocean coast',
   },
   {
     id: 7,
@@ -81,6 +93,8 @@ export const mockQuestions: Question[] = [
     answer: 'They all pass laws, have an elected body, and a leader',
     category: 'Government',
     explanation: 'The federal, provincial/territorial, and municipal governments each have specific powers and responsibilities, but they share a similar structure of passing laws, having an elected body (like Parliament or a city council), and a leader (like a Prime Minister or Mayor).',
+    imageUrl: 'https://picsum.photos/seed/q7/600/400',
+    imageHint: 'government building',
   },
   {
     id: 8,
@@ -89,6 +103,8 @@ export const mockQuestions: Question[] = [
     answer: 'People who remained loyal to the British Crown during the American Revolution',
     category: 'History',
     explanation: 'The United Empire Loyalists were American colonists who remained loyal to the British Crown and fled to British North America during and after the American Revolutionary War.',
+    imageUrl: 'https://picsum.photos/seed/q8/600/400',
+    imageHint: 'historic flag',
   },
   {
     id: 9,
@@ -96,7 +112,9 @@ export const mockQuestions: Question[] = [
     options: ["O Canada", "God Save the Queen (or King)", "The Maple Leaf Forever", "Star-Spangled Banner"],
     answer: "God Save the Queen (or King)",
     category: "Symbols",
-    explanation: "'God Save the Queen (or King)' is the Royal Anthem of Canada. 'O Canada' is the national anthem."
+    explanation: "'God Save the Queen (or King)' is the Royal Anthem of Canada. 'O Canada' is the national anthem.",
+    imageUrl: 'https://picsum.photos/seed/q9/600/400',
+    imageHint: 'royal crown',
   },
   {
     id: 10,
@@ -104,7 +122,9 @@ export const mockQuestions: Question[] = [
     options: ["Quebec", "Ontario", "New Brunswick", "Manitoba"],
     answer: "New Brunswick",
     category: "Geography",
-    explanation: "New Brunswick is the only province that is constitutionally bilingual (English and French)."
+    explanation: "New Brunswick is the only province that is constitutionally bilingual (English and French).",
+    imageUrl: 'https://picsum.photos/seed/q10/600/400',
+    imageHint: 'provincial flag',
   },
   {
     id: 11,
@@ -112,7 +132,9 @@ export const mockQuestions: Question[] = [
     options: ["First Nations, Métis, and Inuit", "Acadians, Métis, and Inuit", "First Nations, Acadians, and Loyalists", "Inuit, Métis, and Settlers"],
     answer: "First Nations, Métis, and Inuit",
     category: "History",
-    explanation: "The Canadian Constitution recognizes three main groups of Aboriginal peoples: First Nations (sometimes called Indians), Métis, and Inuit."
+    explanation: "The Canadian Constitution recognizes three main groups of Aboriginal peoples: First Nations (sometimes called Indians), Métis, and Inuit.",
+    imageUrl: 'https://picsum.photos/seed/q11/600/400',
+    imageHint: 'indigenous art',
   },
   {
     id: 12,
@@ -120,7 +142,9 @@ export const mockQuestions: Question[] = [
     options: ["July 1st", "May 24th", "June 24th", "December 26th"],
     answer: "July 1st",
     category: "History",
-    explanation: "Canada Day is celebrated on July 1st, the anniversary of Confederation in 1867."
+    explanation: "Canada Day is celebrated on July 1st, the anniversary of Confederation in 1867.",
+    imageUrl: 'https://picsum.photos/seed/q12/600/400',
+    imageHint: 'fireworks celebration',
   },
   {
     id: 13,
@@ -128,7 +152,9 @@ export const mockQuestions: Question[] = [
     options: ["1982", "1867", "1960", "2000"],
     answer: "1982",
     category: "Rights and Responsibilities",
-    explanation: "The Canadian Charter of Rights and Freedoms was added to the Constitution in 1982 by Prime Minister Pierre Elliott Trudeau."
+    explanation: "The Canadian Charter of Rights and Freedoms was added to the Constitution in 1982 by Prime Minister Pierre Elliott Trudeau.",
+    imageUrl: 'https://picsum.photos/seed/q13/600/400',
+    imageHint: 'constitution document',
   },
   {
     id: 14,
@@ -136,7 +162,9 @@ export const mockQuestions: Question[] = [
     options: ["A political party", "A geographical area represented by a Member of Parliament", "A government department", "A type of tax"],
     answer: "A geographical area represented by a Member of Parliament",
     category: "Government",
-    explanation: "A riding, also known as a constituency or electoral district, is a geographical area represented by an elected Member of Parliament (MP)."
+    explanation: "A riding, also known as a constituency or electoral district, is a geographical area represented by an elected Member of Parliament (MP).",
+    imageUrl: 'https://picsum.photos/seed/q14/600/400',
+    imageHint: 'parliament hill',
   },
   {
     id: 15,
@@ -144,7 +172,9 @@ export const mockQuestions: Question[] = [
     options: ["The Beaver", "The Moose", "The Canada Goose", "The Polar Bear"],
     answer: "The Beaver",
     category: "Symbols",
-    explanation: "The beaver was adopted as an official symbol of Canada in 1975. It represents the fur trade, which was a major economic driver in early Canadian history."
+    explanation: "The beaver was adopted as an official symbol of Canada in 1975. It represents the fur trade, which was a major economic driver in early Canadian history.",
+    imageUrl: 'https://picsum.photos/seed/q15/600/400',
+    imageHint: 'beaver animal',
   },
   {
     id: 16,
@@ -152,7 +182,9 @@ export const mockQuestions: Question[] = [
     options: ["Yukon, Northwest Territories, and Nunavut", "Yukon, Alberta, and Nunavut", "Northwest Territories, British Columbia, and Yukon", "Nunavut, Alaska, and Yukon"],
     answer: "Yukon, Northwest Territories, and Nunavut",
     category: "Geography",
-    explanation: "Canada has three territories in the north: Yukon, Northwest Territories, and Nunavut."
+    explanation: "Canada has three territories in the north: Yukon, Northwest Territories, and Nunavut.",
+    imageUrl: 'https://picsum.photos/seed/q16/600/400',
+    imageHint: 'northern lights',
   },
   {
     id: 17,
@@ -160,7 +192,9 @@ export const mockQuestions: Question[] = [
     options: ["Any resident of Canada", "A Canadian citizen, at least 18 years old, on the voters' list", "Landowners only", "Members of the military only"],
     answer: "A Canadian citizen, at least 18 years old, on the voters' list",
     category: "Rights and Responsibilities",
-    explanation: "To vote in a federal election, you must be a Canadian citizen, be at least 18 years old on election day, and be on the voters' list."
+    explanation: "To vote in a federal election, you must be a Canadian citizen, be at least 18 years old on election day, and be on the voters' list.",
+    imageUrl: 'https://picsum.photos/seed/q17/600/400',
+    imageHint: 'voting ballot',
   },
   {
     id: 18,
@@ -168,7 +202,9 @@ export const mockQuestions: Question[] = [
     options: ["Britain and France", "Spain and Portugal", "Britain and Spain", "France and Germany"],
     answer: "Britain and France",
     category: "History",
-    explanation: "Throughout the 1700s, Britain and France were the main European powers competing for control of territory in North America, culminating in the Seven Years' War."
+    explanation: "Throughout the 1700s, Britain and France were the main European powers competing for control of territory in North America, culminating in the Seven Years' War.",
+    imageUrl: 'https://picsum.photos/seed/q18/600/400',
+    imageHint: 'historic battle',
   },
   {
     id: 19,
@@ -176,7 +212,9 @@ export const mockQuestions: Question[] = [
     options: ["To agree with everything the government says", "To peacefully oppose or try to improve government proposals", "To run the government", "To appoint judges"],
     answer: "To peacefully oppose or try to improve government proposals",
     category: "Government",
-    explanation: "The role of opposition parties is to oppose the government's decisions, hold it accountable, and offer different proposals for consideration."
+    explanation: "The role of opposition parties is to oppose the government's decisions, hold it accountable, and offer different proposals for consideration.",
+    imageUrl: 'https://picsum.photos/seed/q19/600/400',
+    imageHint: 'parliament debate',
   },
   {
     id: 20,
@@ -184,7 +222,9 @@ export const mockQuestions: Question[] = [
     options: ["Red and white with a beaver", "Red and white with a red maple leaf", "Blue and white with a star", "Green and white with a wheat sheaf"],
     answer: "Red and white with a red maple leaf",
     category: "Symbols",
-    explanation: "The Canadian national flag is white with a red square on each end and a single red maple leaf in the centre."
+    explanation: "The Canadian national flag is white with a red square on each end and a single red maple leaf in the centre.",
+    imageUrl: 'https://picsum.photos/seed/q20/600/400',
+    imageHint: 'canadian flag',
   },
   {
     id: 21,
@@ -192,7 +232,9 @@ export const mockQuestions: Question[] = [
     options: ["Alberta", "Ontario", "Quebec", "British Columbia"],
     answer: "Alberta",
     category: "Geography",
-    explanation: "Alberta is home to vast oil sands and is the largest producer of crude oil and natural gas in Canada."
+    explanation: "Alberta is home to vast oil sands and is the largest producer of crude oil and natural gas in Canada.",
+    imageUrl: 'https://picsum.photos/seed/q21/600/400',
+    imageHint: 'oil rig',
   },
   {
     id: 22,
@@ -200,7 +242,9 @@ export const mockQuestions: Question[] = [
     options: ["The law only applies to citizens, not the government", "The law is made by the Queen", "Everyone is subject to the law, including rulers and governments", "The law can be changed by the police"],
     answer: "Everyone is subject to the law, including rulers and governments",
     category: "Rights and Responsibilities",
-    explanation: "The rule of law is a fundamental principle that means everyone, including the government, police, and judges, must obey the law. No one is above the law."
+    explanation: "The rule of law is a fundamental principle that means everyone, including the government, police, and judges, must obey the law. No one is above the law.",
+    imageUrl: 'https://picsum.photos/seed/q22/600/400',
+    imageHint: 'justice scale',
   },
   {
     id: 23,
@@ -208,7 +252,9 @@ export const mockQuestions: Question[] = [
     options: ["The first hockey team", "The representatives who created the Dominion of Canada", "The leaders of the Aboriginal peoples", "The first European explorers"],
     answer: "The representatives who created the Dominion of Canada",
     category: "History",
-    explanation: "The Fathers of Confederation were the political leaders and representatives who attended the Charlottetown and Quebec conferences in 1864 and worked to establish the Dominion of Canada in 1867."
+    explanation: "The Fathers of Confederation were the political leaders and representatives who attended the Charlottetown and Quebec conferences in 1864 and worked to establish the Dominion of Canada in 1867.",
+    imageUrl: 'https://picsum.photos/seed/q23/600/400',
+    imageHint: 'historic painting',
   },
   {
     id: 24,
@@ -216,7 +262,9 @@ export const mockQuestions: Question[] = [
     options: ["Legislative, Executive, and Judicial", "Federal, Provincial, and Municipal", "Police, Military, and Government", "Crown, Senate, and House of Commons"],
     answer: "Legislative, Executive, and Judicial",
     category: "Government",
-    explanation: "The three branches of government are the Legislative (makes laws), Executive (implements and enforces laws), and Judicial (interprets laws)."
+    explanation: "The three branches of government are the Legislative (makes laws), Executive (implements and enforces laws), and Judicial (interprets laws).",
+    imageUrl: 'https://picsum.photos/seed/q24/600/400',
+    imageHint: 'gavel scale',
   },
   {
     id: 25,
@@ -224,7 +272,9 @@ export const mockQuestions: Question[] = [
     options: ["God Save the Queen", "The Star-Spangled Banner", "La Marseillaise", "O Canada"],
     answer: "O Canada",
     category: "Symbols",
-    explanation: "O Canada was proclaimed the national anthem in 1980."
+    explanation: "O Canada was proclaimed the national anthem in 1980.",
+    imageUrl: 'https://picsum.photos/seed/q25/600/400',
+    imageHint: 'sheet music',
   },
   {
     id: 26,
@@ -232,7 +282,9 @@ export const mockQuestions: Question[] = [
     options: ["Ontario", "British Columbia", "Quebec", "Alberta"],
     answer: "Quebec",
     category: "Geography",
-    explanation: "Quebec is the largest province by land area, while Nunavut is the largest territory."
+    explanation: "Quebec is the largest province by land area, while Nunavut is the largest territory.",
+    imageUrl: 'https://picsum.photos/seed/q26/600/400',
+    imageHint: 'canada map',
   },
   {
     id: 27,
@@ -240,7 +292,9 @@ export const mockQuestions: Question[] = [
     options: ["Ontario", "Quebec", "New Brunswick", "Manitoba"],
     answer: "Quebec",
     category: "Geography",
-    explanation: "The vast majority of French-speaking Canadians (francophones) live in the province of Quebec."
+    explanation: "The vast majority of French-speaking Canadians (francophones) live in the province of Quebec.",
+    imageUrl: 'https://picsum.photos/seed/q27/600/400',
+    imageHint: 'quebec city',
   },
   {
     id: 28,
@@ -248,7 +302,9 @@ export const mockQuestions: Question[] = [
     options: ["The British North America Act", "The Constitution Act, 1982", "The Statute of Westminster", "The Quebec Act"],
     answer: "The Constitution Act, 1982",
     category: "History",
-    explanation: "The Constitution Act, 1982, patriated the Canadian Constitution, including the Charter of Rights and Freedoms, ending the British Parliament's power to amend it. This act made Canada a fully independent nation."
+    explanation: "The Constitution Act, 1982, patriated the Canadian Constitution, including the Charter of Rights and Freedoms, ending the British Parliament's power to amend it. This act made Canada a fully independent nation.",
+    imageUrl: 'https://picsum.photos/seed/q28/600/400',
+    imageHint: 'historic document',
   },
   {
     id: 29,
@@ -256,7 +312,9 @@ export const mockQuestions: Question[] = [
     options: ["The Queen", "The Governor General", "The Prime Minister", "The Speaker of the House"],
     answer: "The Prime Minister",
     category: "Government",
-    explanation: "The Prime Minister is the head of government, responsible for leading the party in power and the country."
+    explanation: "The Prime Minister is the head of government, responsible for leading the party in power and the country.",
+    imageUrl: 'https://picsum.photos/seed/q29/600/400',
+    imageHint: 'parliament hill',
   },
   {
     id: 30,
@@ -264,7 +322,9 @@ export const mockQuestions: Question[] = [
     options: ["It signifies the end of summer", "It is a symbol of remembrance for soldiers who have died in war", "It is the national flower of Canada", "It represents peace and neutrality"],
     answer: "It is a symbol of remembrance for soldiers who have died in war",
     category: "Symbols",
-    explanation: "The red poppy is worn on Remembrance Day (November 11th) to honour Canadians who have served and died for their country in wars."
+    explanation: "The red poppy is worn on Remembrance Day (November 11th) to honour Canadians who have served and died for their country in wars.",
+    imageUrl: 'https://picsum.photos/seed/q30/600/400',
+    imageHint: 'poppy flower',
   },
   {
     id: 31,
@@ -272,7 +332,9 @@ export const mockQuestions: Question[] = [
     options: ["Manitoba", "Saskatchewan", "Alberta", "Ontario"],
     answer: "Saskatchewan",
     category: "Geography",
-    explanation: "Saskatchewan is a major agricultural province, known for its vast wheat fields, earning it the nickname 'Canada's Breadbasket'."
+    explanation: "Saskatchewan is a major agricultural province, known for its vast wheat fields, earning it the nickname 'Canada's Breadbasket'.",
+    imageUrl: 'https://picsum.photos/seed/q31/600/400',
+    imageHint: 'wheat field',
   },
   {
     id: 32,
@@ -280,7 +342,9 @@ export const mockQuestions: Question[] = [
     options: ["A vote held in secret", "A vote that only the Prime Minister can see", "A system where no one can know how you voted", "A vote on a secret law"],
     answer: "A system where no one can know how you voted",
     category: "Rights and Responsibilities",
-    explanation: "A secret ballot is a core principle of Canadian democracy, ensuring that each citizen can cast their vote in private without fear or intimidation."
+    explanation: "A secret ballot is a core principle of Canadian democracy, ensuring that each citizen can cast their vote in private without fear or intimidation.",
+    imageUrl: 'https://picsum.photos/seed/q32/600/400',
+    imageHint: 'voting booth',
   },
   {
     id: 33,
@@ -288,7 +352,9 @@ export const mockQuestions: Question[] = [
     options: ["Canada's first subway system", "A secret network that helped slaves escape to Canada", "A trade route for furs", "A railway built by miners"],
     answer: "A secret network that helped slaves escape to Canada",
     category: "History",
-    explanation: "The Underground Railroad was an anti-slavery network of secret routes and safe houses used by enslaved African Americans to escape into free states and Canada."
+    explanation: "The Underground Railroad was an anti-slavery network of secret routes and safe houses used by enslaved African Americans to escape into free states and Canada.",
+    imageUrl: 'https://picsum.photos/seed/q33/600/400',
+    imageHint: 'lantern path',
   },
   {
     id: 34,
@@ -296,7 +362,9 @@ export const mockQuestions: Question[] = [
     options: ["They are appointed by the Prime Minister", "They are elected by Canadian citizens in their riding", "They are chosen by the Queen", "They inherit their position"],
     answer: "They are elected by Canadian citizens in their riding",
     category: "Government",
-    explanation: "Members of Parliament are chosen in federal elections. Voters in each electoral district, or riding, elect one MP to represent them in the House of Commons."
+    explanation: "Members of Parliament are chosen in federal elections. Voters in each electoral district, or riding, elect one MP to represent them in the House of Commons.",
+    imageUrl: 'https://picsum.photos/seed/q34/600/400',
+    imageHint: 'election sign',
   },
   {
     id: 35,
@@ -304,7 +372,9 @@ export const mockQuestions: Question[] = [
     options: ["The right to vote", "The right to a fair trial", "The right to not be imprisoned without a lawful reason", "The right to free speech"],
     answer: "The right to not be imprisoned without a lawful reason",
     category: "Rights and Responsibilities",
-    explanation: "Habeas corpus is the right to challenge unlawful detention by the state. It requires a person under arrest to be brought before a judge or into court."
+    explanation: "Habeas corpus is the right to challenge unlawful detention by the state. It requires a person under arrest to be brought before a judge or into court.",
+    imageUrl: 'https://picsum.photos/seed/q35/600/400',
+    imageHint: 'gavel handcuffs',
   },
   {
     id: 36,
@@ -312,7 +382,9 @@ export const mockQuestions: Question[] = [
     options: ["Vancouver", "Montreal", "Toronto", "Calgary"],
     answer: "Toronto",
     category: "Geography",
-    explanation: "Toronto, the capital of Ontario, is the most populous city in Canada."
+    explanation: "Toronto, the capital of Ontario, is the most populous city in Canada.",
+    imageUrl: 'https://picsum.photos/seed/q36/600/400',
+    imageHint: 'city skyline',
   },
   {
     id: 37,
@@ -320,7 +392,9 @@ export const mockQuestions: Question[] = [
     options: ["24 Sussex Drive", "The Parliament Buildings", "Rideau Hall", "The Supreme Court"],
     answer: "Rideau Hall",
     category: "Government",
-    explanation: "Rideau Hall has been the official residence and workplace of every governor general of Canada since 1867."
+    explanation: "Rideau Hall has been the official residence and workplace of every governor general of Canada since 1867.",
+    imageUrl: 'https://picsum.photos/seed/q37/600/400',
+    imageHint: 'historic building',
   },
   {
     id: 38,
@@ -328,7 +402,9 @@ export const mockQuestions: Question[] = [
     options: ["The Battle of Vimy Ridge", "The Battle of the Plains of Abraham", "The Battle of 1812", "The Battle of the Atlantic"],
     answer: "The Battle of the Plains of Abraham",
     category: "History",
-    explanation: "The British victory at the Battle of the Plains of Abraham near Quebec City in 1759 led to the fall of New France to the British."
+    explanation: "The British victory at the Battle of the Plains of Abraham near Quebec City in 1759 led to the fall of New France to the British.",
+    imageUrl: 'https://picsum.photos/seed/q38/600/400',
+    imageHint: 'battlefield painting',
   },
   {
     id: 39,
@@ -336,7 +412,9 @@ export const mockQuestions: Question[] = [
     options: ["The British North America Act", "The Bill of Rights", "The Canadian Charter of Rights and Freedoms", "The Meech Lake Accord"],
     answer: "The Canadian Charter of Rights and Freedoms",
     category: "Rights and Responsibilities",
-    explanation: "The Canadian Charter of Rights and Freedoms, entrenched in the Constitution in 1982, guarantees the fundamental rights and freedoms of Canadians."
+    explanation: "The Canadian Charter of Rights and Freedoms, entrenched in the Constitution in 1982, guarantees the fundamental rights and freedoms of Canadians.",
+    imageUrl: 'https://picsum.photos/seed/q39/600/400',
+    imageHint: 'charter document',
   },
   {
     id: 40,
@@ -344,7 +422,9 @@ export const mockQuestions: Question[] = [
     options: ["Toronto", "Montreal", "Vancouver", "Ottawa"],
     answer: "Ottawa",
     category: "Geography",
-    explanation: "Queen Victoria chose Ottawa as Canada's capital in 1857. It is located on the Ottawa River."
+    explanation: "Queen Victoria chose Ottawa as Canada's capital in 1857. It is located on the Ottawa River.",
+    imageUrl: 'https://picsum.photos/seed/q40/600/400',
+    imageHint: 'parliament hill',
   },
   {
     id: 41,
@@ -352,7 +432,9 @@ export const mockQuestions: Question[] = [
     options: ["The Prime Minister", "They are elected by the public", "The Governor General on the advice of the Prime Minister", "The Queen"],
     answer: "The Governor General on the advice of the Prime Minister",
     category: "Government",
-    explanation: "Senators, who serve in the Upper House of Parliament, are appointed by the Governor General based on the recommendation of the Prime Minister."
+    explanation: "Senators, who serve in the Upper House of Parliament, are appointed by the Governor General based on the recommendation of the Prime Minister.",
+    imageUrl: 'https://picsum.photos/seed/q41/600/400',
+    imageHint: 'senate chamber',
   },
   {
     id: 42,
@@ -360,7 +442,9 @@ export const mockQuestions: Question[] = [
     options: ["The end of World War II", "The invasion of Normandy by the Allies", "The bombing of Pearl Harbor", "The signing of the Treaty of Versailles"],
     answer: "The invasion of Normandy by the Allies",
     category: "History",
-    explanation: "On D-Day, Canadian forces were part of the massive Allied invasion of Normandy, France, a key operation of World War II that led to the liberation of Europe."
+    explanation: "On D-Day, Canadian forces were part of the massive Allied invasion of Normandy, France, a key operation of World War II that led to the liberation of Europe.",
+    imageUrl: 'https://picsum.photos/seed/q42/600/400',
+    imageHint: 'normandy beach',
   },
   {
     id: 43,
@@ -368,7 +452,9 @@ export const mockQuestions: Question[] = [
     options: ["O Canada! Our home and native land! / True patriot love in all of us command.", "O Canada! Our home on native land! / True patriot love in all thy sons command.", "O Canada! Our home and cherished land! / With glowing hearts we see thee rise.", "O Canada! From far and wide / We stand on guard for thee."],
     answer: "O Canada! Our home and native land! / True patriot love in all of us command.",
     category: "Symbols",
-    explanation: "The first two lines of the national anthem are 'O Canada! Our home and native land! True patriot love in all of us command.' The lyrics were updated in 2018 to be gender-neutral."
+    explanation: "The first two lines of the national anthem are 'O Canada! Our home and native land! True patriot love in all of us command.' The lyrics were updated in 2018 to be gender-neutral.",
+    imageUrl: 'https://picsum.photos/seed/q43/600/400',
+    imageHint: 'music notes',
   },
   {
     id: 44,
@@ -376,7 +462,9 @@ export const mockQuestions: Question[] = [
     options: ["The West Coast", "The Atlantic Provinces", "The North", "The Prairies"],
     answer: "The Atlantic Provinces",
     category: "Geography",
-    explanation: "The Bay of Fundy in the Atlantic region has the highest tides in the world."
+    explanation: "The Bay of Fundy in the Atlantic region has the highest tides in the world.",
+    imageUrl: 'https://picsum.photos/seed/q44/600/400',
+    imageHint: 'high tide',
   },
   {
     id: 45,
@@ -384,7 +472,9 @@ export const mockQuestions: Question[] = [
     options: ["To make laws", "To enforce laws", "To interpret and apply the law", "To advise the Prime Minister"],
     answer: "To interpret and apply the law",
     category: "Government",
-    explanation: "The judicial branch of government, which includes judges and courts, is responsible for interpreting and applying Canada's laws in an impartial manner."
+    explanation: "The judicial branch of government, which includes judges and courts, is responsible for interpreting and applying Canada's laws in an impartial manner.",
+    imageUrl: 'https://picsum.photos/seed/q45/600/400',
+    imageHint: 'courthouse steps',
   },
   {
     id: 46,
@@ -392,7 +482,9 @@ export const mockQuestions: Question[] = [
     options: ["To celebrate Canada's birthday", "To honour veterans and those who died in wars", "To celebrate the first day of winter", "To vote in an election"],
     answer: "To honour veterans and those who died in wars",
     category: "History",
-    explanation: "Remembrance Day is observed on November 11th to recall the end of World War I and to honour all who have served and died in the nation's service."
+    explanation: "Remembrance Day is observed on November 11th to recall the end of World War I and to honour all who have served and died in the nation's service.",
+    imageUrl: 'https://picsum.photos/seed/q46/600/400',
+    imageHint: 'poppy field',
   },
   {
     id: 47,
@@ -400,7 +492,9 @@ export const mockQuestions: Question[] = [
     options: ["The Federal Court", "The Provincial Court of Appeal", "The Supreme Court of Canada", "The Tax Court of Canada"],
     answer: "The Supreme Court of Canada",
     category: "Government",
-    explanation: "The Supreme Court of Canada is the country's final court of appeal and has jurisdiction over all areas of the law."
+    explanation: "The Supreme Court of Canada is the country's final court of appeal and has jurisdiction over all areas of the law.",
+    imageUrl: 'https://picsum.photos/seed/q47/600/400',
+    imageHint: 'supreme court',
   },
   {
     id: 48,
@@ -408,7 +502,9 @@ export const mockQuestions: Question[] = [
     options: ["Quebec", "British Columbia", "Alberta", "Ontario"],
     answer: "Ontario",
     category: "Geography",
-    explanation: "With over 14 million people, Ontario is the most populous province in Canada, home to more than one-third of Canadians."
+    explanation: "With over 14 million people, Ontario is the most populous province in Canada, home to more than one-third of Canadians.",
+    imageUrl: 'https://picsum.photos/seed/q48/600/400',
+    imageHint: 'toronto skyline',
   },
   {
     id: 49,
@@ -416,7 +512,9 @@ export const mockQuestions: Question[] = [
     options: ["From the Inuit word for 'village'", "From the French explorer Jacques Cartier", "From the Spanish word for 'coast'", "From the name of a queen"],
     answer: "From the French explorer Jacques Cartier",
     category: "History",
-    explanation: "The name 'Canada' comes from the Huron-Iroquois word 'kanata,' meaning 'village' or 'settlement.' Jacques Cartier misunderstood it as the name for the entire area."
+    explanation: "The name 'Canada' comes from the Huron-Iroquois word 'kanata,' meaning 'village' or 'settlement.' Jacques Cartier misunderstood it as the name for the entire area.",
+    imageUrl: 'https://picsum.photos/seed/q49/600/400',
+    imageHint: 'old map',
   },
   {
     id: 50,
@@ -424,7 +522,9 @@ export const mockQuestions: Question[] = [
     options: ["Service, Manufacturing, and Natural Resources", "Technology, Tourism, and Agriculture", "Fishing, Mining, and Forestry", "Banking, Healthcare, and Education"],
     answer: "Service, Manufacturing, and Natural Resources",
     category: "Geography",
-    explanation: "Canada's economy is broadly divided into three sectors: service industries (like transportation and retail), manufacturing industries (like automobiles and food processing), and natural resource industries (like forestry and mining)."
+    explanation: "Canada's economy is broadly divided into three sectors: service industries (like transportation and retail), manufacturing industries (like automobiles and food processing), and natural resource industries (like forestry and mining).",
+    imageUrl: 'https://picsum.photos/seed/q50/600/400',
+    imageHint: 'factory mine',
   },
   {
     id: 51,
@@ -432,7 +532,9 @@ export const mockQuestions: Question[] = [
     options: ["The Prime Minister directly", "A candidate in their local electoral district", "The Governor General", "All of the above"],
     answer: "A candidate in their local electoral district",
     category: "Government",
-    explanation: "In a federal election, Canadians vote for a candidate to represent their electoral district (riding) in the House of Commons."
+    explanation: "In a federal election, Canadians vote for a candidate to represent their electoral district (riding) in the House of Commons.",
+    imageUrl: 'https://picsum.photos/seed/q51/600/400',
+    imageHint: 'voting checkmark',
   },
   {
     id: 52,
@@ -440,7 +542,9 @@ export const mockQuestions: Question[] = [
     options: ["The right to express any opinion", "The right to believe or not believe in a religion", "The right to join any group", "The right to live anywhere in Canada"],
     answer: "The right to believe or not believe in a religion",
     category: "Rights and Responsibilities",
-    explanation: "This fundamental freedom allows you to have your own religious and spiritual beliefs and to express them, or to have no religious beliefs at all."
+    explanation: "This fundamental freedom allows you to have your own religious and spiritual beliefs and to express them, or to have no religious beliefs at all.",
+    imageUrl: 'https://picsum.photos/seed/q52/600/400',
+    imageHint: 'religious symbols',
   },
   {
     id: 53,
@@ -448,7 +552,9 @@ export const mockQuestions: Question[] = [
     options: ["A tax on hats", "A fee charged to Chinese immigrants entering Canada", "A property tax", "A tax on voting"],
     answer: "A fee charged to Chinese immigrants entering Canada",
     category: "History",
-    explanation: "The Chinese Head Tax was a fixed fee charged to each Chinese person entering Canada. It was a discriminatory policy meant to discourage Chinese immigration."
+    explanation: "The Chinese Head Tax was a fixed fee charged to each Chinese person entering Canada. It was a discriminatory policy meant to discourage Chinese immigration.",
+    imageUrl: 'https://picsum.photos/seed/q53/600/400',
+    imageHint: 'old money',
   },
   {
     id: 54,
@@ -456,7 +562,9 @@ export const mockQuestions: Question[] = [
     options: ["Pacific Ocean", "Arctic Ocean", "Atlantic Ocean", "Southern Ocean"],
     answer: "Atlantic Ocean",
     category: "Geography",
-    explanation: "The Atlantic Ocean forms Canada's eastern border."
+    explanation: "The Atlantic Ocean forms Canada's eastern border.",
+    imageUrl: 'https://picsum.photos/seed/q54/600/400',
+    imageHint: 'eastern coastline',
   },
   {
     id: 55,
@@ -464,7 +572,9 @@ export const mockQuestions: Question[] = [
     options: ["The Speaker", "The Prime Minister", "The Leader of the Official Opposition", "The Sergeant-at-Arms"],
     answer: "The Leader of the Official Opposition",
     category: "Government",
-    explanation: "The leader of the party with the second-most seats in the House of Commons is known as the Leader of His Majesty's Loyal Opposition."
+    explanation: "The leader of the party with the second-most seats in the House of Commons is known as the Leader of His Majesty's Loyal Opposition.",
+    imageUrl: 'https://picsum.photos/seed/q55/600/400',
+    imageHint: 'parliamentary mace',
   },
   {
     id: 56,
@@ -472,7 +582,9 @@ export const mockQuestions: Question[] = [
     options: ["The monarch has absolute power", "The monarch is only a figurehead", "The monarch's power is limited by the constitution", "There is no monarch"],
     answer: "The monarch's power is limited by the constitution",
     category: "Government",
-    explanation: "In a constitutional monarchy like Canada, the Sovereign is the head of state, but their powers are defined and limited by the constitution and the laws of the country."
+    explanation: "In a constitutional monarchy like Canada, the Sovereign is the head of state, but their powers are defined and limited by the constitution and the laws of the country.",
+    imageUrl: 'https://picsum.photos/seed/q56/600/400',
+    imageHint: 'crown constitution',
   },
   {
     id: 57,
@@ -480,7 +592,9 @@ export const mockQuestions: Question[] = [
     options: ["A motion", "An order", "A bill", "A decree"],
     answer: "A bill",
     category: "Government",
-    explanation: "A bill is a proposal for a new law, or a change to an existing law, that is presented for debate before Parliament."
+    explanation: "A bill is a proposal for a new law, or a change to an existing law, that is presented for debate before Parliament.",
+    imageUrl: 'https://picsum.photos/seed/q57/600/400',
+    imageHint: 'law document',
   },
   {
     id: 58,
@@ -488,7 +602,9 @@ export const mockQuestions: Question[] = [
     options: ["NAFTA", "The TPP", "CUSMA (or USMCA)", "The European Union"],
     answer: "CUSMA (or USMCA)",
     category: "Geography",
-    explanation: "The Canada-United States-Mexico Agreement (CUSMA), known as USMCA in the US, is the free trade agreement between the three countries, which replaced NAFTA."
+    explanation: "The Canada-United States-Mexico Agreement (CUSMA), known as USMCA in the US, is the free trade agreement between the three countries, which replaced NAFTA.",
+    imageUrl: 'https://picsum.photos/seed/q58/600/400',
+    imageHint: 'flags handshake',
   },
   {
     id: 59,
@@ -496,7 +612,9 @@ export const mockQuestions: Question[] = [
     options: ["Canada's first Prime Minister", "An explorer", "The first Governor General", "A famous hockey player"],
     answer: "Canada's first Prime Minister",
     category: "History",
-    explanation: "Sir John A. Macdonald was a Father of Confederation and Canada's first Prime Minister, serving from 1867 to 1873 and from 1878 to 1891."
+    explanation: "Sir John A. Macdonald was a Father of Confederation and Canada's first Prime Minister, serving from 1867 to 1873 and from 1878 to 1891.",
+    imageUrl: 'https://picsum.photos/seed/q59/600/400',
+    imageHint: 'historic portrait',
   },
   {
     id: 60,
@@ -504,7 +622,9 @@ export const mockQuestions: Question[] = [
     options: ["Right", "Option", "Duty", "Privilege"],
     answer: "Duty",
     category: "Rights and Responsibilities",
-    explanation: "When called upon, it is a citizen's legal duty to serve on a jury. This is a key part of the justice system."
+    explanation: "When called upon, it is a citizen's legal duty to serve on a jury. This is a key part of the justice system.",
+    imageUrl: 'https://picsum.photos/seed/q60/600/400',
+    imageHint: 'jury box',
   },
   {
     id: 61,
@@ -512,7 +632,9 @@ export const mockQuestions: Question[] = [
     options: ["Ontario, Quebec, and Manitoba", "Manitoba, Saskatchewan, and Alberta", "British Columbia, Alberta, and Saskatchewan", "Yukon, Northwest Territories, and Nunavut"],
     answer: "Manitoba, Saskatchewan, and Alberta",
     category: "Geography",
-    explanation: "The Prairie provinces are Manitoba, Saskatchewan, and Alberta, known for their plains and rich agriculture."
+    explanation: "The Prairie provinces are Manitoba, Saskatchewan, and Alberta, known for their plains and rich agriculture.",
+    imageUrl: 'https://picsum.photos/seed/q61/600/400',
+    imageHint: 'prairie landscape',
   },
   {
     id: 62,
@@ -520,7 +642,9 @@ export const mockQuestions: Question[] = [
     options: ["To represent their constituents in the House of Commons", "To command the army", "To collect taxes", "To run a province"],
     answer: "To represent their constituents in the House of Commons",
     category: "Government",
-    explanation: "The primary role of an MP is to represent the interests and concerns of the people living in their electoral district (riding) in Ottawa."
+    explanation: "The primary role of an MP is to represent the interests and concerns of the people living in their electoral district (riding) in Ottawa.",
+    imageUrl: 'https://picsum.photos/seed/q62/600/400',
+    imageHint: 'community meeting',
   },
   {
     id: 63,
@@ -528,7 +652,9 @@ export const mockQuestions: Question[] = [
     options: ["Canadian forces achieved a significant victory in World War I", "The Fathers of Confederation met", "The War of 1812 ended", "The Quebec Referendum was held"],
     answer: "Canadian forces achieved a significant victory in World War I",
     category: "History",
-    explanation: "The Battle of Vimy Ridge in April 1917 was a defining moment for Canada. The Canadian Corps captured the heavily fortified ridge, a major military achievement that fostered a sense of national pride and identity."
+    explanation: "The Battle of Vimy Ridge in April 1917 was a defining moment for Canada. The Canadian Corps captured the heavily fortified ridge, a major military achievement that fostered a sense of national pride and identity.",
+    imageUrl: 'https://picsum.photos/seed/q63/600/400',
+    imageHint: 'war memorial',
   },
   {
     id: 64,
@@ -536,7 +662,9 @@ export const mockQuestions: Question[] = [
     options: ["The right to gather and protest peacefully", "The right to own weapons", "The right to a speedy trial", "The right to privacy"],
     answer: "The right to gather and protest peacefully",
     category: "Rights and Responsibilities",
-    explanation: "This fundamental freedom, protected by the Charter, allows Canadians to gather for peaceful demonstrations and meetings."
+    explanation: "This fundamental freedom, protected by the Charter, allows Canadians to gather for peaceful demonstrations and meetings.",
+    imageUrl: 'https://picsum.photos/seed/q64/600/400',
+    imageHint: 'protest march',
   },
   {
     id: 65,
@@ -544,7 +672,9 @@ export const mockQuestions: Question[] = [
     options: ["The Supreme Court", "Rideau Hall", "The Parliament Buildings", "24 Sussex Drive"],
     answer: "The Parliament Buildings",
     category: "Government",
-    explanation: "The Parliament Buildings, located on Parliament Hill in Ottawa, house the legislative branch of the federal government, including the House of Commons and the Senate chambers."
+    explanation: "The Parliament Buildings, located on Parliament Hill in Ottawa, house the legislative branch of the federal government, including the House of Commons and the Senate chambers.",
+    imageUrl: 'https://picsum.photos/seed/q65/600/400',
+    imageHint: 'parliament building',
   },
   {
     id: 66,
@@ -552,7 +682,9 @@ export const mockQuestions: Question[] = [
     options: ["Ontario", "British Columbia", "Quebec", "Nunavut"],
     answer: "Quebec",
     category: "Geography",
-    explanation: "Of the provinces, Quebec has the largest land area. Nunavut is the largest territory and overall the largest administrative division in Canada."
+    explanation: "Of the provinces, Quebec has the largest land area. Nunavut is the largest territory and overall the largest administrative division in Canada.",
+    imageUrl: 'https://picsum.photos/seed/q66/600/400',
+    imageHint: 'map of quebec',
   },
   {
     id: 67,
@@ -560,7 +692,9 @@ export const mockQuestions: Question[] = [
     options: ["Descendants of French colonists who settled in the Maritime provinces", "Indigenous people of the West Coast", "English settlers in Ontario", "The first residents of Toronto"],
     answer: "Descendants of French colonists who settled in the Maritime provinces",
     category: "History",
-    explanation: "The Acadians are the descendants of French colonists who began settling in what are now the Maritime provinces in 1604. They have a distinct history and culture."
+    explanation: "The Acadians are the descendants of French colonists who began settling in what are now the Maritime provinces in 1604. They have a distinct history and culture.",
+    imageUrl: 'https://picsum.photos/seed/q67/600/400',
+    imageHint: 'acadian flag',
   },
   {
     id: 68,
@@ -568,7 +702,9 @@ export const mockQuestions: Question[] = [
     options: ["To support all government actions", "To form a coalition government", "To peacefully challenge and scrutinize the government", "To elect the Governor General"],
     answer: "To peacefully challenge and scrutinize the government",
     category: "Government",
-    explanation: "The Official Opposition plays a crucial role in holding the government accountable for its actions and presenting alternative policies to the public."
+    explanation: "The Official Opposition plays a crucial role in holding the government accountable for its actions and presenting alternative policies to the public.",
+    imageUrl: 'https://picsum.photos/seed/q68/600/400',
+    imageHint: 'debate chamber',
   },
   {
     id: 69,
@@ -576,7 +712,9 @@ export const mockQuestions: Question[] = [
     options: ["The first settlers from Scotland", "A distinct Aboriginal people of mixed First Nations and European ancestry", "Inuit people living in cities", "French-speaking Canadians"],
     answer: "A distinct Aboriginal people of mixed First Nations and European ancestry",
     category: "History",
-    explanation: "The Métis are a distinct Aboriginal people with a unique culture that emerged from the relations between First Nations peoples and European settlers."
+    explanation: "The Métis are a distinct Aboriginal people with a unique culture that emerged from the relations between First Nations peoples and European settlers.",
+    imageUrl: 'https://picsum.photos/seed/q69/600/400',
+    imageHint: 'metis sash',
   },
   {
     id: 70,
@@ -584,7 +722,9 @@ export const mockQuestions: Question[] = [
     options: ["Republic", "Dictatorship", "Parliamentary Democracy and Constitutional Monarchy", "Absolute Monarchy"],
     answer: "Parliamentary Democracy and Constitutional Monarchy",
     category: "Government",
-    explanation: "Canada is a parliamentary democracy, where citizens elect representatives to Parliament, and a constitutional monarchy, where the King or Queen is the head of state."
+    explanation: "Canada is a parliamentary democracy, where citizens elect representatives to Parliament, and a constitutional monarchy, where the King or Queen is the head of state.",
+    imageUrl: 'https://picsum.photos/seed/q70/600/400',
+    imageHint: 'parliament crown',
   },
   {
     id: 71,
@@ -592,7 +732,9 @@ export const mockQuestions: Question[] = [
     options: ["Freedom of speech", "Freedom to own land", "Freedom from taxes", "Freedom to drive"],
     answer: "Freedom of speech",
     category: "Rights and Responsibilities",
-    explanation: "Freedom of thought, belief, opinion and expression, including freedom of the press and other media of communication, is one of the four fundamental freedoms in the Charter."
+    explanation: "Freedom of thought, belief, opinion and expression, including freedom of the press and other media of communication, is one of the four fundamental freedoms in the Charter.",
+    imageUrl: 'https://picsum.photos/seed/q71/600/400',
+    imageHint: 'protest sign',
   },
   {
     id: 72,
@@ -600,7 +742,9 @@ export const mockQuestions: Question[] = [
     options: ["Vancouver", "Victoria", "Kelowna", "Whistler"],
     answer: "Victoria",
     category: "Geography",
-    explanation: "Victoria, located on Vancouver Island, is the capital city of the province of British Columbia."
+    explanation: "Victoria, located on Vancouver Island, is the capital city of the province of British Columbia.",
+    imageUrl: 'https://picsum.photos/seed/q72/600/400',
+    imageHint: 'victoria bc',
   },
   {
     id: 73,
@@ -608,7 +752,9 @@ export const mockQuestions: Question[] = [
     options: ["A war in the 1700s", "A period of rapid social and political change in Quebec in the 1960s", "The construction of the Canadian Pacific Railway", "The women's suffrage movement"],
     answer: "A period of rapid social and political change in Quebec in the 1960s",
     category: "History",
-    explanation: "The Quiet Revolution was a time of intense socio-political and socio-cultural change in Quebec, characterized by secularization, the creation of a welfare state, and the realignment of politics into federalist and sovereigntist factions."
+    explanation: "The Quiet Revolution was a time of intense socio-political and socio-cultural change in Quebec, characterized by secularization, the creation of a welfare state, and the realignment of politics into federalist and sovereigntist factions.",
+    imageUrl: 'https://picsum.photos/seed/q73/600/400',
+    imageHint: 'montreal 1960s',
   },
   {
     id: 74,
@@ -616,7 +762,9 @@ export const mockQuestions: Question[] = [
     options: ["Municipal", "Provincial/Territorial", "Federal", "All of the above"],
     answer: "Federal",
     category: "Government",
-    explanation: "The federal government has responsibility for matters of national and international concern, such as national defence, foreign policy, and currency."
+    explanation: "The federal government has responsibility for matters of national and international concern, such as national defence, foreign policy, and currency.",
+    imageUrl: 'https://picsum.photos/seed/q74/600/400',
+    imageHint: 'military jet',
   },
   {
     id: 75,
@@ -624,7 +772,9 @@ export const mockQuestions: Question[] = [
     options: ["Hockey", "Lacrosse", "Curling", "Skiing"],
     answer: "Hockey",
     category: "Symbols",
-    explanation: "Ice hockey was declared the official national winter sport of Canada in 1994."
+    explanation: "Ice hockey was declared the official national winter sport of Canada in 1994.",
+    imageUrl: 'https://picsum.photos/seed/q75/600/400',
+    imageHint: 'hockey skates',
   },
   {
     id: 76,
@@ -632,7 +782,9 @@ export const mockQuestions: Question[] = [
     options: ["The Appalachian Mountains", "The Rocky Mountains", "The Laurentian Mountains", "The Coast Mountains"],
     answer: "The Rocky Mountains",
     category: "Geography",
-    explanation: "The majestic Rocky Mountains run along the border between Alberta and British Columbia."
+    explanation: "The majestic Rocky Mountains run along the border between Alberta and British Columbia.",
+    imageUrl: 'https://picsum.photos/seed/q76/600/400',
+    imageHint: 'rocky mountains',
   },
   {
     id: 77,
@@ -640,7 +792,9 @@ export const mockQuestions: Question[] = [
     options: ["A Father of Confederation", "A Métis leader who fought for the rights of his people", "Canada's first astronaut", "The founder of the Hudson's Bay Company"],
     answer: "A Métis leader who fought for the rights of his people",
     category: "History",
-    explanation: "Louis Riel was a pivotal figure in Canadian history, a Métis leader who led two resistance movements against the Canadian government and is considered a founder of Manitoba."
+    explanation: "Louis Riel was a pivotal figure in Canadian history, a Métis leader who led two resistance movements against the Canadian government and is considered a founder of Manitoba.",
+    imageUrl: 'https://picsum.photos/seed/q77/600/400',
+    imageHint: 'metis leader',
   },
   {
     id: 78,
@@ -648,7 +802,9 @@ export const mockQuestions: Question[] = [
     options: ["The party with the most elected representatives becomes the party in power", "The Queen chooses the government", "The Senators vote for the government", "The party that wins in Ontario forms the government"],
     answer: "The party with the most elected representatives becomes the party in power",
     category: "Government",
-    explanation: "Typically, the political party that has the most members elected to the House of Commons forms the government. The leader of this party becomes the Prime Minister."
+    explanation: "Typically, the political party that has the most members elected to the House of Commons forms the government. The leader of this party becomes the Prime Minister.",
+    imageUrl: 'https://picsum.photos/seed/q78/600/400',
+    imageHint: 'election results',
   },
   {
     id: 79,
@@ -656,7 +812,9 @@ export const mockQuestions: Question[] = [
     options: ["Rich people have more rights", "Everyone is treated the same under the law, regardless of their background", "Only citizens have rights", "Laws do not apply to politicians"],
     answer: "Everyone is treated the same under the law, regardless of their background",
     category: "Rights and Responsibilities",
-    explanation: "This principle, protected by the Charter, means that every individual is equal under the law and is entitled to equal protection and benefit of the law without discrimination."
+    explanation: "This principle, protected by the Charter, means that every individual is equal under the law and is entitled to equal protection and benefit of the law without discrimination.",
+    imageUrl: 'https://picsum.photos/seed/q79/600/400',
+    imageHint: 'diverse people',
   },
   {
     id: 80,
@@ -664,7 +822,9 @@ export const mockQuestions: Question[] = [
     options: ["The Oak Tree", "The Pine Tree", "The Maple Tree", "The Birch Tree"],
     answer: "The Maple Tree",
     category: "Symbols",
-    explanation: "The maple tree was officially recognized as a national symbol of Canada in 1996. The maple leaf is the most well-known symbol of the country."
+    explanation: "The maple tree was officially recognized as a national symbol of Canada in 1996. The maple leaf is the most well-known symbol of the country.",
+    imageUrl: 'https://picsum.photos/seed/q80/600/400',
+    imageHint: 'maple tree',
   },
   {
     id: 81,
@@ -672,7 +832,9 @@ export const mockQuestions: Question[] = [
     options: ["Nova Scotia", "New Brunswick", "Prince Edward Island", "Newfoundland and Labrador"],
     answer: "Prince Edward Island",
     category: "Geography",
-    explanation: "Prince Edward Island (P.E.I.) is Canada's smallest province in terms of both land area and population."
+    explanation: "Prince Edward Island (P.E.I.) is Canada's smallest province in terms of both land area and population.",
+    imageUrl: 'https://picsum.photos/seed/q81/600/400',
+    imageHint: 'coastal lighthouse',
   },
   {
     id: 82,
@@ -680,7 +842,9 @@ export const mockQuestions: Question[] = [
     options: ["French Revolution", "British desire to reclaim the United States and Canada", "American desire to conquer Canada", "The fur trade dispute"],
     answer: "British desire to reclaim the United States and Canada",
     category: "History",
-    explanation: "The War of 1812 was fought between the United States and Great Britain, with British North American colonies (Canada) being heavily involved. Key causes included British interference with American trade and American expansionist ambitions."
+    explanation: "The War of 1812 was fought between the United States and Great Britain, with British North American colonies (Canada) being heavily involved. Key causes included British interference with American trade and American expansionist ambitions.",
+    imageUrl: 'https://picsum.photos/seed/q82/600/400',
+    imageHint: 'tall ships',
   },
   {
     id: 83,
@@ -688,7 +852,9 @@ export const mockQuestions: Question[] = [
     options: ["When the governing party has more than half of the seats in the House of Commons", "When two parties govern together", "When the governing party has less than half the seats", "When the Senate has more power than the House of Commons"],
     answer: "When the governing party has more than half of the seats in the House of Commons",
     category: "Government",
-    explanation: "A majority government occurs when the party in power holds at least half of the seats in the House of Commons, which gives it strong control over the legislative process."
+    explanation: "A majority government occurs when the party in power holds at least half of the seats in the House of Commons, which gives it strong control over the legislative process.",
+    imageUrl: 'https://picsum.photos/seed/q83/600/400',
+    imageHint: 'parliament seats',
   },
   {
     id: 84,
@@ -696,7 +862,9 @@ export const mockQuestions: Question[] = [
     options: ["Baseball", "Soccer", "Lacrosse", "Basketball"],
     answer: "Lacrosse",
     category: "Symbols",
-    explanation: "Lacrosse, a sport with Indigenous origins, was declared the official national summer sport of Canada in 1994."
+    explanation: "Lacrosse, a sport with Indigenous origins, was declared the official national summer sport of Canada in 1994.",
+    imageUrl: 'https://picsum.photos/seed/q84/600/400',
+    imageHint: 'lacrosse sticks',
   },
   {
     id: 85,
@@ -704,7 +872,9 @@ export const mockQuestions: Question[] = [
     options: ["Five large lakes in Eastern Canada", "Five large lakes on the border between Canada and the United States", "A series of small lakes in the Rockies", "Lakes in Northern Quebec"],
     answer: "Five large lakes on the border between Canada and the United States",
     category: "Geography",
-    explanation: "The Great Lakes are a series of five interconnected freshwater lakes (Superior, Michigan, Huron, Erie, and Ontario) that form part of the Canada-U.S. border."
+    explanation: "The Great Lakes are a series of five interconnected freshwater lakes (Superior, Michigan, Huron, Erie, and Ontario) that form part of the Canada-U.S. border.",
+    imageUrl: 'https://picsum.photos/seed/q85/600/400',
+    imageHint: 'great lakes',
   },
   {
     id: 86,
@@ -712,7 +882,9 @@ export const mockQuestions: Question[] = [
     options: ["It created the province of Quebec", "It allowed for religious freedom for Catholics and restored French civil law", "It started the Quiet Revolution", "It made English the only official language"],
     answer: "It allowed for religious freedom for Catholics and restored French civil law",
     category: "History",
-    explanation: "The Quebec Act was passed by the British Parliament to gain the loyalty of the French-speaking population. It guaranteed their religious freedom and kept French civil law, which has shaped modern Quebec."
+    explanation: "The Quebec Act was passed by the British Parliament to gain the loyalty of the French-speaking population. It guaranteed their religious freedom and kept French civil law, which has shaped modern Quebec.",
+    imageUrl: 'https://picsum.photos/seed/q86/600/400',
+    imageHint: 'old quebec',
   },
   {
     id: 87,
@@ -720,7 +892,9 @@ export const mockQuestions: Question[] = [
     options: ["Federal", "Provincial/Territorial", "Municipal", "Federal and Provincial equally"],
     answer: "Provincial/Territorial",
     category: "Government",
-    explanation: "Provinces and territories have responsibility for areas such as education, healthcare, and highways."
+    explanation: "Provinces and territories have responsibility for areas such as education, healthcare, and highways.",
+    imageUrl: 'https://picsum.photos/seed/q87/600/400',
+    imageHint: 'school hospital',
   },
   {
     id: 88,
@@ -728,7 +902,9 @@ export const mockQuestions: Question[] = [
     options: ["From Sea to Sea", "Strong and Free", "Peace, Order, and Good Government", "Home and Native Land"],
     answer: "From Sea to Sea",
     category: "Symbols",
-    explanation: "Canada's motto, 'A Mari Usque Ad Mare,' translates from Latin to 'From Sea to Sea.' It is taken from Psalm 72:8."
+    explanation: "Canada's motto, 'A Mari Usque Ad Mare,' translates from Latin to 'From Sea to Sea.' It is taken from Psalm 72:8.",
+    imageUrl: 'https://picsum.photos/seed/q88/600/400',
+    imageHint: 'coast to coast',
   },
   {
     id: 89,
@@ -736,7 +912,9 @@ export const mockQuestions: Question[] = [
     options: ["British Columbia", "Ontario", "Quebec", "Manitoba"],
     answer: "Quebec",
     category: "Geography",
-    explanation: "Quebec is the largest producer of hydroelectricity in Canada, with a vast network of rivers and reservoirs."
+    explanation: "Quebec is the largest producer of hydroelectricity in Canada, with a vast network of rivers and reservoirs.",
+    imageUrl: 'https://picsum.photos/seed/q89/600/400',
+    imageHint: 'hydro dam',
   },
   {
     id: 90,
@@ -744,7 +922,9 @@ export const mockQuestions: Question[] = [
     options: ["The approval of the Prime Minister", "A national referendum", "It must pass in both the House of Commons and the Senate and receive Royal Assent", "The approval of the Supreme Court"],
     answer: "It must pass in both the House of Commons and the Senate and receive Royal Assent",
     category: "Government",
-    explanation: "For a bill to become law, it must be passed by a majority vote in both the House of Commons and the Senate. Afterward, it must be given Royal Assent by the Governor General."
+    explanation: "For a bill to become law, it must be passed by a majority vote in both the House of Commons and the Senate. Afterward, it must be given Royal Assent by the Governor General.",
+    imageUrl: 'https://picsum.photos/seed/q90/600/400',
+    imageHint: 'law signature',
   },
   {
     id: 91,
@@ -752,7 +932,9 @@ export const mockQuestions: Question[] = [
     options: ["Kim Campbell", "Bertha Wilson", "Jeanne Sauvé", "Adrienne Clarkson"],
     answer: "Bertha Wilson",
     category: "History",
-    explanation: "In 1982, Bertha Wilson became the first woman appointed to be a Justice of the Supreme Court of Canada."
+    explanation: "In 1982, Bertha Wilson became the first woman appointed to be a Justice of the Supreme Court of Canada.",
+    imageUrl: 'https://picsum.photos/seed/q91/600/400',
+    imageHint: 'female judge',
   },
   {
     id: 92,
@@ -760,7 +942,9 @@ export const mockQuestions: Question[] = [
     options: ["Freedom of expression", "Freedom of association", "Freedom of conscience", "Freedom of peaceful assembly"],
     answer: "Freedom of association",
     category: "Rights and Responsibilities",
-    explanation: "Freedom of association protects the right of individuals to form and join groups, such as unions, political parties, or cultural organizations."
+    explanation: "Freedom of association protects the right of individuals to form and join groups, such as unions, political parties, or cultural organizations.",
+    imageUrl: 'https://picsum.photos/seed/q92/600/400',
+    imageHint: 'group people',
   },
   {
     id: 93,
@@ -768,7 +952,9 @@ export const mockQuestions: Question[] = [
     options: ["Calgary", "Edmonton", "Red Deer", "Banff"],
     answer: "Edmonton",
     category: "Geography",
-    explanation: "Edmonton is the capital city of the province of Alberta."
+    explanation: "Edmonton is the capital city of the province of Alberta.",
+    imageUrl: 'https://picsum.photos/seed/q93/600/400',
+    imageHint: 'edmonton skyline',
   },
   {
     id: 94,
@@ -776,7 +962,9 @@ export const mockQuestions: Question[] = [
     options: ["The joining of provinces to form a new country", "A type of government", "The Canadian constitution", "A military alliance"],
     answer: "The joining of provinces to form a new country",
     category: "History",
-    explanation: "Confederation refers to the process on July 1, 1867, when the British North American colonies of Canada, Nova Scotia, and New Brunswick were united into one Dominion of Canada."
+    explanation: "Confederation refers to the process on July 1, 1867, when the British North American colonies of Canada, Nova Scotia, and New Brunswick were united into one Dominion of Canada.",
+    imageUrl: 'https://picsum.photos/seed/q94/600/400',
+    imageHint: 'historic conference',
   },
   {
     id: 95,
@@ -784,7 +972,9 @@ export const mockQuestions: Question[] = [
     options: ["This can change with each election", "Conservative Party", "Liberal Party", "New Democratic Party"],
     answer: "This can change with each election",
     category: "Government",
-    explanation: "The party in power is the one that wins the most seats in a general election. This information changes over time. You should check the Parliament of Canada website for the current government."
+    explanation: "The party in power is the one that wins the most seats in a general election. This information changes over time. You should check the Parliament of Canada website for the current government.",
+    imageUrl: 'https://picsum.photos/seed/q95/600/400',
+    imageHint: 'political parties',
   },
   {
     id: 96,
@@ -792,7 +982,9 @@ export const mockQuestions: Question[] = [
     options: ["Fraser River", "Mackenzie River", "St. Lawrence River", "Red River"],
     answer: "St. Lawrence River",
     category: "Geography",
-    explanation: "The St. Lawrence River is a historically significant and economically vital waterway that flows through Southern Quebec, connecting the Great Lakes with the Atlantic Ocean."
+    explanation: "The St. Lawrence River is a historically significant and economically vital waterway that flows through Southern Quebec, connecting the Great Lakes with the Atlantic Ocean.",
+    imageUrl: 'https://picsum.photos/seed/q96/600/400',
+    imageHint: 'river landscape',
   },
   {
     id: 97,
@@ -800,7 +992,9 @@ export const mockQuestions: Question[] = [
     options: ["When the governing party has fewer than half the seats in the House of Commons", "When the government represents only minority groups", "A government that lasts for a short time", "When the Senate overrules the House of Commons"],
     answer: "When the governing party has fewer than half the seats in the House of Commons",
     category: "Government",
-    explanation: "A minority government occurs when the governing party has the most seats, but still fewer than all the other parties combined. They must rely on the support of other parties to pass legislation."
+    explanation: "A minority government occurs when the governing party has the most seats, but still fewer than all the other parties combined. They must rely on the support of other parties to pass legislation.",
+    imageUrl: 'https://picsum.photos/seed/q97/600/400',
+    imageHint: 'parliament balance',
   },
   {
     id: 98,
@@ -808,7 +1002,9 @@ export const mockQuestions: Question[] = [
     options: ["Sir John A. Macdonald", "Louis Riel", "Alexander Mackenzie", "Donald Smith (Lord Strathcona)"],
     answer: "Donald Smith (Lord Strathcona)",
     category: "History",
-    explanation: "Donald Smith, also known as Lord Strathcona, was the financial backer who drove the last spike of the Canadian Pacific Railway in 1885, a project championed by Prime Minister John A. Macdonald to unite Canada from coast to coast."
+    explanation: "Donald Smith, also known as Lord Strathcona, was the financial backer who drove the last spike of the Canadian Pacific Railway in 1885, a project championed by Prime Minister John A. Macdonald to unite Canada from coast to coast.",
+    imageUrl: 'https://picsum.photos/seed/q98/600/400',
+    imageHint: 'vintage railway',
   },
   {
     id: 99,
@@ -816,7 +1012,9 @@ export const mockQuestions: Question[] = [
     options: ["To represent the Sovereign in Canada", "To lead the government", "To command the police", "To write laws"],
     answer: "To represent the Sovereign in Canada",
     category: "Government",
-    explanation: "The Governor General is the monarch's representative in Canada. Their duties include giving Royal Assent to bills, reading the Speech from the Throne, and acting as Commander-in-Chief."
+    explanation: "The Governor General is the monarch's representative in Canada. Their duties include giving Royal Assent to bills, reading the Speech from the Throne, and acting as Commander-in-Chief.",
+    imageUrl: 'https://picsum.photos/seed/q99/600/400',
+    imageHint: 'governor general',
   },
   {
     id: 100,
@@ -824,7 +1022,9 @@ export const mockQuestions: Question[] = [
     options: ["The Royal Canadian Mounted Police (RCMP)", "The Federal Bureau of Investigation (FBI)", "The Ontario Provincial Police (OPP)", "The Sûreté du Québec (SQ)"],
     answer: "The Royal Canadian Mounted Police (RCMP)",
     category: "Symbols",
-    explanation: "The RCMP is Canada's national police force, providing federal policing services and also serving as the provincial/territorial or municipal police force in many areas."
+    explanation: "The RCMP is Canada's national police force, providing federal policing services and also serving as the provincial/territorial or municipal police force in many areas.",
+    imageUrl: 'https://picsum.photos/seed/q100/600/400',
+    imageHint: 'mounted police',
   },
   {
     id: 101,
@@ -832,7 +1032,9 @@ export const mockQuestions: Question[] = [
     options: ["The Constitution Act, 1982", "The British North America Act", "The Bill of Rights", "The Quebec Act"],
     answer: "The Constitution Act, 1982",
     category: "Rights and Responsibilities",
-    explanation: "Section 35 of the Constitution Act, 1982, recognizes and affirms the existing Aboriginal and treaty rights of the Aboriginal peoples of Canada."
+    explanation: "Section 35 of the Constitution Act, 1982, recognizes and affirms the existing Aboriginal and treaty rights of the Aboriginal peoples of Canada.",
+    imageUrl: 'https://picsum.photos/seed/q101/600/400',
+    imageHint: 'treaty document',
   },
   {
     id: 102,
@@ -840,7 +1042,9 @@ export const mockQuestions: Question[] = [
     options: ["Nova Scotia, New Brunswick, Prince Edward Island, and Newfoundland and Labrador", "Quebec and Ontario", "British Columbia and Alberta", "The three territories"],
     answer: "Nova Scotia, New Brunswick, Prince Edward Island, and Newfoundland and Labrador",
     category: "Geography",
-    explanation: "The four Atlantic provinces are located on Canada's east coast."
+    explanation: "The four Atlantic provinces are located on Canada's east coast.",
+    imageUrl: 'https://picsum.photos/seed/q102/600/400',
+    imageHint: 'atlantic canada',
   },
   {
     id: 103,
@@ -848,7 +1052,9 @@ export const mockQuestions: Question[] = [
     options: ["The Famous Five", "Laura Secord", "The Sisters of Charity", "The United Empire Loyalists"],
     answer: "The Famous Five",
     category: "History",
-    explanation: "The Famous Five were five Alberta women who, in the 'Persons Case' of 1929, won the right for women to be appointed to the Senate. This was a major victory for women's rights and equality."
+    explanation: "The Famous Five were five Alberta women who, in the 'Persons Case' of 1929, won the right for women to be appointed to the Senate. This was a major victory for women's rights and equality.",
+    imageUrl: 'https://picsum.photos/seed/q103/600/400',
+    imageHint: 'suffragettes march',
   },
   {
     id: 104,
@@ -856,7 +1062,9 @@ export const mockQuestions: Question[] = [
     options: ["A type of briefcase carried by MPs", "The specific responsibilities of a cabinet minister (e.g., Minister of Finance)", "A collection of stocks and bonds owned by the government", "A government building"],
     answer: "The specific responsibilities of a cabinet minister (e.g., Minister of Finance)",
     category: "Government",
-    explanation: "The Prime Minister assigns each cabinet minister a portfolio, which is the area of government they are in charge of, such as Health, Justice, or National Defence."
+    explanation: "The Prime Minister assigns each cabinet minister a portfolio, which is the area of government they are in charge of, such as Health, Justice, or National Defence.",
+    imageUrl: 'https://picsum.photos/seed/q104/600/400',
+    imageHint: 'government portfolio',
   },
   {
     id: 105,
@@ -864,7 +1072,9 @@ export const mockQuestions: Question[] = [
     options: ["Vancouver", "Montreal", "Calgary", "Toronto"],
     answer: "Toronto",
     category: "Geography",
-    explanation: "Toronto is the heart of Canada's financial services industry, home to the Toronto Stock Exchange and the headquarters of the five largest Canadian banks."
+    explanation: "Toronto is the heart of Canada's financial services industry, home to the Toronto Stock Exchange and the headquarters of the five largest Canadian banks.",
+    imageUrl: 'https://picsum.photos/seed/q105/600/400',
+    imageHint: 'financial district',
   },
   {
     id: 106,
@@ -872,7 +1082,9 @@ export const mockQuestions: Question[] = [
     options: ["A private system paid for by individuals", "A universal system paid for by taxes", "A system only for the wealthy", "A system run by charities"],
     answer: "A universal system paid for by taxes",
     category: "Rights and Responsibilities",
-    explanation: "Canada has a universal healthcare system, often called Medicare. It is funded by federal and provincial taxes and provides access to medically necessary hospital and physician services for all citizens and permanent residents."
+    explanation: "Canada has a universal healthcare system, often called Medicare. It is funded by federal and provincial taxes and provides access to medically necessary hospital and physician services for all citizens and permanent residents.",
+    imageUrl: 'https://picsum.photos/seed/q106/600/400',
+    imageHint: 'healthcare symbol',
   },
   {
     id: 107,
@@ -880,7 +1092,9 @@ export const mockQuestions: Question[] = [
     options: ["The first French-Canadian prime minister", "A famous general", "An inventor", "The discoverer of insulin"],
     answer: "The first French-Canadian prime minister",
     category: "History",
-    explanation: "Sir Wilfrid Laurier was the first French-Canadian Prime Minister, serving from 1896 to 1911. He encouraged immigration to the West and managed a period of great economic growth."
+    explanation: "Sir Wilfrid Laurier was the first French-Canadian Prime Minister, serving from 1896 to 1911. He encouraged immigration to the West and managed a period of great economic growth.",
+    imageUrl: 'https://picsum.photos/seed/q107/600/400',
+    imageHint: 'vintage photo',
   },
   {
     id: 108,
@@ -888,7 +1102,9 @@ export const mockQuestions: Question[] = [
     options: ["By winning a vote of non-confidence", "By appealing to the Queen", "By refusing to attend Parliament", "They cannot defeat the government"],
     answer: "By winning a vote of non-confidence",
     category: "Government",
-    explanation: "In a minority government situation, if the government loses a major vote on a budget or another key issue, it is considered a vote of non-confidence. This can force the government to resign or call an election."
+    explanation: "In a minority government situation, if the government loses a major vote on a budget or another key issue, it is considered a vote of non-confidence. This can force the government to resign or call an election.",
+    imageUrl: 'https://picsum.photos/seed/q108/600/400',
+    imageHint: 'parliament vote',
   },
   {
     id: 109,
@@ -896,7 +1112,9 @@ export const mockQuestions: Question[] = [
     options: ["British Columbia", "Newfoundland and Labrador", "Prince Edward Island", "Nova Scotia"],
     answer: "Newfoundland and Labrador",
     category: "Geography",
-    explanation: "The island of Newfoundland is separated from the other provinces by the sea. The Labrador portion borders Quebec, but the province as a whole is not fully connected by land."
+    explanation: "The island of Newfoundland is separated from the other provinces by the sea. The Labrador portion borders Quebec, but the province as a whole is not fully connected by land.",
+    imageUrl: 'https://picsum.photos/seed/q109/600/400',
+    imageHint: 'island coast',
   },
   {
     id: 110,
@@ -904,7 +1122,9 @@ export const mockQuestions: Question[] = [
     options: ["Prime Minister", "Mayor", "Premier", "Governor"],
     answer: "Premier",
     category: "Government",
-    explanation: "The head of a provincial government is called the Premier. In the territories, this leader is also sometimes called the Premier."
+    explanation: "The head of a provincial government is called the Premier. In the territories, this leader is also sometimes called the Premier.",
+    imageUrl: 'https://picsum.photos/seed/q110/600/400',
+    imageHint: 'provincial legislature',
   },
   {
     id: 111,
@@ -912,7 +1132,9 @@ export const mockQuestions: Question[] = [
     options: ["Canada must obey British laws", "Canada is part of a free association of former British colonies", "Canada uses the British currency", "Canada's military is controlled by Britain"],
     answer: "Canada is part of a free association of former British colonies",
     category: "Rights and Responsibilities",
-    explanation: "The Commonwealth is a voluntary association of 54 countries, most with historic links to the British Empire. Members cooperate on shared goals like development, democracy, and peace."
+    explanation: "The Commonwealth is a voluntary association of 54 countries, most with historic links to the British Empire. Members cooperate on shared goals like development, democracy, and peace.",
+    imageUrl: 'https://picsum.photos/seed/q111/600/400',
+    imageHint: 'commonwealth flags',
   },
   {
     id: 112,
@@ -920,7 +1142,9 @@ export const mockQuestions: Question[] = [
     options: ["The Grand Trunk Railway", "The Canadian National Railway", "The Canadian Pacific Railway", "The Intercolonial Railway"],
     answer: "The Canadian Pacific Railway",
     category: "History",
-    explanation: "The completion of the Canadian Pacific Railway was a monumental engineering feat that physically united Canada and fulfilled a promise made to British Columbia to join Confederation."
+    explanation: "The completion of the Canadian Pacific Railway was a monumental engineering feat that physically united Canada and fulfilled a promise made to British Columbia to join Confederation.",
+    imageUrl: 'https://picsum.photos/seed/q112/600/400',
+    imageHint: 'railway track',
   },
   {
     id: 113,
@@ -928,7 +1152,9 @@ export const mockQuestions: Question[] = [
     options: ["Sydney", "Dartmouth", "Halifax", "Truro"],
     answer: "Halifax",
     category: "Geography",
-    explanation: "Halifax is the capital of Nova Scotia and a major economic centre for Atlantic Canada."
+    explanation: "Halifax is the capital of Nova Scotia and a major economic centre for Atlantic Canada.",
+    imageUrl: 'https://picsum.photos/seed/q113/600/400',
+    imageHint: 'halifax harbour',
   },
   {
     id: 114,
@@ -936,7 +1162,9 @@ export const mockQuestions: Question[] = [
     options: ["The Prime Minister", "The Minister of National Defence", "The Governor General", "The Chief of the Defence Staff"],
     answer: "The Governor General",
     category: "Government",
-    explanation: "The Governor General represents the monarch and formally serves as the Commander-in-Chief of the Canadian Armed Forces."
+    explanation: "The Governor General represents the monarch and formally serves as the Commander-in-Chief of the Canadian Armed Forces.",
+    imageUrl: 'https://picsum.photos/seed/q114/600/400',
+    imageHint: 'military parade',
   },
   {
     id: 115,
@@ -944,7 +1172,9 @@ export const mockQuestions: Question[] = [
     options: ["A federal election", "A vote by the public on a specific question", "A debate in the Senate", "A decision by a judge"],
     answer: "A vote by the public on a specific question",
     category: "Government",
-    explanation: "A referendum is a direct vote in which an entire electorate is invited to vote on a particular proposal. This may result in the adoption of a new law. For example, Quebec held referendums on sovereignty in 1980 and 1995."
+    explanation: "A referendum is a direct vote in which an entire electorate is invited to vote on a particular proposal. This may result in the adoption of a new law. For example, Quebec held referendums on sovereignty in 1980 and 1995.",
+    imageUrl: 'https://picsum.photos/seed/q115/600/400',
+    imageHint: 'ballot question',
   },
   {
     id: 116,
@@ -952,7 +1182,9 @@ export const mockQuestions: Question[] = [
     options: ["The War of 1812", "The South African War (Boer War)", "World War I", "The Korean War"],
     answer: "World War I",
     category: "History",
-    explanation: "Canada's significant contributions and sacrifices in World War I, particularly at battles like Vimy Ridge, fostered a strong sense of national identity and led to greater independence from Britain."
+    explanation: "Canada's significant contributions and sacrifices in World War I, particularly at battles like Vimy Ridge, fostered a strong sense of national identity and led to greater independence from Britain.",
+    imageUrl: 'https://picsum.photos/seed/q116/600/400',
+    imageHint: 'ww1 soldier',
   },
   {
     id: 117,
@@ -960,7 +1192,9 @@ export const mockQuestions: Question[] = [
     options: ["The Premier", "The Lieutenant Governor", "The Commissioner", "The Mayor"],
     answer: "The Lieutenant Governor",
     category: "Government",
-    explanation: "The Lieutenant Governor is the representative of the Crown in a province, performing similar duties to the Governor General but at the provincial level."
+    explanation: "The Lieutenant Governor is the representative of the Crown in a province, performing similar duties to the Governor General but at the provincial level.",
+    imageUrl: 'https://picsum.photos/seed/q117/600/400',
+    imageHint: 'provincial crest',
   },
   {
     id: 118,
@@ -968,7 +1202,9 @@ export const mockQuestions: Question[] = [
     options: ["Montreal", "Quebec City", "Gatineau", "Sherbrooke"],
     answer: "Quebec City",
     category: "Geography",
-    explanation: "Quebec City is the capital of the province of Quebec and one of the oldest cities in North America."
+    explanation: "Quebec City is the capital of the province of Quebec and one of the oldest cities in North America.",
+    imageUrl: 'https://picsum.photos/seed/q118/600/400',
+    imageHint: 'chateau frontenac',
   },
   {
     id: 119,
@@ -976,7 +1212,9 @@ export const mockQuestions: Question[] = [
     options: ["A piece of furniture in the Prime Minister's office", "A committee of Senators", "The Prime Minister and the ministers he or she chooses", "The opposition critics"],
     answer: "The Prime Minister and the ministers he or she chooses",
     category: "Government",
-    explanation: "The cabinet consists of the Prime Minister and ministers they select to be in charge of various government departments (portfolios). It is the key decision-making body in the executive branch."
+    explanation: "The cabinet consists of the Prime Minister and ministers they select to be in charge of various government departments (portfolios). It is the key decision-making body in the executive branch.",
+    imageUrl: 'https://picsum.photos/seed/q119/600/400',
+    imageHint: 'cabinet meeting',
   },
   {
     id: 120,
@@ -984,7 +1222,9 @@ export const mockQuestions: Question[] = [
     options: ["That women are 'persons' and can be appointed to the Senate", "That Aboriginal people are 'persons'", "The right to a lawyer", "The voting age"],
     answer: "That women are 'persons' and can be appointed to the Senate",
     category: "History",
-    explanation: "The landmark 'Persons Case', brought forward by the Famous Five, was a legal ruling that established women were eligible to be appointed to the Senate, a major step forward for women's equality."
+    explanation: "The landmark 'Persons Case', brought forward by the Famous Five, was a legal ruling that established women were eligible to be appointed to the Senate, a major step forward for women's equality.",
+    imageUrl: 'https://picsum.photos/seed/q120/600/400',
+    imageHint: 'vintage women',
   },
   {
     id: 121,
@@ -992,7 +1232,9 @@ export const mockQuestions: Question[] = [
     options: ["Brandon", "Thompson", "Winnipeg", "Portage la Prairie"],
     answer: "Winnipeg",
     category: "Geography",
-    explanation: "Winnipeg is the capital and largest city of Manitoba."
+    explanation: "Winnipeg is the capital and largest city of Manitoba.",
+    imageUrl: 'https://picsum.photos/seed/q121/600/400',
+    imageHint: 'winnipeg forks',
   },
   {
     id: 122,
@@ -1000,7 +1242,9 @@ export const mockQuestions: Question[] = [
     options: ["The right to a guaranteed job", "The right to enter and leave Canada", "The right to free housing", "The right to not pay taxes"],
     answer: "The right to enter and leave Canada",
     category: "Rights and Responsibilities",
-    explanation: "Mobility rights, protected by the Charter, include the right of citizens to enter, remain in, and leave Canada."
+    explanation: "Mobility rights, protected by the Charter, include the right of citizens to enter, remain in, and leave Canada.",
+    imageUrl: 'https://picsum.photos/seed/q122/600/400',
+    imageHint: 'passport airport',
   },
   {
     id: 123,
@@ -1008,7 +1252,9 @@ export const mockQuestions: Question[] = [
     options: ["1867", "1905", "1949", "1999"],
     answer: "1949",
     category: "History",
-    explanation: "Newfoundland was a separate British colony until it joined Canada as the 10th province in 1949."
+    explanation: "Newfoundland was a separate British colony until it joined Canada as the 10th province in 1949.",
+    imageUrl: 'https://picsum.photos/seed/q123/600/400',
+    imageHint: 'newfoundland coast',
   },
   {
     id: 124,
@@ -1016,7 +1262,9 @@ export const mockQuestions: Question[] = [
     options: ["Federal", "Provincial/Territorial", "Municipal", "Regional"],
     answer: "Municipal",
     category: "Government",
-    explanation: "Municipal (or local) governments are responsible for services that affect the daily lives of residents, such as roads, sewers, garbage collection, and parks."
+    explanation: "Municipal (or local) governments are responsible for services that affect the daily lives of residents, such as roads, sewers, garbage collection, and parks.",
+    imageUrl: 'https://picsum.photos/seed/q124/600/400',
+    imageHint: 'recycling truck',
   },
   {
     id: 125,
@@ -1024,7 +1272,9 @@ export const mockQuestions: Question[] = [
     options: ["A military defence system", "A large area of exposed Precambrian rock that covers much of Canada", "A hockey trophy", "The coat of arms"],
     answer: "A large area of exposed Precambrian rock that covers much of Canada",
     category: "Geography",
-    explanation: "The Canadian Shield is a vast geological formation of ancient rock, rich in mineral resources, that covers about half of Canada's landmass."
+    explanation: "The Canadian Shield is a vast geological formation of ancient rock, rich in mineral resources, that covers about half of Canada's landmass.",
+    imageUrl: 'https://picsum.photos/seed/q125/600/400',
+    imageHint: 'rock formation',
   },
   {
     id: 126,
@@ -1032,7 +1282,9 @@ export const mockQuestions: Question[] = [
     options: ["Royal Assent", "First Reading", "A vote of non-confidence", "Question Period"],
     answer: "Royal Assent",
     category: "Government",
-    explanation: "Royal Assent is the final step in the legislative process, where the Governor General (or Lieutenant Governor for provincial bills) approves a bill on behalf of the Sovereign, making it law."
+    explanation: "Royal Assent is the final step in the legislative process, where the Governor General (or Lieutenant Governor for provincial bills) approves a bill on behalf of the Sovereign, making it law.",
+    imageUrl: 'https://picsum.photos/seed/q126/600/400',
+    imageHint: 'royal signature',
   },
   {
     id: 127,
@@ -1040,7 +1292,9 @@ export const mockQuestions: Question[] = [
     options: ["A popular ice cream flavour", "A large-scale removal of Indigenous children from their families into the child welfare system", "A dance craze in the 1960s", "A gold rush in the Yukon"],
     answer: "A large-scale removal of Indigenous children from their families into the child welfare system",
     category: "History",
-    explanation: "The '60s Scoop' was a tragic period where a large number of Indigenous children were taken from their families and communities and placed in non-Indigenous homes, leading to a loss of culture and identity."
+    explanation: "The '60s Scoop' was a tragic period where a large number of Indigenous children were taken from their families and communities and placed in non-Indigenous homes, leading to a loss of culture and identity.",
+    imageUrl: 'https://picsum.photos/seed/q127/600/400',
+    imageHint: 'family hands',
   },
   {
     id: 128,
@@ -1048,7 +1302,9 @@ export const mockQuestions: Question[] = [
     options: ["It is optional for citizens", "It is a responsibility of Canadian citizenship", "Only major laws need to be followed", "Laws only apply to non-citizens"],
     answer: "It is a responsibility of Canadian citizenship",
     category: "Rights and Responsibilities",
-    explanation: "One of the fundamental duties of any Canadian citizen is to obey Canada's laws. These laws are made by elected representatives and are intended to maintain order and a peaceful society."
+    explanation: "One of the fundamental duties of any Canadian citizen is to obey Canada's laws. These laws are made by elected representatives and are intended to maintain order and a peaceful society.",
+    imageUrl: 'https://picsum.photos/seed/q128/600/400',
+    imageHint: 'law book',
   },
   {
     id: 129,
@@ -1056,7 +1312,9 @@ export const mockQuestions: Question[] = [
     options: ["Ottawa", "Toronto", "Hamilton", "London"],
     answer: "Toronto",
     category: "Geography",
-    explanation: "Toronto is the capital of the province of Ontario and is Canada's largest city."
+    explanation: "Toronto is the capital of the province of Ontario and is Canada's largest city.",
+    imageUrl: 'https://picsum.photos/seed/q129/600/400',
+    imageHint: 'cn tower',
   },
   {
     id: 130,
@@ -1064,7 +1322,9 @@ export const mockQuestions: Question[] = [
     options: ["Christopher Columbus", "John Cabot", "Jacques Cartier", "Henry Hudson"],
     answer: "John Cabot",
     category: "History",
-    explanation: "John Cabot, an Italian explorer sailing for England, landed on the east coast of Canada in 1497 and claimed the land for England. He was the first European to draw a map of Canada's eastern coastline."
+    explanation: "John Cabot, an Italian explorer sailing for England, landed on the east coast of Canada in 1497 and claimed the land for England. He was the first European to draw a map of Canada's eastern coastline.",
+    imageUrl: 'https://picsum.photos/seed/q130/600/400',
+    imageHint: 'ancient map',
   },
   {
     id: 131,
@@ -1072,7 +1332,9 @@ export const mockQuestions: Question[] = [
     options: ["Parliament", "The Cabinet", "The police", "The judiciary (courts)"],
     answer: "The judiciary (courts)",
     category: "Government",
-    explanation: "The judicial branch, composed of courts and judges, is responsible for interpreting laws and resolving legal disputes independently from the other branches of government."
+    explanation: "The judicial branch, composed of courts and judges, is responsible for interpreting laws and resolving legal disputes independently from the other branches of government.",
+    imageUrl: 'https://picsum.photos/seed/q131/600/400',
+    imageHint: 'courtroom gavel',
   },
   {
     id: 132,
@@ -1080,7 +1342,9 @@ export const mockQuestions: Question[] = [
     options: ["The West Coast", "The North", "The Prairies", "Central Canada"],
     answer: "The North",
     category: "Geography",
-    explanation: "Canada's vast northern region, which includes the three territories, covers over one-third of the country's landmass but is sparsely populated."
+    explanation: "Canada's vast northern region, which includes the three territories, covers over one-third of the country's landmass but is sparsely populated.",
+    imageUrl: 'https://picsum.photos/seed/q132/600/400',
+    imageHint: 'arctic tundra',
   },
   {
     id: 133,
@@ -1088,7 +1352,9 @@ export const mockQuestions: Question[] = [
     options: ["The right to own a car", "The right to move to and live in any province, and to leave and enter Canada", "The right to a free bus pass", "The right to change jobs"],
     answer: "The right to move to and live in any province, and to leave and enter Canada",
     category: "Rights and Responsibilities",
-    explanation: "Mobility rights, outlined in the Charter, ensure that Canadian citizens can live and work anywhere in Canada, and can freely enter and leave the country."
+    explanation: "Mobility rights, outlined in the Charter, ensure that Canadian citizens can live and work anywhere in Canada, and can freely enter and leave the country.",
+    imageUrl: 'https://picsum.photos/seed/q133/600/400',
+    imageHint: 'road map',
   },
   {
     id: 134,
@@ -1096,7 +1362,9 @@ export const mockQuestions: Question[] = [
     options: ["Canada became part of the United States", "Canada remained independent of the United States", "Canada became a republic", "The border was moved"],
     answer: "Canada remained independent of the United States",
     category: "History",
-    explanation: "A key outcome of the War of 1812 was the successful defence of British North America against American invasion, which helped solidify the border and ensured Canada would develop as a separate country from the USA."
+    explanation: "A key outcome of the War of 1812 was the successful defence of British North America against American invasion, which helped solidify the border and ensured Canada would develop as a separate country from the USA.",
+    imageUrl: 'https://picsum.photos/seed/q134/600/400',
+    imageHint: 'historic fort',
   },
   {
     id: 135,
@@ -1104,7 +1372,9 @@ export const mockQuestions: Question[] = [
     options: ["The Library of Parliament", "The Senate", "The House of Commons", "The office of the Prime Minister"],
     answer: "The House of Commons",
     category: "Government",
-    explanation: "The House of Commons, composed of elected Members of Parliament, is the major law-making body where bills are introduced, debated, and voted upon."
+    explanation: "The House of Commons, composed of elected Members of Parliament, is the major law-making body where bills are introduced, debated, and voted upon.",
+    imageUrl: 'https://picsum.photos/seed/q135/600/400',
+    imageHint: 'commons chamber',
   },
   {
     id: 136,
@@ -1112,7 +1382,9 @@ export const mockQuestions: Question[] = [
     options: ["Ontario", "New Brunswick", "Manitoba", "Quebec"],
     answer: "Quebec",
     category: "Government",
-    explanation: "Due to its history, Quebec has a civil code for matters of private law, which is based on the French legal tradition, unlike the rest of Canada which uses English common law."
+    explanation: "Due to its history, Quebec has a civil code for matters of private law, which is based on the French legal tradition, unlike the rest of Canada which uses English common law.",
+    imageUrl: 'https://picsum.photos/seed/q136/600/400',
+    imageHint: 'law code',
   },
   {
     id: 137,
@@ -1120,7 +1392,9 @@ export const mockQuestions: Question[] = [
     options: ["Saskatoon", "Regina", "Moose Jaw", "Prince Albert"],
     answer: "Regina",
     category: "Geography",
-    explanation: "Regina is the capital city of Saskatchewan."
+    explanation: "Regina is the capital city of Saskatchewan.",
+    imageUrl: 'https://picsum.photos/seed/q137/600/400',
+    imageHint: 'regina skyline',
   },
   {
     id: 138,
@@ -1128,7 +1402,9 @@ export const mockQuestions: Question[] = [
     options: ["Making lots of money", "Volunteering in the community", "Obeying the law", "Speaking both official languages"],
     answer: "Obeying the law",
     category: "Rights and Responsibilities",
-    explanation: "Respecting and obeying federal, provincial, and municipal laws is a core responsibility of every Canadian citizen, ensuring a safe and orderly society for all."
+    explanation: "Respecting and obeying federal, provincial, and municipal laws is a core responsibility of every Canadian citizen, ensuring a safe and orderly society for all.",
+    imageUrl: 'https://picsum.photos/seed/q138/600/400',
+    imageHint: 'peaceful community',
   },
   {
     id: 139,
@@ -1136,7 +1412,9 @@ export const mockQuestions: Question[] = [
     options: ["Sir John A. Macdonald", "Louis Riel", "Thomas Scott", "Gabriel Dumont"],
     answer: "Louis Riel",
     category: "History",
-    explanation: "Louis Riel led the Métis of the Red River settlement and formed a provisional government to negotiate the terms of Manitoba's entry into Confederation in 1870."
+    explanation: "Louis Riel led the Métis of the Red River settlement and formed a provisional government to negotiate the terms of Manitoba's entry into Confederation in 1870.",
+    imageUrl: 'https://picsum.photos/seed/q139/600/400',
+    imageHint: 'red river',
   },
   {
     id: 140,
@@ -1144,7 +1422,9 @@ export const mockQuestions: Question[] = [
     options: ["16", "18", "21", "25"],
     answer: "18",
     category: "Rights and Responsibilities",
-    explanation: "Any Canadian citizen who is at least 18 years old on election day is eligible to run for a seat in the House of Commons."
+    explanation: "Any Canadian citizen who is at least 18 years old on election day is eligible to run for a seat in the House of Commons.",
+    imageUrl: 'https://picsum.photos/seed/q140/600/400',
+    imageHint: 'election campaign',
   },
   {
     id: 141,
@@ -1152,7 +1432,9 @@ export const mockQuestions: Question[] = [
     options: ["Pioneers", "Settlers", "Aboriginal Peoples", "Founders"],
     answer: "Aboriginal Peoples",
     category: "History",
-    explanation: "The first people to inhabit what is now Canada were the ancestors of today's Aboriginal peoples (First Nations, Inuit, and Métis), who have been here for thousands of years."
+    explanation: "The first people to inhabit what is now Canada were the ancestors of today's Aboriginal peoples (First Nations, Inuit, and Métis), who have been here for thousands of years.",
+    imageUrl: 'https://picsum.photos/seed/q141/600/400',
+    imageHint: 'ancient artifacts',
   },
   {
     id: 142,
@@ -1160,7 +1442,9 @@ export const mockQuestions: Question[] = [
     options: ["Municipal", "Provincial", "Federal", "All of them"],
     answer: "Federal",
     category: "Government",
-    explanation: "The federal government is responsible for foreign affairs and international relations, which includes the issuance of Canadian passports."
+    explanation: "The federal government is responsible for foreign affairs and international relations, which includes the issuance of Canadian passports.",
+    imageUrl: 'https://picsum.photos/seed/q142/600/400',
+    imageHint: 'canadian passport',
   },
   {
     id: 143,
@@ -1168,7 +1452,9 @@ export const mockQuestions: Question[] = [
     options: ["Summerside", "Montague", "Charlottetown", "Souris"],
     answer: "Charlottetown",
     category: "Geography",
-    explanation: "Charlottetown is the capital of Prince Edward Island and is known as the 'Birthplace of Confederation' because the first conference to discuss uniting the provinces was held there in 1864."
+    explanation: "Charlottetown is the capital of Prince Edward Island and is known as the 'Birthplace of Confederation' because the first conference to discuss uniting the provinces was held there in 1864.",
+    imageUrl: 'https://picsum.photos/seed/q143/600/400',
+    imageHint: 'charlottetown waterfront',
   },
   {
     id: 144,
@@ -1176,7 +1462,9 @@ export const mockQuestions: Question[] = [
     options: ["The right to vote", "Freedom of the press and other media", "The right to a fair trial", "The right to bear arms"],
     answer: "Freedom of the press and other media",
     category: "Rights and Responsibilities",
-    explanation: "This fundamental freedom is broad and includes the right for the media to report on what is happening in Canada and the world without censorship from the government."
+    explanation: "This fundamental freedom is broad and includes the right for the media to report on what is happening in Canada and the world without censorship from the government.",
+    imageUrl: 'https://picsum.photos/seed/q144/600/400',
+    imageHint: 'newspaper press',
   },
   {
     id: 145,
@@ -1184,7 +1472,9 @@ export const mockQuestions: Question[] = [
     options: ["The monarchy", "The civil service", "Responsible government", "The court system"],
     answer: "Responsible government",
     category: "Government",
-    explanation: "Responsible government is a key principle in Canada. It means that the executive branch (the cabinet) must have the confidence and support of the elected House of Commons to stay in power."
+    explanation: "Responsible government is a key principle in Canada. It means that the executive branch (the cabinet) must have the confidence and support of the elected House of Commons to stay in power.",
+    imageUrl: 'https://picsum.photos/seed/q145/600/400',
+    imageHint: 'accountability check',
   },
   {
     id: 146,
@@ -1192,7 +1482,9 @@ export const mockQuestions: Question[] = [
     options: ["Captain James Cook", "Sir Francis Drake", "Vitus Bering", "George Vancouver"],
     answer: "Captain James Cook",
     category: "History",
-    explanation: "British sea captain James Cook was one of the first Europeans to map the Pacific coast of North America, landing on Vancouver Island in 1778."
+    explanation: "British sea captain James Cook was one of the first Europeans to map the Pacific coast of North America, landing on Vancouver Island in 1778.",
+    imageUrl: 'https://picsum.photos/seed/q146/600/400',
+    imageHint: 'explorer ship',
   },
   {
     id: 147,
@@ -1200,7 +1492,9 @@ export const mockQuestions: Question[] = [
     options: ["The Lieutenant Governor", "The Premier", "The Commissioner", "The Governor"],
     answer: "The Commissioner",
     category: "Government",
-    explanation: "In Canada's three territories, the federal government is represented by a Commissioner, who fulfills a role similar to that of a provincial Lieutenant Governor."
+    explanation: "In Canada's three territories, the federal government is represented by a Commissioner, who fulfills a role similar to that of a provincial Lieutenant Governor.",
+    imageUrl: 'https://picsum.photos/seed/q147/600/400',
+    imageHint: 'territorial emblem',
   },
   {
     id: 148,
@@ -1208,7 +1502,9 @@ export const mockQuestions: Question[] = [
     options: ["Moncton", "Saint John", "Fredericton", "Bathurst"],
     answer: "Fredericton",
     category: "Geography",
-    explanation: "Fredericton is the capital city of the province of New Brunswick."
+    explanation: "Fredericton is the capital city of the province of New Brunswick.",
+    imageUrl: 'https://picsum.photos/seed/q148/600/400',
+    imageHint: 'fredericton bridge',
   },
   {
     id: 149,
@@ -1216,7 +1512,9 @@ export const mockQuestions: Question[] = [
     options: ["A national election", "An election held in an electoral district to fill a vacant seat", "A vote for the leader of a party", "A municipal election"],
     answer: "An election held in an electoral district to fill a vacant seat",
     category: "Government",
-    explanation: "A by-election is held between general elections in a single riding to fill a seat that has become vacant, for example, due to the resignation or death of a Member of Parliament."
+    explanation: "A by-election is held between general elections in a single riding to fill a seat that has become vacant, for example, due to the resignation or death of a Member of Parliament.",
+    imageUrl: 'https://picsum.photos/seed/q149/600/400',
+    imageHint: 'empty seat',
   },
   {
     id: 150,
@@ -1224,7 +1522,9 @@ export const mockQuestions: Question[] = [
     options: ["It led to the creation of social assistance programs", "It caused Canada to join the United States", "It had no effect on Canada", "It led to World War II"],
     answer: "It led to the creation of social assistance programs",
     category: "History",
-    explanation: "The widespread hardship of the Great Depression prompted the Canadian government to begin creating a 'social safety net', including programs like employment insurance and family allowance, to support its citizens."
+    explanation: "The widespread hardship of the Great Depression prompted the Canadian government to begin creating a 'social safety net', including programs like employment insurance and family allowance, to support its citizens.",
+    imageUrl: 'https://picsum.photos/seed/q150/600/400',
+    imageHint: 'soup kitchen',
   },
   {
     id: 151,
@@ -1232,7 +1532,9 @@ export const mockQuestions: Question[] = [
     options: ["Corner Brook", "St. John's", "Mount Pearl", "Gander"],
     answer: "St. John's",
     category: "Geography",
-    explanation: "St. John's is the capital and largest city of Newfoundland and Labrador, and is one of the oldest European settlements in North America."
+    explanation: "St. John's is the capital and largest city of Newfoundland and Labrador, and is one of the oldest European settlements in North America.",
+    imageUrl: 'https://picsum.photos/seed/q151/600/400',
+    imageHint: 'st johns houses',
   },
   {
     id: 152,
@@ -1240,7 +1542,9 @@ export const mockQuestions: Question[] = [
     options: ["To make laws", "To keep people safe and to enforce the law", "To advise the government", "To run the prisons"],
     answer: "To keep people safe and to enforce the law",
     category: "Rights and Responsibilities",
-    explanation: "Police forces in Canada at the federal, provincial, and municipal levels are responsible for law enforcement, crime prevention, and maintaining public order."
+    explanation: "Police forces in Canada at the federal, provincial, and municipal levels are responsible for law enforcement, crime prevention, and maintaining public order.",
+    imageUrl: 'https://picsum.photos/seed/q152/600/400',
+    imageHint: 'police car',
   },
   {
     id: 153,
@@ -1248,7 +1552,9 @@ export const mockQuestions: Question[] = [
     options: ["By a national popular vote", "He or she is the leader of the party with the most seats in the House of Commons", "Appointed by the Queen", "Elected by the Senate"],
     answer: "He or she is the leader of the party with the most seats in the House of Commons",
     category: "Government",
-    explanation: "After a federal election, the Governor General invites the leader of the party that won the most seats to form a government and become Prime Minister."
+    explanation: "After a federal election, the Governor General invites the leader of the party that won the most seats to form a government and become Prime Minister.",
+    imageUrl: 'https://picsum.photos/seed/q153/600/400',
+    imageHint: 'prime minister',
   },
   {
     id: 154,
@@ -1256,7 +1562,9 @@ export const mockQuestions: Question[] = [
     options: ["The Aboriginal people of the Arctic", "The first settlers of Quebec", "Métis people from the Red River", "A First Nation from Ontario"],
     answer: "The Aboriginal people of the Arctic",
     category: "History",
-    explanation: "The Inuit are an Aboriginal people who live in Canada's vast northern Arctic regions. Their name means 'the people' in their language, Inuktitut."
+    explanation: "The Inuit are an Aboriginal people who live in Canada's vast northern Arctic regions. Their name means 'the people' in their language, Inuktitut.",
+    imageUrl: 'https://picsum.photos/seed/q154/600/400',
+    imageHint: 'inuit art',
   },
   {
     id: 155,
@@ -1264,7 +1572,9 @@ export const mockQuestions: Question[] = [
     options: ["Provincial government", "Federal government", "Municipality", "Riding"],
     answer: "Municipality",
     category: "Government",
-    explanation: "A municipality is the level of government responsible for a specific local area, such as a city, town, or district. It is led by a mayor and council."
+    explanation: "A municipality is the level of government responsible for a specific local area, such as a city, town, or district. It is led by a mayor and council.",
+    imageUrl: 'https://picsum.photos/seed/q155/600/400',
+    imageHint: 'city hall',
   },
   {
     id: 156,
@@ -1272,7 +1582,9 @@ export const mockQuestions: Question[] = [
     options: ["Islam", "Judaism", "Christianity", "No affiliation"],
     answer: "Christianity",
     category: "Geography",
-    explanation: "While Canada has a diverse range of religions and a growing number of people with no religious affiliation, Christianity remains the largest religion in the country."
+    explanation: "While Canada has a diverse range of religions and a growing number of people with no religious affiliation, Christianity remains the largest religion in the country.",
+    imageUrl: 'https://picsum.photos/seed/q156/600/400',
+    imageHint: 'church steeple',
   },
   {
     id: 157,
@@ -1280,7 +1592,9 @@ export const mockQuestions: Question[] = [
     options: ["A way to get paid", "A responsibility of citizenship", "A legal requirement", "Something only for retired people"],
     answer: "A responsibility of citizenship",
     category: "Rights and Responsibilities",
-    explanation: "Volunteering is an excellent way to contribute to the well-being of your community and the country. It is considered an important responsibility for citizens, although it is not a mandatory duty."
+    explanation: "Volunteering is an excellent way to contribute to the well-being of your community and the country. It is considered an important responsibility for citizens, although it is not a mandatory duty.",
+    imageUrl: 'https://picsum.photos/seed/q157/600/400',
+    imageHint: 'volunteers hands',
   },
   {
     id: 158,
@@ -1288,7 +1602,9 @@ export const mockQuestions: Question[] = [
     options: ["They were given more land", "They were expelled from their homes in an event known as the 'Great Upheaval'", "They were all sent back to France", "They became the rulers of the region"],
     answer: "They were expelled from their homes in an event known as the 'Great Upheaval'",
     category: "History",
-    explanation: "Between 1755 and 1763, the British deported thousands of Acadians from their homes in the Maritimes. This tragic event is known as the Great Upheaval or the Expulsion of the Acadians."
+    explanation: "Between 1755 and 1763, the British deported thousands of Acadians from their homes in the Maritimes. This tragic event is known as the Great Upheaval or the Expulsion of the Acadians.",
+    imageUrl: 'https://picsum.photos/seed/q158/600/400',
+    imageHint: 'old village',
   },
   {
     id: 159,
@@ -1296,7 +1612,9 @@ export const mockQuestions: Question[] = [
     options: ["Inuvik", "Hay River", "Whitehorse", "Yellowknife"],
     answer: "Yellowknife",
     category: "Geography",
-    explanation: "Yellowknife is the capital and only city in the Northwest Territories."
+    explanation: "Yellowknife is the capital and only city in the Northwest Territories.",
+    imageUrl: 'https://picsum.photos/seed/q159/600/400',
+    imageHint: 'yellowknife sign',
   },
   {
     id: 160,
@@ -1304,7 +1622,9 @@ export const mockQuestions: Question[] = [
     options: ["The police", "Your employer", "An election official", "No one has the right to ask you how you voted"],
     answer: "No one has the right to ask you how you voted",
     category: "Rights and Responsibilities",
-    explanation: "The vote is secret. It is your private decision, and no one, including family members, employers, or government officials, has the right to insist that you tell them how you voted."
+    explanation: "The vote is secret. It is your private decision, and no one, including family members, employers, or government officials, has the right to insist that you tell them how you voted.",
+    imageUrl: 'https://picsum.photos/seed/q160/600/400',
+    imageHint: 'secret ballot',
   },
   {
     id: 161,
@@ -1312,7 +1632,9 @@ export const mockQuestions: Question[] = [
     options: ["A speech by the Queen on TV", "The Prime Minister's victory speech", "A speech written by the government and read by the Governor General, outlining the government's plans for the session of Parliament", "A debate between party leaders"],
     answer: "A speech written by the government and read by the Governor General, outlining the government's plans for the session of Parliament",
     category: "Government",
-    explanation: "The Speech from the Throne opens a new session of Parliament and outlines the government's agenda and legislative priorities."
+    explanation: "The Speech from the Throne opens a new session of Parliament and outlines the government's agenda and legislative priorities.",
+    imageUrl: 'https://picsum.photos/seed/q161/600/400',
+    imageHint: 'throne speech',
   },
   {
     id: 162,
@@ -1320,7 +1642,9 @@ export const mockQuestions: Question[] = [
     options: ["A world's fair held in Montreal in 1967", "A sports tournament", "A political conference", "A music festival"],
     answer: "A world's fair held in Montreal in 1967",
     category: "History",
-    explanation: "Expo 67 was a highly successful international exhibition held in Montreal to mark Canada's 100th birthday. It was a major cultural event that showcased Canada to the world."
+    explanation: "Expo 67 was a highly successful international exhibition held in Montreal to mark Canada's 100th birthday. It was a major cultural event that showcased Canada to the world.",
+    imageUrl: 'https://picsum.photos/seed/q162/600/400',
+    imageHint: 'expo 67',
   },
   {
     id: 163,
@@ -1328,7 +1652,9 @@ export const mockQuestions: Question[] = [
     options: ["Dawson City", "Whitehorse", "Watson Lake", "Yellowknife"],
     answer: "Whitehorse",
     category: "Geography",
-    explanation: "Whitehorse is the capital and largest city of the Yukon territory."
+    explanation: "Whitehorse is the capital and largest city of the Yukon territory.",
+    imageUrl: 'https://picsum.photos/seed/q163/600/400',
+    imageHint: 'yukon landscape',
   },
   {
     id: 164,
@@ -1336,7 +1662,9 @@ export const mockQuestions: Question[] = [
     options: ["The House of Commons", "The Supreme Court", "The Cabinet", "The Senate"],
     answer: "The Senate",
     category: "Government",
-    explanation: "The Senate's role is to provide a 'sober second thought' by carefully reviewing legislation passed by the House of Commons. Senators are not elected and are expected to be less partisan."
+    explanation: "The Senate's role is to provide a 'sober second thought' by carefully reviewing legislation passed by the House of Commons. Senators are not elected and are expected to be less partisan.",
+    imageUrl: 'https://picsum.photos/seed/q164/600/400',
+    imageHint: 'senate chamber',
   },
   {
     id: 165,
@@ -1344,7 +1672,9 @@ export const mockQuestions: Question[] = [
     options: ["The right to vote in federal and provincial elections", "The right to a government job", "The right to free housing", "The right to ignore laws"],
     answer: "The right to vote in federal and provincial elections",
     category: "Rights and Responsibilities",
-    explanation: "The right to vote is a cornerstone of Canadian democracy, allowing citizens to choose their representatives."
+    explanation: "The right to vote is a cornerstone of Canadian democracy, allowing citizens to choose their representatives.",
+    imageUrl: 'https://picsum.photos/seed/q165/600/400',
+    imageHint: 'voting sticker',
   },
   {
     id: 166,
@@ -1352,7 +1682,9 @@ export const mockQuestions: Question[] = [
     options: ["A Father of Confederation", "A great Canadian hockey player", "A famous member of the North-West Mounted Police", "Canada's first astronaut"],
     answer: "A famous member of the North-West Mounted Police",
     category: "History",
-    explanation: "Sir Sam Steele was a distinguished officer of the North-West Mounted Police (a forerunner of the RCMP) who played a key role in maintaining law and order during the Klondike Gold Rush."
+    explanation: "Sir Sam Steele was a distinguished officer of the North-West Mounted Police (a forerunner of the RCMP) who played a key role in maintaining law and order during the Klondike Gold Rush.",
+    imageUrl: 'https://picsum.photos/seed/q166/600/400',
+    imageHint: 'mounted police officer',
   },
   {
     id: 167,
@@ -1360,7 +1692,9 @@ export const mockQuestions: Question[] = [
     options: ["Rankin Inlet", "Iqaluit", "Cambridge Bay", "Arviat"],
     answer: "Iqaluit",
     category: "Geography",
-    explanation: "Iqaluit is the capital city of Canada's newest territory, Nunavut."
+    explanation: "Iqaluit is the capital city of Canada's newest territory, Nunavut.",
+    imageUrl: 'https://picsum.photos/seed/q167/600/400',
+    imageHint: 'iqaluit landscape',
   },
   {
     id: 168,
@@ -1368,7 +1702,9 @@ export const mockQuestions: Question[] = [
     options: ["100", "It is fixed by the Constitution", "The number changes based on population shifts", "500"],
     answer: "The number changes based on population shifts",
     category: "Government",
-    explanation: "The number of electoral districts is not fixed. It is adjusted every 10 years after the census to reflect changes in Canada's population distribution."
+    explanation: "The number of electoral districts is not fixed. It is adjusted every 10 years after the census to reflect changes in Canada's population distribution.",
+    imageUrl: 'https://picsum.photos/seed/q168/600/400',
+    imageHint: 'canada map ridings',
   },
   {
     id: 169,
@@ -1376,7 +1712,9 @@ export const mockQuestions: Question[] = [
     options: ["Only visiting museums", "Preserving Canada's natural, cultural, and historical sites for future generations", "Keeping historical artifacts in private collections", "Learning only about your own family's history"],
     answer: "Preserving Canada's natural, cultural, and historical sites for future generations",
     category: "Rights and Responsibilities",
-    explanation: "It is a responsibility of citizens to help preserve the diverse natural and cultural heritage of Canada, from national parks to historic buildings, so that others can continue to enjoy them."
+    explanation: "It is a responsibility of citizens to help preserve the diverse natural and cultural heritage of Canada, from national parks to historic buildings, so that others can continue to enjoy them.",
+    imageUrl: 'https://picsum.photos/seed/q169/600/400',
+    imageHint: 'national park',
   },
   {
     id: 170,
@@ -1384,7 +1722,9 @@ export const mockQuestions: Question[] = [
     options: ["Oil", "Silver", "Gold", "Diamonds"],
     answer: "Gold",
     category: "History",
-    explanation: "The discovery of gold in the Klondike region of the Yukon in 1896 led to the famous Klondike Gold Rush, attracting tens of thousands of prospectors to the North."
+    explanation: "The discovery of gold in the Klondike region of the Yukon in 1896 led to the famous Klondike Gold Rush, attracting tens of thousands of prospectors to the North.",
+    imageUrl: 'https://picsum.photos/seed/q170/600/400',
+    imageHint: 'gold nugget',
   },
   {
     id: 171,
@@ -1392,7 +1732,9 @@ export const mockQuestions: Question[] = [
     options: ["Only the Prime Minister", "Any Member of Parliament", "Only the Speaker", "Only Cabinet Ministers"],
     answer: "Any Member of Parliament",
     category: "Government",
-    explanation: "Any MP can introduce a bill. Bills introduced by a minister are called government bills, while those introduced by a non-minister MP are called private member's bills."
+    explanation: "Any MP can introduce a bill. Bills introduced by a minister are called government bills, while those introduced by a non-minister MP are called private member's bills.",
+    imageUrl: 'https://picsum.photos/seed/q171/600/400',
+    imageHint: 'parliament podium',
   },
   {
     id: 172,
@@ -1400,7 +1742,9 @@ export const mockQuestions: Question[] = [
     options: ["The Hudson Bay", "The Mackenzie River", "The St. Lawrence Seaway", "The Fraser River"],
     answer: "The St. Lawrence Seaway",
     category: "Geography",
-    explanation: "The St. Lawrence Seaway is a system of locks, canals, and channels in Canada and the United States that permits oceangoing vessels to travel from the Atlantic Ocean to the Great Lakes."
+    explanation: "The St. Lawrence Seaway is a system of locks, canals, and channels in Canada and the United States that permits oceangoing vessels to travel from the Atlantic Ocean to the Great Lakes.",
+    imageUrl: 'https://picsum.photos/seed/q172/600/400',
+    imageHint: 'cargo ship',
   },
   {
     id: 173,
@@ -1408,7 +1752,9 @@ export const mockQuestions: Question[] = [
     options: ["The principle that the government must respect all legal rights a person is owed", "The process of becoming a citizen", "The process for electing a Prime Minister", "The process for passing a law"],
     answer: "The principle that the government must respect all legal rights a person is owed",
     category: "Rights and Responsibilities",
-    explanation: "Due process is a fundamental legal principle that ensures fair treatment through the normal judicial system. It is a key part of the 'rule of law'."
+    explanation: "Due process is a fundamental legal principle that ensures fair treatment through the normal judicial system. It is a key part of the 'rule of law'.",
+    imageUrl: 'https://picsum.photos/seed/q173/600/400',
+    imageHint: 'courthouse facade',
   },
   {
     id: 174,
@@ -1416,7 +1762,9 @@ export const mockQuestions: Question[] = [
     options: ["A law about babies", "A period of high birth rates after World War II", "A famous children's story", "A type of explosion"],
     answer: "A period of high birth rates after World War II",
     category: "History",
-    explanation: "Following World War II (from about 1946 to 1964), Canada experienced a significant increase in its birth rate, a period known as the baby boom."
+    explanation: "Following World War II (from about 1946 to 1964), Canada experienced a significant increase in its birth rate, a period known as the baby boom.",
+    imageUrl: 'https://picsum.photos/seed/q174/600/400',
+    imageHint: 'vintage family',
   },
   {
     id: 175,
@@ -1424,7 +1772,9 @@ export const mockQuestions: Question[] = [
     options: ["The Prime Minister and the Cabinet", "The House of Commons and the Senate", "The Legislative and the Executive", "The Government and the Opposition"],
     answer: "The House of Commons and the Senate",
     category: "Government",
-    explanation: "Parliament consists of the Sovereign (represented by the Governor General), the Senate (the upper house), and the House of Commons (the lower house)."
+    explanation: "Parliament consists of the Sovereign (represented by the Governor General), the Senate (the upper house), and the House of Commons (the lower house).",
+    imageUrl: 'https://picsum.photos/seed/q175/600/400',
+    imageHint: 'parliament chambers',
   },
   {
     id: 176,
@@ -1432,7 +1782,9 @@ export const mockQuestions: Question[] = [
     options: ["To enforce traffic laws", "To defend Canada and its interests", "To collect taxes", "To build roads"],
     answer: "To defend Canada and its interests",
     category: "Government",
-    explanation: "The Canadian Armed Forces have three main roles: to defend Canada, to defend North America in cooperation with the United States, and to contribute to international peace and security."
+    explanation: "The Canadian Armed Forces have three main roles: to defend Canada, to defend North America in cooperation with the United States, and to contribute to international peace and security.",
+    imageUrl: 'https://picsum.photos/seed/q176/600/400',
+    imageHint: 'canadian soldier',
   },
   {
     id: 177,
@@ -1440,7 +1792,9 @@ export const mockQuestions: Question[] = [
     options: ["Canada's national sovereignty", "The Hudson's Bay Company", "A hockey team", "A specific province"],
     answer: "Canada's national sovereignty",
     category: "Symbols",
-    explanation: "The Coat of Arms of Canada is a symbol of national sovereignty. It was adopted in 1921 and contains symbols of France, England, Scotland, and Ireland as well as Canadian maple leaves."
+    explanation: "The Coat of Arms of Canada is a symbol of national sovereignty. It was adopted in 1921 and contains symbols of France, England, Scotland, and Ireland as well as Canadian maple leaves.",
+    imageUrl: 'https://picsum.photos/seed/q177/600/400',
+    imageHint: 'coat of arms',
   },
   {
     id: 178,
@@ -1448,7 +1802,9 @@ export const mockQuestions: Question[] = [
     options: ["Rights for lawyers only", "Rights that ensure fair legal treatment, such as the right to a lawyer", "The right to sue anyone", "The right to make laws"],
     answer: "Rights that ensure fair legal treatment, such as the right to a lawyer",
     category: "Rights and Responsibilities",
-    explanation: "Legal rights in the Charter protect individuals in their dealings with the justice system. They include the right to life, liberty, and security of the person, and the right to a fair trial."
+    explanation: "Legal rights in the Charter protect individuals in their dealings with the justice system. They include the right to life, liberty, and security of the person, and the right to a fair trial.",
+    imageUrl: 'https://picsum.photos/seed/q178/600/400',
+    imageHint: 'lawyer briefcase',
   },
   {
     id: 179,
@@ -1456,7 +1812,9 @@ export const mockQuestions: Question[] = [
     options: ["The official name of Canada after Confederation in 1867", "A British colony", "The name of Canada before 1867", "A territory in the North"],
     answer: "The official name of Canada after Confederation in 1867",
     category: "History",
-    explanation: "Upon Confederation, the new country was named the Dominion of Canada, signifying its self-governing status within the British Empire."
+    explanation: "Upon Confederation, the new country was named the Dominion of Canada, signifying its self-governing status within the British Empire.",
+    imageUrl: 'https://picsum.photos/seed/q179/600/400',
+    imageHint: 'confederation document',
   },
   {
     id: 180,
@@ -1464,7 +1822,9 @@ export const mockQuestions: Question[] = [
     options: ["To run the court system", "A group of people with similar ideas on how to run the country", "To appoint Senators", "To enforce laws"],
     answer: "A group of people with similar ideas on how to run the country",
     category: "Government",
-    explanation: "Political parties are organizations of people who share similar political beliefs and who work to get their candidates elected to public office to implement their policies."
+    explanation: "Political parties are organizations of people who share similar political beliefs and who work to get their candidates elected to public office to implement their policies.",
+    imageUrl: 'https://picsum.photos/seed/q180/600/400',
+    imageHint: 'party logos',
   },
   {
     id: 181,
@@ -1472,7 +1832,9 @@ export const mockQuestions: Question[] = [
     options: ["Ontario", "Saskatchewan", "Quebec", "British Columbia"],
     answer: "Saskatchewan",
     category: "Geography",
-    explanation: "Saskatchewan is a leader in Canadian agriculture, producing a large portion of the country's grain and oilseeds."
+    explanation: "Saskatchewan is a leader in Canadian agriculture, producing a large portion of the country's grain and oilseeds.",
+    imageUrl: 'https://picsum.photos/seed/q181/600/400',
+    imageHint: 'combine harvester',
   },
   {
     id: 182,
@@ -1480,7 +1842,9 @@ export const mockQuestions: Question[] = [
     options: ["A hero of the War of 1812", "The first female MP", "A famous painter", "A leader of the women's suffrage movement"],
     answer: "A hero of the War of 1812",
     category: "History",
-    explanation: "Laura Secord is a Canadian hero who, during the War of 1812, walked 32 kilometers to warn British forces of an impending American attack, contributing to a British victory."
+    explanation: "Laura Secord is a Canadian hero who, during the War of 1812, walked 32 kilometers to warn British forces of an impending American attack, contributing to a British victory.",
+    imageUrl: 'https://picsum.photos/seed/q182/600/400',
+    imageHint: 'historic heroine',
   },
   {
     id: 183,
@@ -1488,7 +1852,9 @@ export const mockQuestions: Question[] = [
     options: ["A time for MPs to take a test", "A daily session where MPs can ask questions of the government", "A coffee break", "A secret meeting"],
     answer: "A daily session where MPs can ask questions of the government",
     category: "Government",
-    explanation: "Question Period is a key part of the parliamentary day, where opposition members (and government backbenchers) can question the Prime Minister and cabinet ministers to hold them accountable for their actions."
+    explanation: "Question Period is a key part of the parliamentary day, where opposition members (and government backbenchers) can question the Prime Minister and cabinet ministers to hold them accountable for their actions.",
+    imageUrl: 'https://picsum.photos/seed/q183/600/400',
+    imageHint: 'question mark',
   },
   {
     id: 184,
@@ -1496,7 +1862,9 @@ export const mockQuestions: Question[] = [
     options: ["Education", "Hospitals", "Currency and Banking", "Local roads"],
     answer: "Currency and Banking",
     category: "Government",
-    explanation: "The federal government is responsible for matters of national scope, such as the monetary system, national defence, and the postal service."
+    explanation: "The federal government is responsible for matters of national scope, such as the monetary system, national defence, and the postal service.",
+    imageUrl: 'https://picsum.photos/seed/q184/600/400',
+    imageHint: 'money bank',
   },
   {
     id: 185,
@@ -1504,7 +1872,9 @@ export const mockQuestions: Question[] = [
     options: ["Modern", "Art Deco", "Gothic Revival", "Classical"],
     answer: "Gothic Revival",
     category: "Symbols",
-    explanation: "The Parliament Buildings are a world-renowned example of the Gothic Revival style of architecture, characterized by pointed arches, spires, and decorative details."
+    explanation: "The Parliament Buildings are a world-renowned example of the Gothic Revival style of architecture, characterized by pointed arches, spires, and decorative details.",
+    imageUrl: 'https://picsum.photos/seed/q185/600/400',
+    imageHint: 'gothic architecture',
   },
   {
     id: 186,
@@ -1512,7 +1882,9 @@ export const mockQuestions: Question[] = [
     options: ["The right to vote and to be a candidate in an election", "The right to free healthcare", "The right to own property", "The right to a jury trial"],
     answer: "The right to vote and to be a candidate in an election",
     category: "Rights and Responsibilities",
-    explanation: "Democratic rights in the Canadian Charter of Rights and Freedoms include the right of every citizen to vote in elections for the House of Commons and provincial legislative assemblies, and the right to be a candidate."
+    explanation: "Democratic rights in the Canadian Charter of Rights and Freedoms include the right of every citizen to vote in elections for the House of Commons and provincial legislative assemblies, and the right to be a candidate.",
+    imageUrl: 'https://picsum.photos/seed/q186/600/400',
+    imageHint: 'democracy symbol',
   },
   {
     id: 187,
@@ -1520,7 +1892,9 @@ export const mockQuestions: Question[] = [
     options: ["An economic recession", "A series of events in 1970 in Quebec involving kidnappings by a separatist group", "A major flood in Manitoba", "A debate over the flag"],
     answer: "A series of events in 1970 in Quebec involving kidnappings by a separatist group",
     category: "History",
-    explanation: "The October Crisis of 1970 involved the kidnapping of two government officials by the Front de libération du Québec (FLQ), a radical separatist group. The federal government invoked the War Measures Act in response."
+    explanation: "The October Crisis of 1970 involved the kidnapping of two government officials by the Front de libération du Québec (FLQ), a radical separatist group. The federal government invoked the War Measures Act in response.",
+    imageUrl: 'https://picsum.photos/seed/q187/600/400',
+    imageHint: '1970s newspaper',
   },
   {
     id: 188,
@@ -1528,7 +1902,9 @@ export const mockQuestions: Question[] = [
     options: ["They are elected", "They are appointed by the government", "They inherit their position", "They are chosen by the police"],
     answer: "They are appointed by the government",
     category: "Government",
-    explanation: "Judges are appointed by federal and provincial governments. They are chosen from lists of qualified lawyers and are expected to be impartial and independent."
+    explanation: "Judges are appointed by federal and provincial governments. They are chosen from lists of qualified lawyers and are expected to be impartial and independent.",
+    imageUrl: 'https://picsum.photos/seed/q188/600/400',
+    imageHint: 'judge gavel',
   },
   {
     id: 189,
@@ -1536,7 +1912,9 @@ export const mockQuestions: Question[] = [
     options: ["This can change from year to year", "USA, UK, France, Germany, Italy", "India, China, Philippines, Pakistan, Nigeria", "Mexico, Brazil, Argentina, Colombia, Peru"],
     answer: "This can change from year to year",
     category: "Geography",
-    explanation: "The top source countries for immigration to Canada change over time. You can find the most recent statistics on the Immigration, Refugees and Citizenship Canada website."
+    explanation: "The top source countries for immigration to Canada change over time. You can find the most recent statistics on the Immigration, Refugees and Citizenship Canada website.",
+    imageUrl: 'https://picsum.photos/seed/q189/600/400',
+    imageHint: 'world map',
   },
   {
     id: 190,
@@ -1544,7 +1922,9 @@ export const mockQuestions: Question[] = [
     options: ["The upper house of Parliament", "The residence of the Prime Minister", "The elected lower house of Parliament", "A courthouse"],
     answer: "The elected lower house of Parliament",
     category: "Government",
-    explanation: "The House of Commons is the democratically elected chamber of the Canadian Parliament, where Members of Parliament debate and pass laws."
+    explanation: "The House of Commons is the democratically elected chamber of the Canadian Parliament, where Members of Parliament debate and pass laws.",
+    imageUrl: 'https://picsum.photos/seed/q190/600/400',
+    imageHint: 'parliament interior',
   },
   {
     id: 191,
@@ -1552,7 +1932,9 @@ export const mockQuestions: Question[] = [
     options: ["An official policy that encourages Canadians to celebrate their diverse cultural backgrounds", "A type of food", "A political party", "A policy that requires everyone to be the same"],
     answer: "An official policy that encourages Canadians to celebrate their diverse cultural backgrounds",
     category: "Rights and Responsibilities",
-    explanation: "Canada's policy of multiculturalism, adopted in 1971, recognizes and promotes the understanding that diversity is a fundamental characteristic of Canadian society. It encourages cultural groups to preserve and share their heritage."
+    explanation: "Canada's policy of multiculturalism, adopted in 1971, recognizes and promotes the understanding that diversity is a fundamental characteristic of Canadian society. It encourages cultural groups to preserve and share their heritage.",
+    imageUrl: 'https://picsum.photos/seed/q191/600/400',
+    imageHint: 'cultural festival',
   },
   {
     id: 192,
@@ -1560,7 +1942,9 @@ export const mockQuestions: Question[] = [
     options: ["A Prime Minister", "A famous musician", "An athlete who ran across Canada to raise money for cancer research", "An astronaut"],
     answer: "An athlete who ran across Canada to raise money for cancer research",
     category: "History",
-    explanation: "Terry Fox, who had lost a leg to cancer, began the 'Marathon of Hope' in 1980 to raise money for cancer research. He became a national hero for his courage and determination, and annual Terry Fox Runs continue to this day."
+    explanation: "Terry Fox, who had lost a leg to cancer, began the 'Marathon of Hope' in 1980 to raise money for cancer research. He became a national hero for his courage and determination, and annual Terry Fox Runs continue to this day.",
+    imageUrl: 'https://picsum.photos/seed/q192/600/400',
+    imageHint: 'running shoe',
   },
   {
     id: 193,
@@ -1568,7 +1952,9 @@ export const mockQuestions: Question[] = [
     options: ["Elections", "The concentration of power in one branch of government", "Making new laws", "The government from collecting taxes"],
     answer: "The concentration of power in one branch of government",
     category: "Government",
-    explanation: "The division of government into legislative, executive, and judicial branches creates a system of checks and balances, ensuring that no single branch can become too powerful."
+    explanation: "The division of government into legislative, executive, and judicial branches creates a system of checks and balances, ensuring that no single branch can become too powerful.",
+    imageUrl: 'https://picsum.photos/seed/q193/600/400',
+    imageHint: 'balanced scale',
   },
   {
     id: 194,
@@ -1576,7 +1962,9 @@ export const mockQuestions: Question[] = [
     options: ["Forestry, fishing, energy, and minerals", "Cars, clothing, and electronics", "Banking, insurance, and tourism", "Software, movies, and music"],
     answer: "Forestry, fishing, energy, and minerals",
     category: "Geography",
-    explanation: "Canada is rich in natural resources, and industries based on these resources, such as forestry, mining, and oil and gas extraction, are a vital part of the nation's economy."
+    explanation: "Canada is rich in natural resources, and industries based on these resources, such as forestry, mining, and oil and gas extraction, are a vital part of the nation's economy.",
+    imageUrl: 'https://picsum.photos/seed/q194/600/400',
+    imageHint: 'natural resources',
   },
   {
     id: 195,
@@ -1584,7 +1972,9 @@ export const mockQuestions: Question[] = [
     options: ["Men and women have different rights", "Men and women are equal under the law", "Only women can vote", "Men and women must have the same jobs"],
     answer: "Men and women are equal under the law",
     category: "Rights and Responsibilities",
-    explanation: "In Canada, it is a fundamental value that men and women are equal under the law and have the right to the same opportunities in all aspects of society."
+    explanation: "In Canada, it is a fundamental value that men and women are equal under the law and have the right to the same opportunities in all aspects of society.",
+    imageUrl: 'https://picsum.photos/seed/q195/600/400',
+    imageHint: 'equality symbol',
   },
   {
     id: 196,
@@ -1592,7 +1982,9 @@ export const mockQuestions: Question[] = [
     options: ["The first Europeans to reach North America", "A First Nations group", "French explorers", "British soldiers"],
     answer: "The first Europeans to reach North America",
     category: "History",
-    explanation: "Norse (Viking) explorers from Iceland reached Newfoundland around 1000 AD. They built a settlement at L'Anse aux Meadows, which is now a National Historic Site."
+    explanation: "Norse (Viking) explorers from Iceland reached Newfoundland around 1000 AD. They built a settlement at L'Anse aux Meadows, which is now a National Historic Site.",
+    imageUrl: 'https://picsum.photos/seed/q196/600/400',
+    imageHint: 'viking ship',
   },
   {
     id: 197,
@@ -1600,7 +1992,9 @@ export const mockQuestions: Question[] = [
     options: ["Mayor", "Premier", "Commissioner", "Prime Minister"],
     answer: "Premier",
     category: "Government",
-    explanation: "Similar to a province, the elected head of government in each of Canada's three territories is called the Premier."
+    explanation: "Similar to a province, the elected head of government in each of Canada's three territories is called the Premier.",
+    imageUrl: 'https://picsum.photos/seed/q197/600/400',
+    imageHint: 'territorial legislature',
   },
   {
     id: 198,
@@ -1608,7 +2002,9 @@ export const mockQuestions: Question[] = [
     options: ["The right to vote", "The right to not be imprisoned without a lawful reason", "Freedom of speech", "The right to a lawyer"],
     answer: "The right to not be imprisoned without a lawful reason",
     category: "Rights and Responsibilities",
-    explanation: "The right of habeas corpus, which dates back to English common law, is the right to have a court determine if the government is lawfully detaining you. It prevents unlawful imprisonment."
+    explanation: "The right of habeas corpus, which dates back to English common law, is the right to have a court determine if the government is lawfully detaining you. It prevents unlawful imprisonment.",
+    imageUrl: 'https://picsum.photos/seed/q198/600/400',
+    imageHint: 'legal document',
   },
   {
     id: 199,
@@ -1616,7 +2012,9 @@ export const mockQuestions: Question[] = [
     options: ["The elected lower house", "The upper house of Parliament, whose members are appointed", "The Supreme Court", "The Prime Minister's office"],
     answer: "The upper house of Parliament, whose members are appointed",
     category: "Government",
-    explanation: "The Senate is the upper chamber of Canada's Parliament. Its members, or Senators, are appointed by the Governor General on the advice of the Prime Minister to represent regions and minority groups."
+    explanation: "The Senate is the upper chamber of Canada's Parliament. Its members, or Senators, are appointed by the Governor General on the advice of the Prime Minister to represent regions and minority groups.",
+    imageUrl: 'https://picsum.photos/seed/q199/600/400',
+    imageHint: 'senate interior',
   },
   {
     id: 200,
@@ -1624,7 +2022,9 @@ export const mockQuestions: Question[] = [
     options: ["A politician", "A famous actor", "A scientist who co-discovered insulin", "A World War I hero"],
     answer: "A scientist who co-discovered insulin",
     category: "History",
-    explanation: "Sir Frederick Banting was a Canadian medical scientist who, along with Charles Best, is credited with the discovery of insulin in 1922, a breakthrough that has saved millions of lives worldwide."
+    explanation: "Sir Frederick Banting was a Canadian medical scientist who, along with Charles Best, is credited with the discovery of insulin in 1922, a breakthrough that has saved millions of lives worldwide.",
+    imageUrl: 'https://picsum.photos/seed/q200/600/400',
+    imageHint: 'science lab',
   }
 ];
 

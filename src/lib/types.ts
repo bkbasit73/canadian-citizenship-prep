@@ -12,6 +12,8 @@ export type Question = {
   answer: string;
   category: QuestionCategory;
   explanation: string;
+  imageUrl: string;
+  imageHint: string;
 };
 
 export type StudyTopic = {
