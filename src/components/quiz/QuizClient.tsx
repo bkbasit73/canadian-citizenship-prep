@@ -10,6 +10,7 @@ import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import type { Question } from '@/lib/types';
 import { cn } from '@/lib/utils';
+import { Skeleton } from '@/components/ui/skeleton';
 
 interface QuizClientProps {
   allQuestions: Question[];
@@ -101,6 +102,29 @@ export function QuizClient({ allQuestions }: QuizClientProps) {
         </CardFooter>
       </Card>
     );
+  }
+
+  if (!currentQuestion) {
+    return (
+        <Card className="max-w-2xl mx-auto">
+            <CardHeader>
+                <Skeleton className="h-8 w-1/2 mb-2" />
+                <Skeleton className="h-4 w-full" />
+            </CardHeader>
+            <CardContent className="space-y-6">
+                <Skeleton className="h-6 w-3/4" />
+                <div className="space-y-4">
+                    <Skeleton className="h-12 w-full" />
+                    <Skeleton className="h-12 w-full" />
+                    <Skeleton className="h-12 w-full" />
+                    <Skeleton className="h-12 w-full" />
+                </div>
+            </CardContent>
+            <CardFooter>
+                <Skeleton className="h-10 w-28 ml-auto" />
+            </CardFooter>
+        </Card>
+    )
   }
 
   return (
