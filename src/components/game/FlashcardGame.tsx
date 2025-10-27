@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { ArrowLeft, ArrowRight, RefreshCw } from 'lucide-react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -18,9 +18,15 @@ const shuffleArray = <T,>(array: T[]): T[] => {
 };
 
 export function FlashcardGame({ questions: allQuestions }: FlashcardGameProps) {
-  const [shuffledQuestions, setShuffledQuestions] = useState(() => shuffleArray(allQuestions));
+  const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setShuffledQuestions(shuffleArray(allQuestions));
+    setHasMounted(true);
+  }, [allQuestions]);
 
   const currentQuestion = useMemo(() => shuffledQuestions[currentIndex], [shuffledQuestions, currentIndex]);
 
@@ -44,7 +50,7 @@ export function FlashcardGame({ questions: allQuestions }: FlashcardGameProps) {
     setCurrentIndex(0);
   };
   
-  if (!currentQuestion) {
+  if (!hasMounted || !currentQuestion) {
       return <Skeleton className="h-[400px] w-full" />;
   }
 
