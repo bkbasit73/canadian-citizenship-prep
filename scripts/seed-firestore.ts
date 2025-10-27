@@ -1,9 +1,9 @@
-// To run this script, you need to have ts-node installed:
-// npm install -g ts-node
-// Then run: ts-node --esm scripts/seed-firestore.ts
+// To run this script, you need to have tsx installed:
+// npm install -g tsx
+// Then run: tsx scripts/seed-firestore.ts
 
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, writeBatch } from 'firebase/firestore';
+import { getFirestore, collection, writeBatch, doc } from 'firebase/firestore';
 import { mockQuestions, mockStudyTopics } from '../src/lib/data';
 import { firebaseConfig } from '../src/firebase/config';
 
@@ -16,7 +16,8 @@ async function seedQuestions() {
   const batch = writeBatch(db);
 
   mockQuestions.forEach((question) => {
-    const docRef = collection(questionsCollection).doc(String(question.id));
+    // Use the numeric ID from the mock data as the document ID string
+    const docRef = doc(questionsCollection, String(question.id));
     batch.set(docRef, question);
   });
 
@@ -33,7 +34,7 @@ async function seedStudyTopics() {
   const batch = writeBatch(db);
 
   mockStudyTopics.forEach((topic) => {
-    const docRef = collection(studyTopicsCollection).doc(topic.id);
+    const docRef = doc(studyTopicsCollection, topic.id);
     batch.set(docRef, topic);
   });
 
