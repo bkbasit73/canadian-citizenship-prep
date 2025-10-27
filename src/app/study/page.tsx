@@ -2,16 +2,12 @@
 
 import { AppLayout } from '@/components/AppLayout';
 import { StudyGuide } from '@/components/study/StudyGuide';
-import { useCollection, useFirebase } from '@/firebase';
-import { collection } from 'firebase/firestore';
-import { useMemo } from 'react';
+import { mockQuestions } from '@/lib/data';
 import type { Question } from '@/lib/types';
-import { Skeleton } from '@/components/ui/skeleton';
 
 export default function StudyPage() {
-  const { firestore } = useFirebase();
-  const questionsCollection = useMemo(() => collection(firestore, 'questions'), [firestore]);
-  const { data: questions, isLoading } = useCollection<Question>(questionsCollection);
+  // Directly use the mock questions from the data file
+  const questions: Question[] = mockQuestions;
 
   return (
     <AppLayout>
@@ -22,17 +18,7 @@ export default function StudyPage() {
             Review all 200 official questions by category.
           </p>
         </div>
-        {isLoading || !questions ? (
-            <div className="space-y-4">
-                <Skeleton className="h-16 w-full" />
-                <Skeleton className="h-16 w-full" />
-                <Skeleton className="h-16 w-full" />
-                <Skeleton className="h-16 w-full" />
-                <Skeleton className="h-16 w-full" />
-            </div>
-        ) : (
-            <StudyGuide questions={questions} />
-        )}
+        <StudyGuide questions={questions} />
       </div>
     </AppLayout>
   );

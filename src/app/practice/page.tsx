@@ -2,17 +2,12 @@
 
 import { AppLayout } from '@/components/AppLayout';
 import { QuizClient } from '@/components/quiz/QuizClient';
-import { useCollection, useFirebase } from '@/firebase';
-import { collection } from 'firebase/firestore';
-import { useMemo } from 'react';
+import { mockQuestions } from '@/lib/data';
 import type { Question } from '@/lib/types';
-import { Skeleton } from '@/components/ui/skeleton';
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 
 export default function PracticePage() {
-  const { firestore } = useFirebase();
-  const questionsCollection = useMemo(() => collection(firestore, 'questions'), [firestore]);
-  const { data: questions, isLoading } = useCollection<Question>(questionsCollection);
+  // Directly use the mock questions from the data file
+  const allQuestions: Question[] = mockQuestions;
 
   return (
     <AppLayout>
@@ -23,28 +18,7 @@ export default function PracticePage() {
             Test your knowledge with a timed quiz. Choose your challenge!
           </p>
         </div>
-        {isLoading || !questions ? (
-          <Card className="max-w-2xl mx-auto w-full">
-            <CardHeader>
-              <Skeleton className="h-8 w-1/2 mb-2" />
-              <Skeleton className="h-4 w-full" />
-            </CardHeader>
-            <CardContent className="space-y-6 pt-6">
-              <Skeleton className="h-6 w-3/4" />
-              <div className="space-y-4">
-                <Skeleton className="h-12 w-full" />
-                <Skeleton className="h-12 w-full" />
-                <Skeleton className="h-12 w-full" />
-                <Skeleton className="h-12 w-full" />
-              </div>
-            </CardContent>
-            <CardFooter>
-              <Skeleton className="h-10 w-28 ml-auto" />
-            </CardFooter>
-          </Card>
-        ) : (
-          <QuizClient allQuestions={questions} />
-        )}
+        <QuizClient allQuestions={allQuestions} />
       </div>
     </AppLayout>
   );
