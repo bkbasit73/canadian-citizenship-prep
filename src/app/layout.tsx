@@ -3,7 +3,6 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import { FirebaseClientProvider } from '@/firebase';
-import { AnonymousSignIn } from '@/components/auth/AnonymousSignIn';
 
 export const metadata: Metadata = {
   title: 'Canadian Citizenship Challenge Game',
@@ -27,7 +26,6 @@ export default function RootLayout({
       </head>
       <body className={cn('font-body antialiased min-h-screen')}>
         <FirebaseClientProvider>
-          <AnonymousSignIn />
           {children}
         </FirebaseClientProvider>
         <Toaster />
