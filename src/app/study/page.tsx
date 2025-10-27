@@ -28,7 +28,7 @@ export default function StudyPage() {
       <div className="max-w-7xl mx-auto w-full">
         <div className="flex flex-col gap-8">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">Study Mode</h1>
+            <h1 className="text-3xl font-bold tracking-tight">Discover Canada</h1>
             <p className="text-muted-foreground">
               Review all questions by category. Click a question to see the answer.
             </p>
