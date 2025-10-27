@@ -18,6 +18,8 @@ interface SurvivalQuizProps {
 
 const TIME_PER_QUESTION = 40;
 
+const CHALLENGE_LEVELS = [20, 40, 60, 100, 200];
+
 const shuffleArray = <T,>(array: T[]): T[] => {
   return [...array].sort(() => Math.random() - 0.5);
 };
@@ -25,16 +27,16 @@ const shuffleArray = <T,>(array: T[]): T[] => {
 export function SurvivalQuiz({ questions: allQuestions }: SurvivalQuizProps) {
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
   const [hasMounted, setHasMounted] = useState(false);
-  const [quizState, setQuizState] = useState<'in-progress' | 'finished'>('in-progress');
+  const [quizState, setQuizState] = useState<'not-started' | 'in-progress' | 'finished'>('not-started');
   const [timeLeft, setTimeLeft] = useState(TIME_PER_QUESTION);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [score, setScore] = useState(0);
+  const [numQuestions, setNumQuestions] = useState(0);
 
   useEffect(() => {
-    setShuffledQuestions(shuffleArray(allQuestions));
     setHasMounted(true);
-  }, [allQuestions]);
+  }, []);
 
   const currentQuestion = useMemo(() => shuffledQuestions[currentQuestionIndex], [shuffledQuestions, currentQuestionIndex]);
 
@@ -52,7 +54,6 @@ export function SurvivalQuiz({ questions: allQuestions }: SurvivalQuizProps) {
     if (quizState !== 'in-progress') return;
 
     if (timeLeft <= 0) {
-      // Time's up, move to the next question
       handleNextQuestion();
       return;
     }
@@ -68,21 +69,27 @@ export function SurvivalQuiz({ questions: allQuestions }: SurvivalQuizProps) {
     if (answer === currentQuestion.answer) {
       setScore((prev) => prev + 1);
     }
-    // Automatically move to the next question after a brief delay
     setTimeout(() => {
       handleNextQuestion();
     }, 500);
   };
   
-  const handleRestart = () => {
-    setShuffledQuestions(shuffleArray(allQuestions));
+  const handleStartQuiz = (level: number) => {
+    const questionCount = Math.min(level, allQuestions.length);
+    setNumQuestions(questionCount);
+    setShuffledQuestions(shuffleArray(allQuestions).slice(0, questionCount));
     setCurrentQuestionIndex(0);
     setScore(0);
     setTimeLeft(TIME_PER_QUESTION);
     setQuizState('in-progress');
   };
 
-  if (!hasMounted || !currentQuestion) {
+  const handleRestart = () => {
+    setQuizState('not-started');
+    setNumQuestions(0);
+  };
+
+  if (!hasMounted) {
     return (
         <Card className="max-w-2xl mx-auto w-full">
             <CardHeader>
@@ -100,6 +107,26 @@ export function SurvivalQuiz({ questions: allQuestions }: SurvivalQuizProps) {
             </CardContent>
           </Card>
     )
+  }
+
+  if (quizState === 'not-started') {
+    return (
+      <Card className="max-w-2xl mx-auto text-center">
+        <CardHeader>
+          <CardTitle>Choose Your Challenge</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-muted-foreground mb-6">Select the number of questions for your quiz.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {CHALLENGE_LEVELS.map((level) => (
+                <Button key={level} variant="outline" size="lg" onClick={() => handleStartQuiz(level)} disabled={level > allQuestions.length}>
+                    {level} Questions
+                </Button>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    );
   }
 
   if (quizState === 'finished') {
@@ -124,6 +151,26 @@ export function SurvivalQuiz({ questions: allQuestions }: SurvivalQuizProps) {
         </CardFooter>
       </Card>
     );
+  }
+
+  if (!currentQuestion) {
+    return (
+        <Card className="max-w-2xl mx-auto w-full">
+            <CardHeader>
+              <Skeleton className="h-8 w-1/2 mb-2" />
+              <Skeleton className="h-4 w-full" />
+            </CardHeader>
+            <CardContent className="space-y-6 pt-6">
+              <Skeleton className="h-6 w-3/4" />
+              <div className="space-y-4">
+                <Skeleton className="h-12 w-full" />
+                <Skeleton className="h-12 w-full" />
+                <Skeleton className="h-12 w-full" />
+                <Skeleton className="h-12 w-full" />
+              </div>
+            </CardContent>
+          </Card>
+    )
   }
 
   const timeProgress = (timeLeft / TIME_PER_QUESTION) * 100;
