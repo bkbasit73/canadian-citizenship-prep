@@ -1,0 +1,21 @@
+import Link from 'next/link';
+import { SidebarTrigger } from './ui/sidebar';
+import { MapleLeafIcon } from './icons/MapleLeafIcon';
+import { RealTimeClock } from './dashboard/RealTimeClock';
+
+export function Header() {
+  return (
+    <header className="flex h-16 items-center gap-4 border-b bg-card px-4 md:px-6">
+      <nav className="flex items-center gap-4">
+        <Link href="/" className="flex items-center gap-2 font-semibold text-lg md:text-base">
+           <MapleLeafIcon className="h-10 w-10 text-red-500" />
+          <span className="font-bold text-lg hidden sm:inline-block">Canadian Citizenship Challenge</span>
+        </Link>
+        <SidebarTrigger className="md:hidden" />
+      </nav>
+      <div className="ml-auto flex items-center gap-4">
+        <RealTimeClock />
+      </div>
+    </header>
+  );
+}

@@ -1,0 +1,112 @@
+{
+  "entities": {
+    "Question": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Question",
+      "type": "object",
+      "description": "Represents a question from the Canadian citizenship test.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the question."
+        },
+        "question": {
+          "type": "string",
+          "description": "The text of the question."
+        },
+        "options": {
+          "type": "array",
+          "description": "Array of possible answers.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "answer": {
+          "type": "string",
+          "description": "The correct answer."
+        },
+        "category": {
+          "type": "string",
+          "description": "Category of the question (e.g., History, Government, Rights & Freedoms, Geography, Symbols)."
+        },
+        "explanation": {
+          "type": "string",
+          "description": "Explanation of the correct answer."
+        }
+      },
+      "required": [
+        "id",
+        "question",
+        "options",
+        "answer",
+        "category",
+        "explanation"
+      ]
+    },
+    "StudyTopic": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "StudyTopic",
+      "type": "object",
+      "description": "Represents a study topic for the Canadian citizenship test.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the study topic."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the study topic."
+        },
+        "content": {
+          "type": "string",
+          "description": "The content of the study topic."
+        },
+        "category": {
+          "type": "string",
+          "description": "Category of the topic."
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL for the topic image."
+        },
+        "imageHint": {
+          "type": "string",
+          "description": "Hint for AI image generation."
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "content",
+        "category"
+      ]
+    }
+  },
+  "auth": {
+    "providers": []
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/questions/{questionId}",
+        "definition": {
+          "entityName": "Question",
+          "schema": {
+            "$ref": "#/backend/entities/Question"
+          },
+          "description": "Stores the test questions. Open read access for all users."
+        }
+      },
+      {
+        "path": "/study_topics/{topicId}",
+        "definition": {
+          "entityName": "StudyTopic",
+          "schema": {
+            "$ref": "#/backend/entities/StudyTopic"
+          },
+          "description": "Stores the study guide topics. Open read access for all users."
+        }
+      }
+    ]
+  }
+}
