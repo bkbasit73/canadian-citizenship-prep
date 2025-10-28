@@ -2,7 +2,6 @@
 import React, { useEffect, useRef } from "react";
 import { Animated, View, Text } from "react-native";
 import ConfettiCannon from "react-native-confetti-cannon";
-import { Audio } from "expo-av";
 
 interface BadgePopupProps {
   badge: string;
@@ -13,7 +12,6 @@ interface BadgePopupProps {
 export default function BadgePopup({ badge, message, visible }: BadgePopupProps) {
   const opacity = useRef(new Animated.Value(0)).current;
   const scale = useRef(new Animated.Value(0.8)).current;
-  const sound = useRef<Audio.Sound | null>(null);
 
   // Confetti colors per badge type
   const getConfettiColors = () => {
@@ -31,33 +29,7 @@ export default function BadgePopup({ badge, message, visible }: BadgePopupProps)
     }
   };
 
-  // Badge-specific sound per level
-  const getSoundFile = () => {
-    switch (badge.toLowerCase()) {
-      case "bronze":
-        return require("../../assets/sounds/bronze.mp3");
-      case "silver":
-        return require("../../assets/sounds/silver.mp3");
-      case "gold":
-        return require("../../assets/sounds/gold.mp3");
-      case "platinum":
-        return require("../../assets/sounds/platinum.mp3");
-      default:
-        return require("../../assets/sounds/success.mp3");
-    }
-  };
-
   useEffect(() => {
-    const playSound = async () => {
-      try {
-        const { sound: sfx } = await Audio.Sound.createAsync(getSoundFile());
-        sound.current = sfx;
-        await sfx.playAsync();
-      } catch (error) {
-        console.warn("Error playing sound:", error);
-      }
-    };
-
     if (visible) {
       Animated.parallel([
         Animated.timing(opacity, {
@@ -72,8 +44,6 @@ export default function BadgePopup({ badge, message, visible }: BadgePopupProps)
         }),
       ]).start();
 
-      playSound();
-
       setTimeout(() => {
         Animated.timing(opacity, {
           toValue: 0,
@@ -82,10 +52,6 @@ export default function BadgePopup({ badge, message, visible }: BadgePopupProps)
         }).start();
       }, 5000);
     }
-
-    return () => {
-      if (sound.current) sound.current.unloadAsync();
-    };
   }, [visible]);
 
   if (!visible) return null;

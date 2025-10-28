@@ -10,6 +10,7 @@ import DashboardScreen from "../screens/DashboardScreen";
 import LoginScreen from "../screens/LoginScreen";
 import DailyChallengeScreen from "../screens/DailyChallengeScreen";
 import TrophyGalleryScreen from "../screens/TrophyGalleryScreen";
+import AnytimePlayScreen from "../screens/AnytimePlayScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -24,6 +25,7 @@ export default function AppNavigator() {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="DailyChallenge" component={DailyChallengeScreen} />
         <Stack.Screen name="TrophyGallery" component={TrophyGalleryScreen} />
+        <Stack.Screen name="AnytimePlay" component={AnytimePlayScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

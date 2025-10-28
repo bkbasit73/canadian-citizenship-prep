@@ -35,6 +35,10 @@ export default function HomeScreen({ navigation }: any) {
       <TouchableOpacity onPress={() => navigation.navigate("TrophyGallery")}>
         <Text style={{ fontSize: 18, color: "#2563eb", marginTop: 20 }}>🏆 Trophy Gallery</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => navigation.navigate("AnytimePlay")}>
+        <Text style={{ fontSize: 18, color: "#2563eb", marginTop: 20 }}>🎮 Anytime Play</Text>
+      </TouchableOpacity>
     </View>
   );
 }
